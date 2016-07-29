@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: REMORA 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-07-05 13:42+0000\n"
-"PO-Revision-Date: 2016-07-24 19:12+0000\n"
+"POT-Creation-Date: 2016-07-28 10:05+0000\n"
+"PO-Revision-Date: 2016-07-28 13:16+0000\n"
 "Last-Translator: Ton <tonnes.mb@gmail.com>\n"
 "Language-Team: DUTCH <LL@li.org>\n"
 "Language: nl\n"
@@ -64,8 +64,8 @@ msgid "Continue to Download&nbsp;&rarr;"
 msgstr "Doorgaan naar download&nbsp;&rarr;"
 
 #: src/olympia/addons/buttons.py src/olympia/addons/helpers.py src/olympia/addons/templates/addons/impala/details.html src/olympia/addons/templates/addons/impala/listing/items.html
-#: src/olympia/addons/templates/addons/mobile/home.html src/olympia/addons/views.py src/olympia/amo/templates/amo/side_nav.html src/olympia/amo/templates/amo/site_nav.html
-#: src/olympia/bandwagon/views.py src/olympia/browse/templates/browse/impala/category_landing.html src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/browse/views.py
+#: src/olympia/addons/templates/addons/mobile/home.html src/olympia/amo/templates/amo/side_nav.html src/olympia/amo/templates/amo/site_nav.html src/olympia/bandwagon/views.py
+#: src/olympia/browse/templates/browse/impala/category_landing.html src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/browse/views.py
 msgid "Featured"
 msgstr "Aanbevolen"
 
@@ -179,18 +179,6 @@ msgstr "Gebruikers wordt dit altijd gevraagd in de Add-onbeheerder (vanaf Firefo
 #: src/olympia/addons/models.py src/olympia/addons/templates/addons/details_box.html src/olympia/devhub/templates/devhub/includes/addon_details.html src/olympia/devhub/templates/devhub/index.html
 msgid "Listed"
 msgstr "Vermeld"
-
-#: src/olympia/addons/views.py src/olympia/browse/templates/browse/personas/mobile/category_landing.html
-msgid "Popular"
-msgstr "Populair"
-
-#: src/olympia/addons/views.py src/olympia/browse/views.py
-msgid "Recently Added"
-msgstr "Onlangs toegevoegd"
-
-#: src/olympia/addons/views.py src/olympia/bandwagon/views.py src/olympia/browse/views.py src/olympia/search/forms.py
-msgid "Recently Updated"
-msgstr "Onlangs bijgewerkt"
 
 #. l10n: {0} is the addon name
 # %1 is an add-on name.
@@ -306,12 +294,12 @@ msgstr "Steun verdere ontwikkeling van <strong>%(addon_name)s</strong> door een 
 #: src/olympia/addons/templates/addons/contributions_lightbox.html
 #, python-format
 msgid "To show your support for <b>%(addon_name)s</b>, the developer asks that you make a donation to the <a href=\"%(charity_url)s\">%(charity_name)s</a> through <a href=\"%(paypal_url)s\">PayPal</a>."
-msgstr "Om uw steun voor <b>%(addon_name)s</b> te tonen vraagt de ontwikkelaar om een donatie aan <a href=\"%(charity_url)s\">%(charity_name)s</a> via <a href=\"%(paypal_url)s\">PayPal</a>."
+msgstr "Om uw steun voor <b>%(addon_name)s</b> te tonen, vraagt de ontwikkelaar om een donatie aan <a href=\"%(charity_url)s\">%(charity_name)s</a> via <a href=\"%(paypal_url)s\">PayPal</a>."
 
 #: src/olympia/addons/templates/addons/contributions_lightbox.html
 #, python-format
 msgid "To show your support for <b>%(addon_name)s</b>, the developer asks that you make a small contribution to <a href=\"%(charity_url)s\">%(charity_name)s</a> through <a href=\"%(paypal_url)s\">PayPal</a>."
-msgstr "Om uw steun voor <b>%(addon_name)s</b> te tonen vraagt de ontwikkelaar om een kleine donatie aan <a href=\"%(charity_url)s\">%(charity_name)s</a> via <a href=\"%(paypal_url)s\">PayPal</a>."
+msgstr "Om uw steun voor <b>%(addon_name)s</b> te tonen, vraagt de ontwikkelaar om een kleine bijdrage aan <a href=\"%(charity_url)s\">%(charity_name)s</a> via <a href=\"%(paypal_url)s\">PayPal</a>."
 
 #: src/olympia/addons/templates/addons/contributions_lightbox.html
 msgid "How much would you like to contribute?"
@@ -639,8 +627,8 @@ msgid "See all Themes by this Artist"
 msgstr "Alle thema’s van deze kunstenaar"
 
 #: src/olympia/addons/templates/addons/mobile/home.html src/olympia/addons/templates/addons/persona_detail.html src/olympia/amo/templates/amo/side_nav.html
-#: src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/devhub/templates/devhub/addons/edit/basic.html src/olympia/editors/templates/editors/review.html
-#: src/olympia/editors/templates/editors/themes/themes.html src/olympia/templates/categories.html
+#: src/olympia/browse/templates/browse/macros.html src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/devhub/templates/devhub/addons/edit/basic.html
+#: src/olympia/editors/templates/editors/review.html src/olympia/editors/templates/editors/themes/themes.html src/olympia/templates/categories.html
 msgid "Categories"
 msgstr "Categorieën"
 
@@ -911,7 +899,7 @@ msgid_plural "See all %(cnt)s reviews of this add-on"
 msgstr[0] "Bekijk alle beoordelingen van deze add-on"
 msgstr[1] "Bekijk alle %(cnt)s beoordelingen van deze add-on"
 
-#: src/olympia/addons/templates/addons/tags_box.html src/olympia/devhub/templates/devhub/addons/edit/basic.html
+#: src/olympia/addons/templates/addons/tags_box.html src/olympia/constants/categories.py src/olympia/devhub/templates/devhub/addons/edit/basic.html
 msgid "Tags"
 msgstr "Labels"
 
@@ -1424,10 +1412,6 @@ msgstr "Fout bij controleren invoer, probeer het opnieuw."
 #: src/olympia/amo/fields.py
 msgid "This must be a valid hex color code, such as #000000."
 msgstr "Dit dient een geldige hex-kleurcode te zijn, zoals #000000."
-
-#: src/olympia/amo/fields.py
-msgid "Enter at least one value."
-msgstr "Voer ten minste één waarde in."
 
 #: src/olympia/amo/helpers.py src/olympia/amo/templates/amo/site_nav.html src/olympia/bandwagon/templates/bandwagon/add.html src/olympia/bandwagon/templates/bandwagon/collection_detail.html
 #: src/olympia/bandwagon/templates/bandwagon/delete.html src/olympia/bandwagon/templates/bandwagon/edit.html src/olympia/bandwagon/templates/bandwagon/impala/collection_listing.html
@@ -1991,7 +1975,7 @@ msgstr "Meer…"
 msgid "Add-ons for Mobile"
 msgstr "Add-ons voor Mobiel"
 
-#: src/olympia/amo/templates/amo/site_nav.html src/olympia/browse/feeds.py src/olympia/browse/templates/browse/search_tools.html src/olympia/constants/base.py
+#: src/olympia/amo/templates/amo/site_nav.html src/olympia/browse/feeds.py src/olympia/browse/templates/browse/search_tools.html src/olympia/constants/base.py src/olympia/constants/categories.py
 msgid "Search Tools"
 msgstr "Zoekhulpmiddelen"
 
@@ -2209,6 +2193,10 @@ msgstr "Verwijderen uit favorieten"
 #: src/olympia/editors/templates/editors/leaderboard.html src/olympia/editors/templates/editors/themes/queue_list.html src/olympia/search/forms.py src/olympia/users/templates/users/vcard.html
 msgid "Name"
 msgstr "Naam"
+
+#: src/olympia/bandwagon/views.py src/olympia/browse/views.py src/olympia/search/forms.py
+msgid "Recently Updated"
+msgstr "Onlangs bijgewerkt"
 
 #: src/olympia/bandwagon/views.py
 msgid "Recently Popular"
@@ -2570,8 +2558,8 @@ msgstr "<b>Waarschuwing:</b> door het wijzigen van de eigenaar van deze collecti
 
 #: src/olympia/bandwagon/templates/bandwagon/edit_contributors.html src/olympia/devhub/templates/devhub/addons/forms_shared/media.html src/olympia/devhub/templates/devhub/addons/submit/describe.html
 #: src/olympia/devhub/templates/devhub/addons/submit/license.html src/olympia/devhub/templates/devhub/addons/submit/upload.html src/olympia/devhub/templates/devhub/payments/tier.html
-#: src/olympia/editors/templates/editors/themes/themes.html src/olympia/users/templates/users/fxa_migration_prompt_content.html src/olympia/users/templates/users/login_form.html
-#: src/olympia/users/templates/users/mobile/login.html
+#: src/olympia/editors/templates/editors/themes/themes.html src/olympia/users/templates/users/fxa_login_prompt_content.html src/olympia/users/templates/users/fxa_migration_prompt_content.html
+#: src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html
 msgid "Continue"
 msgstr "Doorgaan"
 
@@ -2787,6 +2775,10 @@ msgstr "Meeste gebruikers"
 #: src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/browse/views.py src/olympia/legacy_discovery/templates/legacy_discovery/pane.html src/olympia/search/forms.py
 msgid "Up & Coming"
 msgstr "Aankomend"
+
+#: src/olympia/browse/views.py
+msgid "Recently Added"
+msgstr "Onlangs toegevoegd"
 
 #: src/olympia/browse/views.py src/olympia/devhub/views.py src/olympia/legacy_discovery/templates/legacy_discovery/addons/detail.html
 msgid "Created"
@@ -3051,6 +3043,10 @@ msgid "Easy-to-use themes for Firefox"
 msgstr "Eenvoudig te gebruiken thema’s voor Firefox"
 
 #: src/olympia/browse/templates/browse/personas/mobile/category_landing.html
+msgid "Popular"
+msgstr "Populair"
+
+#: src/olympia/browse/templates/browse/personas/mobile/category_landing.html
 msgid "More Themes"
 msgstr "Meer thema’s"
 
@@ -3156,7 +3152,7 @@ msgstr "Probleem"
 msgid "No reports found."
 msgstr "Geen rapporten gevonden."
 
-#: src/olympia/constants/applications.py
+#: src/olympia/constants/applications.py src/olympia/constants/categories.py
 msgid "Firefox"
 msgstr "Firefox"
 
@@ -3309,7 +3305,7 @@ msgid "Ask before users can download this add-on"
 msgstr "Vragen voordat gebruikers deze add-on kunnen downloaden"
 
 #. Review points sources other than add-ons and themes.
-#: src/olympia/constants/base.py src/olympia/devhub/forms.py src/olympia/editors/templates/editors/performance.html
+#: src/olympia/constants/base.py src/olympia/constants/categories.py src/olympia/devhub/forms.py src/olympia/editors/templates/editors/performance.html
 msgid "Other"
 msgstr "Overig"
 
@@ -3474,6 +3470,282 @@ msgstr "Compatibel"
 #: src/olympia/constants/base.py
 msgid "Incompatible"
 msgstr "Incompatibel"
+
+#: src/olympia/constants/categories.py
+msgid "Alerts & Updates"
+msgstr "Waarschuwingen en updates"
+
+#: src/olympia/constants/categories.py
+msgid "Appearance"
+msgstr "Vormgeving"
+
+#: src/olympia/constants/categories.py
+msgid "Bookmarks"
+msgstr "Bladwijzers"
+
+#: src/olympia/constants/categories.py
+msgid "Download Management"
+msgstr "Downloadbeheer"
+
+#: src/olympia/constants/categories.py
+msgid "Feeds, News & Blogging"
+msgstr "Feeds, nieuws en blogging"
+
+#: src/olympia/constants/categories.py
+msgid "Games & Entertainment"
+msgstr "Spellen en amusement"
+
+#: src/olympia/constants/categories.py
+msgid "Language Support"
+msgstr "Taalondersteuning"
+
+#: src/olympia/constants/categories.py
+msgid "Photos, Music & Videos"
+msgstr "Foto’s, muziek en video’s"
+
+#: src/olympia/constants/categories.py
+msgid "Privacy & Security"
+msgstr "Privacy en beveiliging"
+
+#: src/olympia/constants/categories.py
+msgid "Shopping"
+msgstr "Winkelen"
+
+#: src/olympia/constants/categories.py
+msgid "Social & Communication"
+msgstr "Sociaal en communicatie"
+
+#: src/olympia/constants/categories.py
+msgid "Tabs"
+msgstr "Tabbladen"
+
+#: src/olympia/constants/categories.py
+msgid "Web Development"
+msgstr "Webontwikkeling"
+
+#: src/olympia/constants/categories.py
+msgid "Animals"
+msgstr "Dieren"
+
+#: src/olympia/constants/categories.py
+msgid "Compact"
+msgstr "Compact"
+
+#: src/olympia/constants/categories.py
+msgid "Large"
+msgstr "Groot"
+
+#: src/olympia/constants/categories.py src/olympia/users/templates/users/edit.html
+msgid "Miscellaneous"
+msgstr "Diversen"
+
+#: src/olympia/constants/categories.py
+msgid "Modern"
+msgstr "Modern"
+
+#: src/olympia/constants/categories.py
+msgid "Nature"
+msgstr "Natuur"
+
+#: src/olympia/constants/categories.py
+msgid "OS Integration"
+msgstr "OS-integratie"
+
+#: src/olympia/constants/categories.py
+msgid "Retro"
+msgstr "Retro"
+
+#: src/olympia/constants/categories.py
+msgid "Sports"
+msgstr "Sport"
+
+#: src/olympia/constants/categories.py
+msgid "General"
+msgstr "Algemeen"
+
+#: src/olympia/constants/categories.py
+msgid "Business"
+msgstr "Zakelijk"
+
+#: src/olympia/constants/categories.py
+msgid "Dictionaries & Encyclopedias"
+msgstr "Woordenboeken en encyclopedieën"
+
+#: src/olympia/constants/categories.py
+msgid "Kids"
+msgstr "Kinderen"
+
+#: src/olympia/constants/categories.py
+msgid "Multiple Search"
+msgstr "Meervoudig zoeken"
+
+#: src/olympia/constants/categories.py
+msgid "Music"
+msgstr "Muziek"
+
+#: src/olympia/constants/categories.py
+msgid "News & Blogs"
+msgstr "Nieuws en blogs"
+
+#: src/olympia/constants/categories.py
+msgid "Photos & Images"
+msgstr "Foto’s en afbeeldingen"
+
+#: src/olympia/constants/categories.py
+msgid "Shopping & E-Commerce"
+msgstr "Winkelen en e-commerce"
+
+#: src/olympia/constants/categories.py
+msgid "Social & People"
+msgstr "Sociaal en personen"
+
+#: src/olympia/constants/categories.py
+msgid "Travel"
+msgstr "Reizen"
+
+#: src/olympia/constants/categories.py
+msgid "Video"
+msgstr "Video"
+
+#: src/olympia/constants/categories.py
+msgid "Abstract"
+msgstr "Abstract"
+
+#: src/olympia/constants/categories.py
+msgid "Causes"
+msgstr "Goede doelen"
+
+#: src/olympia/constants/categories.py
+msgid "Fashion"
+msgstr "Mode"
+
+#: src/olympia/constants/categories.py
+msgid "Film and TV"
+msgstr "Film en tv"
+
+#: src/olympia/constants/categories.py
+msgid "Foxkeh"
+msgstr "Foxkeh"
+
+#: src/olympia/constants/categories.py
+msgid "Holiday"
+msgstr "Vakantie"
+
+#: src/olympia/constants/categories.py
+msgid "Scenery"
+msgstr "Landschap"
+
+#: src/olympia/constants/categories.py
+msgid "Seasonal"
+msgstr "Seizoensgebonden"
+
+#: src/olympia/constants/categories.py
+msgid "Solid"
+msgstr "Vast"
+
+#: src/olympia/constants/categories.py
+msgid "Websites"
+msgstr "Websites"
+
+#: src/olympia/constants/categories.py
+msgid "Device Features & Location"
+msgstr "Apparaatfuncties en -locatie"
+
+#: src/olympia/constants/categories.py
+msgid "Experimental"
+msgstr "Experimenteel"
+
+#: src/olympia/constants/categories.py
+msgid "Feeds, News, & Blogging"
+msgstr "Feeds, nieuws en blogging"
+
+#: src/olympia/constants/categories.py src/olympia/editors/templates/editors/base.html src/olympia/editors/templates/editors/performance.html
+msgid "Performance"
+msgstr "Prestaties"
+
+#: src/olympia/constants/categories.py
+msgid "Photos & Media"
+msgstr "Foto’s en media"
+
+#: src/olympia/constants/categories.py
+msgid "Security & Privacy"
+msgstr "Beveiliging en privacy"
+
+#: src/olympia/constants/categories.py
+msgid "Social Networking"
+msgstr "Sociale netwerken"
+
+#: src/olympia/constants/categories.py
+msgid "Sports & Games"
+msgstr "Sport en spel"
+
+#: src/olympia/constants/categories.py
+msgid "User Interface"
+msgstr "Gebruikersinterface"
+
+#: src/olympia/constants/categories.py
+msgid "Appearance and Customization"
+msgstr "Vormgeving en aanpassing"
+
+#: src/olympia/constants/categories.py
+msgid "Calendar and Date/Time"
+msgstr "Agenda en datum/tijd"
+
+#: src/olympia/constants/categories.py
+msgid "Chat and IM"
+msgstr "Chatten en IM"
+
+#: src/olympia/constants/categories.py
+msgid "Message Composition"
+msgstr "Berichten opstellen"
+
+#: src/olympia/constants/categories.py
+msgid "Contacts"
+msgstr "Contacten"
+
+#: src/olympia/constants/categories.py
+msgid "Folders and Filters"
+msgstr "Mappen en filters"
+
+#: src/olympia/constants/categories.py
+msgid "Import/Export"
+msgstr "Importeren/exporteren"
+
+#: src/olympia/constants/categories.py
+msgid "Message and News Reading"
+msgstr "Berichten en nieuws lezen"
+
+#: src/olympia/constants/categories.py
+msgid "Privacy and Security"
+msgstr "Privacy en beveiliging"
+
+#: src/olympia/constants/categories.py
+msgid "Downloading and File Management"
+msgstr "Downloaden en bestandsbeheer"
+
+#: src/olympia/constants/categories.py
+msgid "Interface Customizations"
+msgstr "Interfaceaanpassingen"
+
+#: src/olympia/constants/categories.py
+msgid "Language Support and Translation"
+msgstr "Taalondersteuning en vertaling"
+
+#: src/olympia/constants/categories.py
+msgid "Photos and Media"
+msgstr "Foto’s en media"
+
+#: src/olympia/constants/categories.py
+msgid "RSS, News and Blogging"
+msgstr "RSS, nieuws en bloggen"
+
+#: src/olympia/constants/categories.py
+msgid "Site-specific"
+msgstr "Website-specifiek"
+
+#: src/olympia/constants/categories.py
+msgid "Web and Developer Tools"
+msgstr "Web- en ontwikkelhulpmiddelen"
 
 #: src/olympia/constants/editors.py src/olympia/editors/templates/editors/themes/queue.html src/olympia/editors/templates/editors/themes/themes.html
 msgid "Request More Info"
@@ -4457,8 +4729,7 @@ msgstr "Standaardlocale"
 msgid "Information about your add-on is displayed in this locale unless you override it with a locale-specific translation. It is only relevant for listed add-ons."
 msgstr "Informatie over uw add-on wordt in deze taal weergegeven, tenzij u dit bijstelt met een locale-specifieke vertaling. Alleen relevant voor vermelde add-ons."
 
-#: src/olympia/devhub/templates/devhub/addons/edit/details.html src/olympia/users/forms.py src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/register.html
-#: src/olympia/users/templates/users/vcard.html
+#: src/olympia/devhub/templates/devhub/addons/edit/details.html src/olympia/users/forms.py src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/vcard.html
 msgid "Homepage"
 msgstr "Startpagina"
 
@@ -6832,6 +7103,18 @@ msgid "Addon visibility"
 msgstr "Zichtbaarheid van add-on"
 
 #: src/olympia/devhub/templates/devhub/versions/list.html
+msgid "Why can't I switch to <i>Listed</i> or <i>Hidden</i>?"
+msgstr "Waarom kan ik niet wisselen naar <i>Vermeld</i> of <i>Verborgen</i>?"
+
+#: src/olympia/devhub/templates/devhub/versions/list.html
+msgid ""
+"Due to technical limitations, you need to delete your entire add-on and resubmit it using this AMO account in order to switch your add-on to listed.\n"
+"            The process is described in detail in <a href=\"{link}\">this documentation</a>."
+msgstr ""
+"Vanwege technische beperkingen dient u uw hele add-on te verwijderen en opnieuw via deze AMO-account in te dienen om uw add-on naar vermeld om te zetten.\n"
+"            Het proces wordt in detail beschreven in <a href=\"{link}\">deze documentatie</a>."
+
+#: src/olympia/devhub/templates/devhub/versions/list.html
 msgid "Listed:"
 msgstr "Vermeld:"
 
@@ -7111,12 +7394,6 @@ msgstr "Platformen"
 #: src/olympia/editors/forms.py
 msgid "Search by add-on name / author email / guid"
 msgstr "Zoeken op add-onnaam / e-mailadres schrijver / guid"
-
-#. L10n: 0 = platform, 1 = filename, 2 = status message
-#: src/olympia/editors/forms.py
-#, python-format
-msgid "<strong>%s</strong> &middot; %s &middot; %s"
-msgstr "<strong>%s</strong> &middot; %s &middot; %s"
 
 #: src/olympia/editors/forms.py
 msgid "Comments:"
@@ -7578,10 +7855,6 @@ msgstr "Wachtrijen"
 #: src/olympia/editors/templates/editors/base.html
 msgid "Unlisted Queues"
 msgstr "Niet-vermelde wachtrijen"
-
-#: src/olympia/editors/templates/editors/base.html src/olympia/editors/templates/editors/performance.html
-msgid "Performance"
-msgstr "Prestaties"
 
 #: src/olympia/editors/templates/editors/base.html src/olympia/editors/templates/editors/themes/base.html
 msgid "Logs"
@@ -8266,8 +8539,9 @@ msgid "Add-on ID must be 64 characters or less."
 msgstr "Add-on-ID dient uit maximaal 64 tekens te bestaan."
 
 #: src/olympia/files/utils.py
-msgid "Add-on ID doesn't match add-on."
-msgstr "Add-on-ID komt niet overeen met add-on."
+#, python-format
+msgid "The add-on ID in your manifest.json or install.rdf (%s) does not match the ID of your add-on on AMO (%s)"
+msgstr "De add-on ID in uw manifest.json of install.rdf (%s) komt niet overeen met de ID van uw add-on op AMO (%s)"
 
 #: src/olympia/files/utils.py
 msgid "Duplicate add-on ID found."
@@ -8282,8 +8556,9 @@ msgid "Version numbers should only contain letters, numbers, and these punctuati
 msgstr "Versienummers mogen alleen letters, cijfers en deze interpunctietekens bevatten: +*.-_."
 
 #: src/olympia/files/utils.py
-msgid "<em:type> doesn't match add-on"
-msgstr "<em:type> komt niet overeen met add-on"
+#, python-format
+msgid "<em:type> in your install.rdf (%s) does not match the type of your add-on on AMO (%s)"
+msgstr "<em:type> in uw install.rdf (%s) komt niet overeen met het type van uw add-on op AMO (%s)"
 
 #: src/olympia/files/views.py
 msgid "Back to review"
@@ -8513,6 +8788,14 @@ msgstr "Spellen!"
 #: src/olympia/legacy_discovery/modules.py
 msgid "Add more fun to your Firefox. Play dozens of games right from your browser—puzzles, classic arcade, action games, and more!"
 msgstr "Voeg meer plezier toe aan uw Firefox. Speel tientallen spellen in uw browser – puzzels, arcadespellen, actiespellen en meer!"
+
+#: src/olympia/legacy_discovery/modules.py
+msgid "Must-Have Media"
+msgstr "Onmisbare media"
+
+#: src/olympia/legacy_discovery/modules.py
+msgid "Take better screenshots, improve your online video experience, finally learn how to make a GIF, and other great media tools."
+msgstr "Maak betere schermafbeeldingen, verbeter uw online videobeleving, leer eindelijk hoe u een GIF kunt maken, en andere geweldige mediahulpmiddelen."
 
 #: src/olympia/legacy_discovery/templates/legacy_discovery/base.html
 msgid "Discover Add-ons"
@@ -11065,7 +11348,7 @@ msgstr "op taal"
 
 #: src/olympia/stats/templates/stats/addon_report_menu.html
 msgid "by Platform"
-msgstr "op Platform"
+msgstr "op platform"
 
 #: src/olympia/stats/templates/stats/addon_report_menu.html
 msgid "by Add-on Status"
@@ -11117,7 +11400,7 @@ msgstr "Gearchiveerde gegevens"
 
 #: src/olympia/stats/templates/stats/popup.html
 msgid "Custom Date Range"
-msgstr "Aangepaste datumreeks"
+msgstr "Aangepast datumbereik"
 
 #: src/olympia/stats/templates/stats/popup.html
 msgid "From"
@@ -11586,7 +11869,7 @@ msgstr "Bezoek Mozilla"
 msgid "menu"
 msgstr "menu"
 
-#: src/olympia/templates/mobile/header_auth.html src/olympia/users/templates/users/register.html
+#: src/olympia/templates/mobile/header_auth.html
 msgid "Register"
 msgstr "Registreren"
 
@@ -11942,28 +12225,6 @@ msgid "Having Trouble?"
 msgstr "Hebt u problemen?"
 
 #: src/olympia/users/views.py
-msgid "You are already logged in to an account."
-msgstr "U bent al bij een account aangemeld."
-
-#: src/olympia/users/views.py
-msgid "Congratulations! Your user account was successfully created."
-msgstr "Gefeliciteerd! Uw gebruikersaccount is met succes aangemaakt."
-
-# %1 is the user's email address
-#: src/olympia/users/views.py
-msgid "An email has been sent to your address {0} to confirm your account. Before you can log in, you have to activate your account by clicking on the link provided in this email."
-msgstr ""
-"Er is een e-mailbericht naar uw adres {0} verzonden om uw account te bevestigen. Voordat u zich kunt aanmelden, dient u uw account te activeren door op de koppeling in dit e-mailbericht te klikken."
-
-#: src/olympia/users/views.py
-msgid "There are errors in this form"
-msgstr "Er staan fouten in dit formulier"
-
-#: src/olympia/users/views.py
-msgid "Please correct them and resubmit."
-msgstr "Corrigeer deze en dien opnieuw in."
-
-#: src/olympia/users/views.py
 msgid "User reported."
 msgstr "Gebruiker gerapporteerd."
 
@@ -12029,11 +12290,11 @@ msgstr "Stel uw schermnaam of gebruikersnaam in om het registratieproces te volt
 msgid "Manage basic account information, such as username and email address."
 msgstr "Beheer basale accountinformatie, zoals gebruikersnaam en e-mailadres."
 
-#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/edit.html
 msgid "Username"
 msgstr "Gebruikersnaam"
 
-#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/pwreset_request.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/pwreset_request.html
 msgid "Email Address"
 msgstr "E-mailadres"
 
@@ -12045,7 +12306,7 @@ msgstr "Firefox-account beheren…"
 msgid "Change Password"
 msgstr "Wachtwoord wijzigen"
 
-#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html
 msgid "Password"
 msgstr "Wachtwoord"
 
@@ -12099,10 +12360,6 @@ msgid "Allowed HTML: {0}. Links are forbidden."
 msgstr "Toegestane HTML: {0}. Koppelingen zijn verboden."
 
 #: src/olympia/users/templates/users/edit.html
-msgid "Miscellaneous"
-msgstr "Diversen"
-
-#: src/olympia/users/templates/users/edit.html
 msgid "Decide what collections should be shown in your profile."
 msgstr "Beslis welke collecties in uw profiel moeten worden weergegeven."
 
@@ -12146,6 +12403,10 @@ msgstr "geen"
 msgid "all"
 msgstr "alles"
 
+#: src/olympia/users/templates/users/fxa_login_prompt_content.html
+msgid "Mozilla Add-ons has transitioned to Firefox Accounts for login. Continue to complete the simple login process."
+msgstr "Mozilla Add-ons is voor aanmelding overgegaan op Firefox Accounts. Ga verder om het eenvoudige aanmeldingsproces te voltooien."
+
 #: src/olympia/users/templates/users/fxa_migration.html src/olympia/users/templates/users/mobile/fxa_migration.html
 msgid "Migrate to Firefox Accounts"
 msgstr "Naar Firefox Accounts migreren"
@@ -12163,12 +12424,12 @@ msgid "User Login"
 msgstr "Gebruiker aanmelden"
 
 #: src/olympia/users/templates/users/login.html src/olympia/users/templates/users/mobile/login.html
-msgid "Enter your email"
-msgstr "Voer uw e-mailadres in"
+msgid "Login with Firefox Accounts"
+msgstr "Aanmelden met Firefox Accounts"
 
 #: src/olympia/users/templates/users/login.html src/olympia/users/templates/users/mobile/login.html
-msgid "Log In"
-msgstr "Aanmelden"
+msgid "Enter your email"
+msgstr "Voer uw e-mailadres in"
 
 #: src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html
 msgid "Email address"
@@ -12284,7 +12545,7 @@ msgstr "Opnieuw instellen van wachtwoord mislukt"
 msgid "You have migrated to Firefox Accounts. You can no longer change your password here."
 msgstr "U bent gemigreerd naar Firefox Accounts. U kunt uw wachtwoord hier niet meer wijzigen."
 
-#: src/olympia/users/templates/users/pwreset_confirm.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/pwreset_confirm.html
 msgid "Confirm password"
 msgstr "Wachtwoord bevestigen"
 
@@ -12298,7 +12559,7 @@ msgstr "Wachtwoord vergeten? Voer hieronder uw e-mailadres in, en we sturen u in
 
 #: src/olympia/users/templates/users/pwreset_request.html
 msgid "Send password reset link"
-msgstr "Koppeling voor opnieuw instellen wachtwoord toezenden"
+msgstr "Koppeling voor opnieuw instellen van wachtwoord toesturen"
 
 #: src/olympia/users/templates/users/pwreset_sent.html
 msgid ""
@@ -12306,48 +12567,6 @@ msgid ""
 msgstr ""
 "Er is een e-mailbericht met nadere informatie verstuurd naar de aangevraagde account. Als u geen e-mailbericht ontvangt, bevestig dan dat u hetzelfde e-mailadres hebt gebruikt tijdens de "
 "accountregistratie."
-
-#: src/olympia/users/templates/users/register.html
-msgid "New User Registration"
-msgstr "Registratie nieuwe gebruiker"
-
-#: src/olympia/users/templates/users/register.html
-msgid "Why register?"
-msgstr "Waarom registreren?"
-
-#: src/olympia/users/templates/users/register.html
-msgid "Registration on AMO is <strong>not required</strong> if you simply want to download and install public add-ons."
-msgstr "Registratie op AMO is <strong>niet verplicht</strong> als u slechts publieke add-ons wilt downloaden en installeren."
-
-#: src/olympia/users/templates/users/register.html
-msgid "You only need to register if:"
-msgstr "U hoeft alleen maar te registreren als:"
-
-#: src/olympia/users/templates/users/register.html
-msgid "You want to submit reviews for add-ons"
-msgstr "U beoordelingen voor add-ons wilt indienen"
-
-#: src/olympia/users/templates/users/register.html
-msgid "You want to keep track of your favorite add-on collections or create one yourself"
-msgstr "U uw favoriete add-oncollecties wilt volgen of er zelf één wilt maken"
-
-#: src/olympia/users/templates/users/register.html
-msgid "You are an add-on developer and want to upload your add-on for hosting on AMO"
-msgstr "U een add-onontwikkelaar bent en u uw add-on voor hosting op AMO wilt uploaden"
-
-#: src/olympia/users/templates/users/register.html
-msgid "Upon successful registration, you will be sent a confirmation email to the address you provided. Please follow the instructions there to confirm your account."
-msgstr "Na succesvolle registratie ontvangt u een bevestigingsbericht op het opgegeven e-mailadres. Volg de instructies in dat bericht om uw account te bevestigen."
-
-#: src/olympia/users/templates/users/register.html
-#, python-format
-msgid "If you like, you can read our <a href=\"%(legal)s\" title=\"Legal Notices\">Legal Notices</a> and <a href=\"%(privacy)s\" title=\"Privacy Policy\">Privacy Policy</a>."
-msgstr "Indien gewenst kunt u onze <a href=\"%(legal)s\" title=\"Legal Notices\">juridische opmerkingen</a> en <a href=\"%(privacy)s\" title=\"Privacy Policy\">privacybeleid</a> lezen."
-
-# Is dit een werkwoord of een zelfstandig naamwoord?
-#: src/olympia/users/templates/users/register.html
-msgid "Display name"
-msgstr "Naam weergeven"
 
 #: src/olympia/users/templates/users/report_abuse.html
 msgid "Please describe why you are reporting this user, such as for spam or an inappropriate picture."

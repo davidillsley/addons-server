@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: REMORA 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-07-05 13:42+0000\n"
-"PO-Revision-Date: 2016-06-29 15:24+0000\n"
+"POT-Creation-Date: 2016-07-28 10:05+0000\n"
+"PO-Revision-Date: 2016-07-25 23:54+0000\n"
 "Last-Translator: marsf <chimantaea_mirabilis@yahoo.co.jp>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -65,8 +65,8 @@ msgstr "ダウンロードを続ける&nbsp;&rarr;"
 
 # いろいろな所で使われてるので注意
 #: src/olympia/addons/buttons.py src/olympia/addons/helpers.py src/olympia/addons/templates/addons/impala/details.html src/olympia/addons/templates/addons/impala/listing/items.html
-#: src/olympia/addons/templates/addons/mobile/home.html src/olympia/addons/views.py src/olympia/amo/templates/amo/side_nav.html src/olympia/amo/templates/amo/site_nav.html
-#: src/olympia/bandwagon/views.py src/olympia/browse/templates/browse/impala/category_landing.html src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/browse/views.py
+#: src/olympia/addons/templates/addons/mobile/home.html src/olympia/amo/templates/amo/side_nav.html src/olympia/amo/templates/amo/site_nav.html src/olympia/bandwagon/views.py
+#: src/olympia/browse/templates/browse/impala/category_landing.html src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/browse/views.py
 msgid "Featured"
 msgstr "おすすめ"
 
@@ -78,7 +78,7 @@ msgstr "未審査"
 #: src/olympia/addons/buttons.py
 msgctxt "install_button"
 msgid "Experimental"
-msgstr ""
+msgstr "実験的"
 
 #: src/olympia/addons/buttons.py
 msgid "Add to {0}"
@@ -175,18 +175,6 @@ msgstr "アドオンマネージャで常に確認が求められます (Firefox
 #: src/olympia/addons/models.py src/olympia/addons/templates/addons/details_box.html src/olympia/devhub/templates/devhub/includes/addon_details.html src/olympia/devhub/templates/devhub/index.html
 msgid "Listed"
 msgstr "表示"
-
-#: src/olympia/addons/views.py src/olympia/browse/templates/browse/personas/mobile/category_landing.html
-msgid "Popular"
-msgstr "人気"
-
-#: src/olympia/addons/views.py src/olympia/browse/views.py
-msgid "Recently Added"
-msgstr "新着"
-
-#: src/olympia/addons/views.py src/olympia/bandwagon/views.py src/olympia/browse/views.py src/olympia/search/forms.py
-msgid "Recently Updated"
-msgstr "最近更新"
 
 # {0} is an add-on name.
 #. l10n: {0} is the addon name
@@ -637,8 +625,8 @@ msgid "See all Themes by this Artist"
 msgstr "この作者が公開しているすべてのテーマ"
 
 #: src/olympia/addons/templates/addons/mobile/home.html src/olympia/addons/templates/addons/persona_detail.html src/olympia/amo/templates/amo/side_nav.html
-#: src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/devhub/templates/devhub/addons/edit/basic.html src/olympia/editors/templates/editors/review.html
-#: src/olympia/editors/templates/editors/themes/themes.html src/olympia/templates/categories.html
+#: src/olympia/browse/templates/browse/macros.html src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/devhub/templates/devhub/addons/edit/basic.html
+#: src/olympia/editors/templates/editors/review.html src/olympia/editors/templates/editors/themes/themes.html src/olympia/templates/categories.html
 msgid "Categories"
 msgstr "カテゴリ"
 
@@ -906,7 +894,7 @@ msgid "See all reviews of this add-on"
 msgid_plural "See all %(cnt)s reviews of this add-on"
 msgstr[0] "このアドオンの %(cnt)s 件のレビューをすべて見る"
 
-#: src/olympia/addons/templates/addons/tags_box.html src/olympia/devhub/templates/devhub/addons/edit/basic.html
+#: src/olympia/addons/templates/addons/tags_box.html src/olympia/constants/categories.py src/olympia/devhub/templates/devhub/addons/edit/basic.html
 msgid "Tags"
 msgstr "タグ"
 
@@ -1382,7 +1370,8 @@ msgstr "自分の登録アイテムを管理"
 msgid "Submit a New Add-on"
 msgstr "新しいアドオンを登録"
 
-#: src/olympia/amo/context_processors.py src/olympia/browse/templates/browse/personas/base.html src/olympia/devhub/templates/devhub/addons/dashboard.html src/olympia/devhub/templates/devhub/index.html
+#: src/olympia/amo/context_processors.py src/olympia/browse/templates/browse/personas/base.html src/olympia/devhub/templates/devhub/addons/dashboard.html
+#: src/olympia/devhub/templates/devhub/index.html
 msgid "Submit a New Theme"
 msgstr "新しいテーマを登録"
 
@@ -1413,10 +1402,6 @@ msgstr "入力内容を検証できませんでした。再度お試しくださ
 #: src/olympia/amo/fields.py
 msgid "This must be a valid hex color code, such as #000000."
 msgstr "#000000 のような 16 進数のカラーコードを入力してください。"
-
-#: src/olympia/amo/fields.py
-msgid "Enter at least one value."
-msgstr "少なくともひとつ値を入力してください。"
 
 #: src/olympia/amo/helpers.py src/olympia/amo/templates/amo/site_nav.html src/olympia/bandwagon/templates/bandwagon/add.html src/olympia/bandwagon/templates/bandwagon/collection_detail.html
 #: src/olympia/bandwagon/templates/bandwagon/delete.html src/olympia/bandwagon/templates/bandwagon/edit.html src/olympia/bandwagon/templates/bandwagon/impala/collection_listing.html
@@ -1977,7 +1962,7 @@ msgstr "その他&hellip;"
 msgid "Add-ons for Mobile"
 msgstr "Add-ons for Mobile"
 
-#: src/olympia/amo/templates/amo/site_nav.html src/olympia/browse/feeds.py src/olympia/browse/templates/browse/search_tools.html src/olympia/constants/base.py
+#: src/olympia/amo/templates/amo/site_nav.html src/olympia/browse/feeds.py src/olympia/browse/templates/browse/search_tools.html src/olympia/constants/base.py src/olympia/constants/categories.py
 msgid "Search Tools"
 msgstr "検索ツール"
 
@@ -2195,6 +2180,10 @@ msgstr "お気に入りから削除"
 #: src/olympia/editors/templates/editors/leaderboard.html src/olympia/editors/templates/editors/themes/queue_list.html src/olympia/search/forms.py src/olympia/users/templates/users/vcard.html
 msgid "Name"
 msgstr "タイトル"
+
+#: src/olympia/bandwagon/views.py src/olympia/browse/views.py src/olympia/search/forms.py
+msgid "Recently Updated"
+msgstr "最近更新"
 
 #: src/olympia/bandwagon/views.py
 msgid "Recently Popular"
@@ -2446,7 +2435,8 @@ msgstr "このコレクションを編集"
 msgid "Delete {0}"
 msgstr "{0} を削除"
 
-#: src/olympia/bandwagon/templates/bandwagon/delete.html src/olympia/devhub/templates/devhub/addons/listing/item_actions.html src/olympia/devhub/templates/devhub/addons/listing/item_actions_theme.html
+#: src/olympia/bandwagon/templates/bandwagon/delete.html src/olympia/devhub/templates/devhub/addons/listing/item_actions.html
+#: src/olympia/devhub/templates/devhub/addons/listing/item_actions_theme.html
 msgid "Delete"
 msgstr "削除"
 
@@ -2548,8 +2538,8 @@ msgstr "<b>警告:</b> このコレクションのオーナーを変更すると
 
 #: src/olympia/bandwagon/templates/bandwagon/edit_contributors.html src/olympia/devhub/templates/devhub/addons/forms_shared/media.html src/olympia/devhub/templates/devhub/addons/submit/describe.html
 #: src/olympia/devhub/templates/devhub/addons/submit/license.html src/olympia/devhub/templates/devhub/addons/submit/upload.html src/olympia/devhub/templates/devhub/payments/tier.html
-#: src/olympia/editors/templates/editors/themes/themes.html src/olympia/users/templates/users/fxa_migration_prompt_content.html src/olympia/users/templates/users/login_form.html
-#: src/olympia/users/templates/users/mobile/login.html
+#: src/olympia/editors/templates/editors/themes/themes.html src/olympia/users/templates/users/fxa_login_prompt_content.html src/olympia/users/templates/users/fxa_migration_prompt_content.html
+#: src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html
 msgid "Continue"
 msgstr "続ける"
 
@@ -2764,6 +2754,10 @@ msgstr "人気"
 #: src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/browse/views.py src/olympia/legacy_discovery/templates/legacy_discovery/pane.html src/olympia/search/forms.py
 msgid "Up & Coming"
 msgstr "注目"
+
+#: src/olympia/browse/views.py
+msgid "Recently Added"
+msgstr "新着"
 
 #: src/olympia/browse/views.py src/olympia/devhub/views.py src/olympia/legacy_discovery/templates/legacy_discovery/addons/detail.html
 msgid "Created"
@@ -3026,6 +3020,10 @@ msgid "Easy-to-use themes for Firefox"
 msgstr "Firefox 用簡易テーマ"
 
 #: src/olympia/browse/templates/browse/personas/mobile/category_landing.html
+msgid "Popular"
+msgstr "人気"
+
+#: src/olympia/browse/templates/browse/personas/mobile/category_landing.html
 msgid "More Themes"
 msgstr "他のテーマ"
 
@@ -3129,7 +3127,7 @@ msgstr "問題あり"
 msgid "No reports found."
 msgstr "レポートがありません。"
 
-#: src/olympia/constants/applications.py
+#: src/olympia/constants/applications.py src/olympia/constants/categories.py
 msgid "Firefox"
 msgstr "Firefox"
 
@@ -3282,7 +3280,7 @@ msgid "Ask before users can download this add-on"
 msgstr "ユーザがこのアドオンをダウンロードする前に尋ねる"
 
 #. Review points sources other than add-ons and themes.
-#: src/olympia/constants/base.py src/olympia/devhub/forms.py src/olympia/editors/templates/editors/performance.html
+#: src/olympia/constants/base.py src/olympia/constants/categories.py src/olympia/devhub/forms.py src/olympia/editors/templates/editors/performance.html
 msgid "Other"
 msgstr "その他"
 
@@ -3443,9 +3441,295 @@ msgid "Compatible"
 msgstr "互換"
 
 #: src/olympia/constants/base.py
-#, fuzzy
 msgid "Incompatible"
-msgstr "互換"
+msgstr "非互換"
+
+#: src/olympia/constants/categories.py
+msgid "Alerts & Updates"
+msgstr "アラート／ステータス"
+
+#: src/olympia/constants/categories.py
+msgid "Appearance"
+msgstr "アピアランス"
+
+#: src/olympia/constants/categories.py
+msgid "Bookmarks"
+msgstr "ブックマーク"
+
+#: src/olympia/constants/categories.py
+msgid "Download Management"
+msgstr "ダウンロード管理"
+
+#: src/olympia/constants/categories.py
+msgid "Feeds, News & Blogging"
+msgstr "フィード／ニュース／ブログ"
+
+#: src/olympia/constants/categories.py
+msgid "Games & Entertainment"
+msgstr "ゲーム／エンタテインメント"
+
+#: src/olympia/constants/categories.py
+msgid "Language Support"
+msgstr "言語サポート"
+
+#: src/olympia/constants/categories.py
+msgid "Photos, Music & Videos"
+msgstr "写真／音楽／動画"
+
+#: src/olympia/constants/categories.py
+msgid "Privacy & Security"
+msgstr "プライバシー／セキュリティ"
+
+#: src/olympia/constants/categories.py
+msgid "Shopping"
+msgstr "ショッピング"
+
+#: src/olympia/constants/categories.py
+msgid "Social & Communication"
+msgstr "情報共有／コミュニケーション"
+
+#: src/olympia/constants/categories.py
+msgid "Tabs"
+msgstr "タブ"
+
+#: src/olympia/constants/categories.py
+msgid "Web Development"
+msgstr "Web 開発"
+
+#: src/olympia/constants/categories.py
+msgid "Animals"
+msgstr "動物"
+
+#: src/olympia/constants/categories.py
+msgid "Compact"
+msgstr "コンパクト"
+
+#: src/olympia/constants/categories.py
+msgid "Large"
+msgstr "大きめ"
+
+#: src/olympia/constants/categories.py src/olympia/users/templates/users/edit.html
+#, fuzzy
+msgid "Miscellaneous"
+msgstr ""
+"#-#-#-#-#  django.po (REMORA 0.1)  #-#-#-#-#\n"
+"備考\n"
+"#-#-#-#-#  django.po (REMORA 0.1)  #-#-#-#-#\n"
+"その他"
+
+#: src/olympia/constants/categories.py
+msgid "Modern"
+msgstr "モダン"
+
+#: src/olympia/constants/categories.py
+msgid "Nature"
+msgstr "自然"
+
+#: src/olympia/constants/categories.py
+msgid "OS Integration"
+msgstr "OS との統合"
+
+#: src/olympia/constants/categories.py
+msgid "Retro"
+msgstr "レトロ"
+
+#: src/olympia/constants/categories.py
+msgid "Sports"
+msgstr "スポーツ"
+
+#: src/olympia/constants/categories.py
+msgid "General"
+msgstr "一般"
+
+#: src/olympia/constants/categories.py
+msgid "Business"
+msgstr "ビジネス"
+
+#: src/olympia/constants/categories.py
+msgid "Dictionaries & Encyclopedias"
+msgstr "辞書と事典"
+
+#: src/olympia/constants/categories.py
+msgid "Kids"
+msgstr "キッズ"
+
+#: src/olympia/constants/categories.py
+msgid "Multiple Search"
+msgstr "メタサーチ"
+
+#: src/olympia/constants/categories.py
+msgid "Music"
+msgstr "音楽"
+
+#: src/olympia/constants/categories.py
+msgid "News & Blogs"
+msgstr "ニュースとブログ"
+
+#: src/olympia/constants/categories.py
+msgid "Photos & Images"
+msgstr "写真と画像"
+
+#: src/olympia/constants/categories.py
+msgid "Shopping & E-Commerce"
+msgstr "ショッピング"
+
+#: src/olympia/constants/categories.py
+msgid "Social & People"
+msgstr "ソーシャル"
+
+#: src/olympia/constants/categories.py
+msgid "Travel"
+msgstr "トラベル"
+
+#: src/olympia/constants/categories.py
+msgid "Video"
+msgstr "動画"
+
+#: src/olympia/constants/categories.py
+msgid "Abstract"
+msgstr "抽象画"
+
+#: src/olympia/constants/categories.py
+msgid "Causes"
+msgstr "社会活動"
+
+#: src/olympia/constants/categories.py
+msgid "Fashion"
+msgstr "ファッション"
+
+#: src/olympia/constants/categories.py
+msgid "Film and TV"
+msgstr "映画・テレビ"
+
+#: src/olympia/constants/categories.py
+msgid "Foxkeh"
+msgstr "フォクすけ"
+
+#: src/olympia/constants/categories.py
+msgid "Holiday"
+msgstr "祝日"
+
+#: src/olympia/constants/categories.py
+msgid "Scenery"
+msgstr "風景"
+
+#: src/olympia/constants/categories.py
+msgid "Seasonal"
+msgstr "季節"
+
+#: src/olympia/constants/categories.py
+msgid "Solid"
+msgstr "無地"
+
+#: src/olympia/constants/categories.py
+msgid "Websites"
+msgstr "Web サイト"
+
+#: src/olympia/constants/categories.py
+msgid "Device Features & Location"
+msgstr "デバイス機能／位置情報"
+
+#: src/olympia/constants/categories.py
+msgid "Experimental"
+msgstr "実験的"
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Feeds, News, & Blogging"
+msgstr "フィード／ニュース／ブログ"
+
+#: src/olympia/constants/categories.py src/olympia/editors/templates/editors/base.html src/olympia/editors/templates/editors/performance.html
+msgid "Performance"
+msgstr "パフォーマンス"
+
+#: src/olympia/constants/categories.py
+msgid "Photos & Media"
+msgstr "写真／メディア"
+
+#: src/olympia/constants/categories.py
+msgid "Security & Privacy"
+msgstr "プライバシー／セキュリティ"
+
+#: src/olympia/constants/categories.py
+msgid "Social Networking"
+msgstr "ソーシャルネットワーキング"
+
+#: src/olympia/constants/categories.py
+msgid "Sports & Games"
+msgstr "スポーツ／ゲーム"
+
+#: src/olympia/constants/categories.py
+msgid "User Interface"
+msgstr "ユーザインタフェース"
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Appearance and Customization"
+msgstr "インタフェースのカスタマイズ"
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Calendar and Date/Time"
+msgstr "カレンダーの追加機能"
+
+#: src/olympia/constants/categories.py
+msgid "Chat and IM"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Message Composition"
+msgstr "寄付を行う"
+
+#: src/olympia/constants/categories.py
+msgid "Contacts"
+msgstr "コンタクト"
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Folders and Filters"
+msgstr "コレクションとお気に入り"
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Import/Export"
+msgstr "エクスポート"
+
+#: src/olympia/constants/categories.py
+msgid "Message and News Reading"
+msgstr "メッセージの購読"
+
+#: src/olympia/constants/categories.py
+msgid "Privacy and Security"
+msgstr "プライバシー／セキュリティ"
+
+#: src/olympia/constants/categories.py
+msgid "Downloading and File Management"
+msgstr "ダウンロード／ファイル管理"
+
+#: src/olympia/constants/categories.py
+msgid "Interface Customizations"
+msgstr "インタフェースのカスタマイズ"
+
+#: src/olympia/constants/categories.py
+msgid "Language Support and Translation"
+msgstr "言語サポート／翻訳"
+
+#: src/olympia/constants/categories.py
+msgid "Photos and Media"
+msgstr "写真／メディア"
+
+#: src/olympia/constants/categories.py
+msgid "RSS, News and Blogging"
+msgstr "フィード／ニュース／ブログ"
+
+#: src/olympia/constants/categories.py
+msgid "Site-specific"
+msgstr "サイト連携"
+
+#: src/olympia/constants/categories.py
+msgid "Web and Developer Tools"
+msgstr "Web 開発者向けツール"
 
 #: src/olympia/constants/editors.py src/olympia/editors/templates/editors/themes/queue.html src/olympia/editors/templates/editors/themes/themes.html
 msgid "Request More Info"
@@ -4422,8 +4706,7 @@ msgstr "既定のロケール"
 msgid "Information about your add-on is displayed in this locale unless you override it with a locale-specific translation. It is only relevant for listed add-ons."
 msgstr "このアドオンに関する情報は、ロケール固有の翻訳で上書きしない限り、このロケールで表示されます。当該アドオンにのみ関係します。"
 
-#: src/olympia/devhub/templates/devhub/addons/edit/details.html src/olympia/users/forms.py src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/register.html
-#: src/olympia/users/templates/users/vcard.html
+#: src/olympia/devhub/templates/devhub/addons/edit/details.html src/olympia/users/forms.py src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/vcard.html
 msgid "Homepage"
 msgstr "ホームページ"
 
@@ -5875,6 +6158,8 @@ msgid ""
 "Add-ons hosted on Mozilla Add-ons should be of high quality and give users an improved web experience. We look for the following things when deciding whether an add-on is appropriate to be public "
 "and unrestricted:"
 msgstr ""
+"Mozilla Add-ons で配布されるアドオンは、高品質であり、ユーザの Web 体験を向上させるものでなければなりません。私たちは、アドオンが適切に制限なく公開されるかどうかを決定するときに、次の事項を検討しま"
+"す:"
 
 #: src/olympia/devhub/templates/devhub/docs/policies-submission.html
 msgid ""
@@ -6075,11 +6360,11 @@ msgstr "これは、addons.mozilla.org サイト上でインストールボタ�
 
 #: src/olympia/devhub/templates/devhub/includes/addon_details.html
 msgid "Multi Process Status:"
-msgstr ""
+msgstr "マルチプロセスの対応状況:"
 
 #: src/olympia/devhub/templates/devhub/includes/addon_details.html
 msgid "Your add-on compatibility with Multi Process Firefox (e10s)."
-msgstr ""
+msgstr "あなたのアドオンは、マルチプロセスで動作する Firefox (e10s) と互換性があります。"
 
 #: src/olympia/devhub/templates/devhub/includes/addon_details.html
 msgid "Created:"
@@ -6101,7 +6386,7 @@ msgstr "これはアップロードされた最新バージョンですが、ま
 
 #: src/olympia/devhub/templates/devhub/includes/addon_details.html src/olympia/devhub/templates/devhub/versions/list.html
 msgid "Queues are not reviewed strictly in order"
-msgstr ""
+msgstr "審査は待ち順にレビューされるとは限りません"
 
 #: src/olympia/devhub/templates/devhub/includes/addons_create_profile.html
 msgid "(required since this add-on accepts contributions)"
@@ -6722,6 +7007,16 @@ msgid "Addon visibility"
 msgstr "アドオンの公開状態"
 
 #: src/olympia/devhub/templates/devhub/versions/list.html
+msgid "Why can't I switch to <i>Listed</i> or <i>Hidden</i>?"
+msgstr ""
+
+#: src/olympia/devhub/templates/devhub/versions/list.html
+msgid ""
+"Due to technical limitations, you need to delete your entire add-on and resubmit it using this AMO account in order to switch your add-on to listed.\n"
+"            The process is described in detail in <a href=\"{link}\">this documentation</a>."
+msgstr ""
+
+#: src/olympia/devhub/templates/devhub/versions/list.html
 msgid "Listed:"
 msgstr "掲載済み:"
 
@@ -6992,12 +7287,6 @@ msgstr "OS"
 #: src/olympia/editors/forms.py
 msgid "Search by add-on name / author email / guid"
 msgstr ""
-
-#. L10n: 0 = platform, 1 = filename, 2 = status message
-#: src/olympia/editors/forms.py
-#, python-format
-msgid "<strong>%s</strong> &middot; %s &middot; %s"
-msgstr "<strong>%s</strong> &middot; %s &middot; %s"
 
 #: src/olympia/editors/forms.py
 msgid "Comments:"
@@ -7441,10 +7730,6 @@ msgstr "審査待ち"
 #: src/olympia/editors/templates/editors/base.html
 msgid "Unlisted Queues"
 msgstr "非掲載アドオンの審査待ち"
-
-#: src/olympia/editors/templates/editors/base.html src/olympia/editors/templates/editors/performance.html
-msgid "Performance"
-msgstr "パフォーマンス"
 
 #: src/olympia/editors/templates/editors/base.html src/olympia/editors/templates/editors/themes/base.html
 msgid "Logs"
@@ -8087,7 +8372,7 @@ msgstr "Firefox 47 以前では GUID が必要です。"
 
 #: src/olympia/files/utils.py
 msgid "Cannot find min/max version. Maybe \"strict_min_version\" or \"strict_max_version\" contains an unsupported version?"
-msgstr ""
+msgstr "min/max バージョンの指定が見つかりません。\"strict_min_version\" または \"strict_max_version\" に未対応のバージョンが含まれている可能性があります。"
 
 #: src/olympia/files/utils.py
 msgid "Could not parse uploaded file."
@@ -8118,8 +8403,9 @@ msgid "Add-on ID must be 64 characters or less."
 msgstr "アドオンの ID は 64 文字以下でなければなりません。"
 
 #: src/olympia/files/utils.py
-msgid "Add-on ID doesn't match add-on."
-msgstr "アドオンの ID がアドオンに一致しません。"
+#, python-format
+msgid "The add-on ID in your manifest.json or install.rdf (%s) does not match the ID of your add-on on AMO (%s)"
+msgstr ""
 
 #: src/olympia/files/utils.py
 msgid "Duplicate add-on ID found."
@@ -8134,15 +8420,15 @@ msgid "Version numbers should only contain letters, numbers, and these punctuati
 msgstr "バージョン番号に英数字もしくは記号「+*.-_.」以外の文字を含めることはできません。"
 
 #: src/olympia/files/utils.py
-msgid "<em:type> doesn't match add-on"
-msgstr "<em:type> がアドオンと一致しません"
+#, python-format
+msgid "<em:type> in your install.rdf (%s) does not match the type of your add-on on AMO (%s)"
+msgstr ""
 
 #: src/olympia/files/views.py
 msgid "Back to review"
 msgstr "レビューのページへ戻る"
 
 #: src/olympia/files/views.py
-#, fuzzy
 msgid "Back to add-on"
 msgstr "アドオンのページへ戻る"
 
@@ -8237,7 +8523,7 @@ msgstr "ファイルを取得しています。"
 
 #: src/olympia/legacy_api/views.py
 msgid "The API version, {0:.1f}, you are using is not valid. Please upgrade to the current version {1:.1f} API."
-msgstr ""
+msgstr "使用されている API バージョン {0:.1f} は無効です。現行のバージョン {1:.1f} API にアップグレードしてください。"
 
 #: src/olympia/legacy_api/views.py
 msgid "Not implemented yet."
@@ -8365,6 +8651,14 @@ msgstr ""
 
 #: src/olympia/legacy_discovery/modules.py
 msgid "Add more fun to your Firefox. Play dozens of games right from your browser—puzzles, classic arcade, action games, and more!"
+msgstr ""
+
+#: src/olympia/legacy_discovery/modules.py
+msgid "Must-Have Media"
+msgstr ""
+
+#: src/olympia/legacy_discovery/modules.py
+msgid "Take better screenshots, improve your online video experience, finally learn how to make a GIF, and other great media tools."
 msgstr ""
 
 #: src/olympia/legacy_discovery/templates/legacy_discovery/base.html
@@ -9724,7 +10018,7 @@ msgstr ""
 #. part of a list (<li>)
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "number of add-on submissions"
-msgstr ""
+msgstr "アドオンの登録数"
 
 #. part of a list (<li>)
 #: src/olympia/pages/templates/pages/dev_faq.html
@@ -11120,9 +11414,8 @@ msgid "Legal Notices"
 msgstr "法的通知"
 
 #: src/olympia/templates/copyright.html
-#, fuzzy
 msgid "Report Trademark Abuse"
-msgstr "不正報告"
+msgstr "商標の不正利用を報告"
 
 #: src/olympia/templates/copyright.html
 msgid "View Mobile Site"
@@ -11275,7 +11568,7 @@ msgstr "Mozilla のサイトへ"
 msgid "menu"
 msgstr "メニュー"
 
-#: src/olympia/templates/mobile/header_auth.html src/olympia/users/templates/users/register.html
+#: src/olympia/templates/mobile/header_auth.html
 msgid "Register"
 msgstr "登録"
 
@@ -11629,27 +11922,6 @@ msgid "Having Trouble?"
 msgstr "何かお困りですか？"
 
 #: src/olympia/users/views.py
-msgid "You are already logged in to an account."
-msgstr "あなたはすでにアカウントへログインしています。"
-
-#: src/olympia/users/views.py
-msgid "Congratulations! Your user account was successfully created."
-msgstr "ありがとうございます。ユーザアカウントの登録が完了しました。"
-
-# %1 is the user's email address
-#: src/olympia/users/views.py
-msgid "An email has been sent to your address {0} to confirm your account. Before you can log in, you have to activate your account by clicking on the link provided in this email."
-msgstr "入力されたメールアドレス {0} にアカウント確認のメールを送信しました。ログインする前に、そのメールに書かれたリンクをクリックして認証手続きをしてください。"
-
-#: src/olympia/users/views.py
-msgid "There are errors in this form"
-msgstr "フォームの入力に誤りがあります"
-
-#: src/olympia/users/views.py
-msgid "Please correct them and resubmit."
-msgstr "誤りを訂正して、もう一度送信してください。"
-
-#: src/olympia/users/views.py
 msgid "User reported."
 msgstr "ユーザが報告されました。"
 
@@ -11715,11 +11987,11 @@ msgstr "登録プロセスを完了するには表示名もしくはユーザ名
 msgid "Manage basic account information, such as username and email address."
 msgstr "ユーザ名やメールアドレスなど、基本的なアカウント情報を管理します。"
 
-#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/edit.html
 msgid "Username"
 msgstr "ユーザ名"
 
-#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/pwreset_request.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/pwreset_request.html
 msgid "Email Address"
 msgstr "メールアドレス"
 
@@ -11731,7 +12003,7 @@ msgstr "Firefox アカウントを管理..."
 msgid "Change Password"
 msgstr "パスワードを変更"
 
-#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html
 msgid "Password"
 msgstr "パスワード"
 
@@ -11785,10 +12057,6 @@ msgid "Allowed HTML: {0}. Links are forbidden."
 msgstr "使用可能な HTML は {0} です。リンクの使用は許可されていません。"
 
 #: src/olympia/users/templates/users/edit.html
-msgid "Miscellaneous"
-msgstr "備考"
-
-#: src/olympia/users/templates/users/edit.html
 msgid "Decide what collections should be shown in your profile."
 msgstr "あなたのプロフィールに表示されるコレクションを選んでください。"
 
@@ -11832,6 +12100,11 @@ msgstr "なし"
 msgid "all"
 msgstr "すべて"
 
+#: src/olympia/users/templates/users/fxa_login_prompt_content.html
+#, fuzzy
+msgid "Mozilla Add-ons has transitioned to Firefox Accounts for login. Continue to complete the simple login process."
+msgstr "Add-ons サイトは Firefox アカウントを使ったログイン方式に切り替わりました。引き続き簡単なアップグレード手順を完了してください。"
+
 #: src/olympia/users/templates/users/fxa_migration.html src/olympia/users/templates/users/mobile/fxa_migration.html
 msgid "Migrate to Firefox Accounts"
 msgstr "Firefox アカウントへ移行"
@@ -11849,12 +12122,13 @@ msgid "User Login"
 msgstr "ログイン"
 
 #: src/olympia/users/templates/users/login.html src/olympia/users/templates/users/mobile/login.html
-msgid "Enter your email"
-msgstr "メールアドレスを入力してください"
+#, fuzzy
+msgid "Login with Firefox Accounts"
+msgstr "Firefox アカウントへ移行"
 
 #: src/olympia/users/templates/users/login.html src/olympia/users/templates/users/mobile/login.html
-msgid "Log In"
-msgstr "ログイン"
+msgid "Enter your email"
+msgstr "メールアドレスを入力してください"
 
 #: src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html
 msgid "Email address"
@@ -11970,7 +12244,7 @@ msgstr "パスワードの変更が完了しました"
 msgid "You have migrated to Firefox Accounts. You can no longer change your password here."
 msgstr "あなたは Firefox アカウントへの移行を完了したため、今後ここでパスワードを変更することはできません。"
 
-#: src/olympia/users/templates/users/pwreset_confirm.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/pwreset_confirm.html
 msgid "Confirm password"
 msgstr "新しいパスワードを再入力"
 
@@ -11990,47 +12264,6 @@ msgstr "パスワード変更のためのリンクをメールで送信"
 msgid ""
 "An email has been sent to the requested account with further information. If you do not receive an email then please confirm you have entered the same email address used during account registration."
 msgstr "詳しい情報が記載されたメールがリクエストされたアカウント宛に送信されました。もしメールが届かない場合は、アカウント登録時に使用したのと同じメールアドレスを入力したか再度確認してください。"
-
-#: src/olympia/users/templates/users/register.html
-msgid "New User Registration"
-msgstr "新規ユーザ登録"
-
-#: src/olympia/users/templates/users/register.html
-msgid "Why register?"
-msgstr "登録する理由"
-
-#: src/olympia/users/templates/users/register.html
-msgid "Registration on AMO is <strong>not required</strong> if you simply want to download and install public add-ons."
-msgstr "公開されたアドオンをダウンロードしてインストールするだけなら、AMO にアカウント登録する必要は <strong>ありません</strong>。"
-
-#: src/olympia/users/templates/users/register.html
-msgid "You only need to register if:"
-msgstr "次の場合に登録する必要があります:"
-
-#: src/olympia/users/templates/users/register.html
-msgid "You want to submit reviews for add-ons"
-msgstr "アドオンのレビューを投稿したいとき"
-
-#: src/olympia/users/templates/users/register.html
-msgid "You want to keep track of your favorite add-on collections or create one yourself"
-msgstr "お気に入りのアドオンのコレクションを追ったり、自分のコレクションを作成したいとき"
-
-#: src/olympia/users/templates/users/register.html
-msgid "You are an add-on developer and want to upload your add-on for hosting on AMO"
-msgstr "アドオン開発者になって、AMO に掲載するアドオンをアップロードしたいとき"
-
-#: src/olympia/users/templates/users/register.html
-msgid "Upon successful registration, you will be sent a confirmation email to the address you provided. Please follow the instructions there to confirm your account."
-msgstr "アカウント登録が完了すると、登録したメールアドレスに確認のメールが送信されます。メールに書かれた説明に従ってアカウント登録を確認してください。"
-
-#: src/olympia/users/templates/users/register.html
-#, python-format
-msgid "If you like, you can read our <a href=\"%(legal)s\" title=\"Legal Notices\">Legal Notices</a> and <a href=\"%(privacy)s\" title=\"Privacy Policy\">Privacy Policy</a>."
-msgstr "お読みになりたい場合は、<a href=\"%(legal)s\" title=\"Legal Notices\">法的通知</a> と <a href=\"%(privacy)s\" title=\"Privacy Policy\">プライバシーポリシー</a> もご覧ください。"
-
-#: src/olympia/users/templates/users/register.html
-msgid "Display name"
-msgstr "表示名"
 
 #: src/olympia/users/templates/users/report_abuse.html
 msgid "Please describe why you are reporting this user, such as for spam or an inappropriate picture."

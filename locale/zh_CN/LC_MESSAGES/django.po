@@ -3,9 +3,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AMO\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-07-05 13:42+0000\n"
-"PO-Revision-Date: 2016-07-21 10:22+0000\n"
-"Last-Translator: YFdyh000 <yfdyh000@gmail.com>\n"
+"POT-Creation-Date: 2016-07-28 10:05+0000\n"
+"PO-Revision-Date: 2016-07-29 02:13+0000\n"
+"Last-Translator: Liu Xing <liuxingmatt@gmail.com>\n"
 "Language-Team: Chinese Simplified, China <LL@li.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -61,8 +61,8 @@ msgid "Continue to Download&nbsp;&rarr;"
 msgstr "继续下载&nbsp;&rarr;"
 
 #: src/olympia/addons/buttons.py src/olympia/addons/helpers.py src/olympia/addons/templates/addons/impala/details.html src/olympia/addons/templates/addons/impala/listing/items.html
-#: src/olympia/addons/templates/addons/mobile/home.html src/olympia/addons/views.py src/olympia/amo/templates/amo/side_nav.html src/olympia/amo/templates/amo/site_nav.html
-#: src/olympia/bandwagon/views.py src/olympia/browse/templates/browse/impala/category_landing.html src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/browse/views.py
+#: src/olympia/addons/templates/addons/mobile/home.html src/olympia/amo/templates/amo/side_nav.html src/olympia/amo/templates/amo/site_nav.html src/olympia/bandwagon/views.py
+#: src/olympia/browse/templates/browse/impala/category_landing.html src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/browse/views.py
 msgid "Featured"
 msgstr "精选"
 
@@ -171,18 +171,6 @@ msgstr "附加组件管理器（Firefox 4 及更高版本）中用户始终会�
 #: src/olympia/addons/models.py src/olympia/addons/templates/addons/details_box.html src/olympia/devhub/templates/devhub/includes/addon_details.html src/olympia/devhub/templates/devhub/index.html
 msgid "Listed"
 msgstr "已上架"
-
-#: src/olympia/addons/views.py src/olympia/browse/templates/browse/personas/mobile/category_landing.html
-msgid "Popular"
-msgstr "热门"
-
-#: src/olympia/addons/views.py src/olympia/browse/views.py
-msgid "Recently Added"
-msgstr "最近添加"
-
-#: src/olympia/addons/views.py src/olympia/bandwagon/views.py src/olympia/browse/views.py src/olympia/search/forms.py
-msgid "Recently Updated"
-msgstr "最近更新"
 
 #. l10n: {0} is the addon name
 # %1 is an add-on name.
@@ -623,8 +611,8 @@ msgid "See all Themes by this Artist"
 msgstr "查看本作者的全部主题"
 
 #: src/olympia/addons/templates/addons/mobile/home.html src/olympia/addons/templates/addons/persona_detail.html src/olympia/amo/templates/amo/side_nav.html
-#: src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/devhub/templates/devhub/addons/edit/basic.html src/olympia/editors/templates/editors/review.html
-#: src/olympia/editors/templates/editors/themes/themes.html src/olympia/templates/categories.html
+#: src/olympia/browse/templates/browse/macros.html src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/devhub/templates/devhub/addons/edit/basic.html
+#: src/olympia/editors/templates/editors/review.html src/olympia/editors/templates/editors/themes/themes.html src/olympia/templates/categories.html
 msgid "Categories"
 msgstr "类别"
 
@@ -885,7 +873,7 @@ msgid "See all reviews of this add-on"
 msgid_plural "See all %(cnt)s reviews of this add-on"
 msgstr[0] "查看此附加组件的所有评价 (%(cnt)s个)"
 
-#: src/olympia/addons/templates/addons/tags_box.html src/olympia/devhub/templates/devhub/addons/edit/basic.html
+#: src/olympia/addons/templates/addons/tags_box.html src/olympia/constants/categories.py src/olympia/devhub/templates/devhub/addons/edit/basic.html
 msgid "Tags"
 msgstr "标签"
 
@@ -1389,10 +1377,6 @@ msgstr "验证输入出错，请重试。"
 #: src/olympia/amo/fields.py
 msgid "This must be a valid hex color code, such as #000000."
 msgstr "这里必须是一个有效的十六进制颜色代码，例如 #000000。"
-
-#: src/olympia/amo/fields.py
-msgid "Enter at least one value."
-msgstr "至少输入一个值。"
 
 #: src/olympia/amo/helpers.py src/olympia/amo/templates/amo/site_nav.html src/olympia/bandwagon/templates/bandwagon/add.html src/olympia/bandwagon/templates/bandwagon/collection_detail.html
 #: src/olympia/bandwagon/templates/bandwagon/delete.html src/olympia/bandwagon/templates/bandwagon/edit.html src/olympia/bandwagon/templates/bandwagon/impala/collection_listing.html
@@ -1948,7 +1932,7 @@ msgstr "更多 &hellip;"
 msgid "Add-ons for Mobile"
 msgstr "移动版附加组件"
 
-#: src/olympia/amo/templates/amo/site_nav.html src/olympia/browse/feeds.py src/olympia/browse/templates/browse/search_tools.html src/olympia/constants/base.py
+#: src/olympia/amo/templates/amo/site_nav.html src/olympia/browse/feeds.py src/olympia/browse/templates/browse/search_tools.html src/olympia/constants/base.py src/olympia/constants/categories.py
 msgid "Search Tools"
 msgstr "搜索工具"
 
@@ -2163,6 +2147,10 @@ msgstr "从收藏夹中移除"
 #: src/olympia/editors/templates/editors/leaderboard.html src/olympia/editors/templates/editors/themes/queue_list.html src/olympia/search/forms.py src/olympia/users/templates/users/vcard.html
 msgid "Name"
 msgstr "名称"
+
+#: src/olympia/bandwagon/views.py src/olympia/browse/views.py src/olympia/search/forms.py
+msgid "Recently Updated"
+msgstr "最近更新"
 
 #: src/olympia/bandwagon/views.py
 msgid "Recently Popular"
@@ -2510,8 +2498,8 @@ msgstr "<b>警告：</b>改变此收藏集的所有者后您就不能再编辑�
 
 #: src/olympia/bandwagon/templates/bandwagon/edit_contributors.html src/olympia/devhub/templates/devhub/addons/forms_shared/media.html src/olympia/devhub/templates/devhub/addons/submit/describe.html
 #: src/olympia/devhub/templates/devhub/addons/submit/license.html src/olympia/devhub/templates/devhub/addons/submit/upload.html src/olympia/devhub/templates/devhub/payments/tier.html
-#: src/olympia/editors/templates/editors/themes/themes.html src/olympia/users/templates/users/fxa_migration_prompt_content.html src/olympia/users/templates/users/login_form.html
-#: src/olympia/users/templates/users/mobile/login.html
+#: src/olympia/editors/templates/editors/themes/themes.html src/olympia/users/templates/users/fxa_login_prompt_content.html src/olympia/users/templates/users/fxa_migration_prompt_content.html
+#: src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html
 msgid "Continue"
 msgstr "继续"
 
@@ -2723,6 +2711,10 @@ msgstr "用户最多"
 #: src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/browse/views.py src/olympia/legacy_discovery/templates/legacy_discovery/pane.html src/olympia/search/forms.py
 msgid "Up & Coming"
 msgstr "崭露头角"
+
+#: src/olympia/browse/views.py
+msgid "Recently Added"
+msgstr "最近添加"
 
 #: src/olympia/browse/views.py src/olympia/devhub/views.py src/olympia/legacy_discovery/templates/legacy_discovery/addons/detail.html
 msgid "Created"
@@ -2983,6 +2975,10 @@ msgid "Easy-to-use themes for Firefox"
 msgstr "易用的 Firefox 主题"
 
 #: src/olympia/browse/templates/browse/personas/mobile/category_landing.html
+msgid "Popular"
+msgstr "热门"
+
+#: src/olympia/browse/templates/browse/personas/mobile/category_landing.html
 msgid "More Themes"
 msgstr "更多主题"
 
@@ -3084,7 +3080,7 @@ msgstr "问题"
 msgid "No reports found."
 msgstr "未找到报告。"
 
-#: src/olympia/constants/applications.py
+#: src/olympia/constants/applications.py src/olympia/constants/categories.py
 msgid "Firefox"
 msgstr "Firefox"
 
@@ -3237,7 +3233,7 @@ msgid "Ask before users can download this add-on"
 msgstr "用户下载这个附加组件前询问"
 
 #. Review points sources other than add-ons and themes.
-#: src/olympia/constants/base.py src/olympia/devhub/forms.py src/olympia/editors/templates/editors/performance.html
+#: src/olympia/constants/base.py src/olympia/constants/categories.py src/olympia/devhub/forms.py src/olympia/editors/templates/editors/performance.html
 msgid "Other"
 msgstr "其他"
 
@@ -3400,6 +3396,307 @@ msgstr "兼容"
 #: src/olympia/constants/base.py
 msgid "Incompatible"
 msgstr "不兼容"
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Alerts & Updates"
+msgstr "亟待更新"
+
+#: src/olympia/constants/categories.py
+msgid "Appearance"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Bookmarks"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Download Management"
+msgstr "下载语言包"
+
+#: src/olympia/constants/categories.py
+msgid "Feeds, News & Blogging"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Games & Entertainment"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Language Support"
+msgstr "语言"
+
+#: src/olympia/constants/categories.py
+msgid "Photos, Music & Videos"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Privacy & Security"
+msgstr "隐私政策"
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Shopping"
+msgstr "购物，轻而易举"
+
+#: src/olympia/constants/categories.py
+msgid "Social & Communication"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Tabs"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Web Development"
+msgstr "扩展开发"
+
+#: src/olympia/constants/categories.py
+msgid "Animals"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Compact"
+msgstr "比较"
+
+#: src/olympia/constants/categories.py
+msgid "Large"
+msgstr ""
+
+#: src/olympia/constants/categories.py src/olympia/users/templates/users/edit.html
+msgid "Miscellaneous"
+msgstr "杂项"
+
+#: src/olympia/constants/categories.py
+msgid "Modern"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Nature"
+msgstr "精选"
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "OS Integration"
+msgstr "用户支持信息"
+
+#: src/olympia/constants/categories.py
+msgid "Retro"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Sports"
+msgstr "支持"
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "General"
+msgstr "常规测试"
+
+#: src/olympia/constants/categories.py
+msgid "Business"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Dictionaries & Encyclopedias"
+msgstr "字典及语言包"
+
+#: src/olympia/constants/categories.py
+msgid "Kids"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Multiple Search"
+msgstr "清除搜索"
+
+#: src/olympia/constants/categories.py
+msgid "Music"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "News & Blogs"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Photos & Images"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Shopping & E-Commerce"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Social & People"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Travel"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Video"
+msgstr "关闭视频"
+
+#: src/olympia/constants/categories.py
+msgid "Abstract"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Causes"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Fashion"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Film and TV"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Foxkeh"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Holiday"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Scenery"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Seasonal"
+msgstr "理由"
+
+#: src/olympia/constants/categories.py
+msgid "Solid"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Websites"
+msgstr "网站"
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Device Features & Location"
+msgstr "审核者向上呈报"
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Experimental"
+msgstr "实验性"
+
+#: src/olympia/constants/categories.py
+msgid "Feeds, News, & Blogging"
+msgstr ""
+
+#: src/olympia/constants/categories.py src/olympia/editors/templates/editors/base.html src/olympia/editors/templates/editors/performance.html
+msgid "Performance"
+msgstr "性能"
+
+#: src/olympia/constants/categories.py
+msgid "Photos & Media"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Security & Privacy"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Social Networking"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Sports & Games"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "User Interface"
+msgstr "注册时间"
+
+#: src/olympia/constants/categories.py
+msgid "Appearance and Customization"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Calendar and Date/Time"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Chat and IM"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Message Composition"
+msgstr "捐款"
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Contacts"
+msgstr "联系我们"
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Folders and Filters"
+msgstr "收藏集和收藏夹"
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Import/Export"
+msgstr "导出"
+
+#: src/olympia/constants/categories.py
+msgid "Message and News Reading"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Privacy and Security"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Downloading and File Management"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Interface Customizations"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Language Support and Translation"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "Photos and Media"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+msgid "RSS, News and Blogging"
+msgstr ""
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Site-specific"
+msgstr "特定网站"
+
+#: src/olympia/constants/categories.py
+#, fuzzy
+msgid "Web and Developer Tools"
+msgstr "搜索开发者文档"
 
 #: src/olympia/constants/editors.py src/olympia/editors/templates/editors/themes/queue.html src/olympia/editors/templates/editors/themes/themes.html
 msgid "Request More Info"
@@ -4366,8 +4663,7 @@ msgstr "默认语言"
 msgid "Information about your add-on is displayed in this locale unless you override it with a locale-specific translation. It is only relevant for listed add-ons."
 msgstr "您的附加组件的相关信息将以此语系的内容显示，并且您可以对其他特定语系填入翻译盖过这些默认内容。此项仅与公开上架的附加组件相关。"
 
-#: src/olympia/devhub/templates/devhub/addons/edit/details.html src/olympia/users/forms.py src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/register.html
-#: src/olympia/users/templates/users/vcard.html
+#: src/olympia/devhub/templates/devhub/addons/edit/details.html src/olympia/users/forms.py src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/vcard.html
 msgid "Homepage"
 msgstr "主页"
 
@@ -6555,6 +6851,16 @@ msgid "Addon visibility"
 msgstr "附加组件公开程度"
 
 #: src/olympia/devhub/templates/devhub/versions/list.html
+msgid "Why can't I switch to <i>Listed</i> or <i>Hidden</i>?"
+msgstr ""
+
+#: src/olympia/devhub/templates/devhub/versions/list.html
+msgid ""
+"Due to technical limitations, you need to delete your entire add-on and resubmit it using this AMO account in order to switch your add-on to listed.\n"
+"            The process is described in detail in <a href=\"{link}\">this documentation</a>."
+msgstr ""
+
+#: src/olympia/devhub/templates/devhub/versions/list.html
 msgid "Listed:"
 msgstr "上架："
 
@@ -6825,12 +7131,6 @@ msgstr "平台"
 #: src/olympia/editors/forms.py
 msgid "Search by add-on name / author email / guid"
 msgstr "按附加组件名称 / 作者邮件地址 / GUID 搜索"
-
-#. L10n: 0 = platform, 1 = filename, 2 = status message
-#: src/olympia/editors/forms.py
-#, python-format
-msgid "<strong>%s</strong> &middot; %s &middot; %s"
-msgstr "<strong>%s</strong> &middot; %s &middot; %s"
 
 #: src/olympia/editors/forms.py
 msgid "Comments:"
@@ -7274,10 +7574,6 @@ msgstr "队列"
 #: src/olympia/editors/templates/editors/base.html
 msgid "Unlisted Queues"
 msgstr "未上架队列"
-
-#: src/olympia/editors/templates/editors/base.html src/olympia/editors/templates/editors/performance.html
-msgid "Performance"
-msgstr "性能"
 
 #: src/olympia/editors/templates/editors/base.html src/olympia/editors/templates/editors/themes/base.html
 msgid "Logs"
@@ -7951,8 +8247,9 @@ msgid "Add-on ID must be 64 characters or less."
 msgstr "附加组件 ID 必须少于或等于 64 个字符。"
 
 #: src/olympia/files/utils.py
-msgid "Add-on ID doesn't match add-on."
-msgstr "附加组件 ID 与附加组件不匹配。"
+#, python-format
+msgid "The add-on ID in your manifest.json or install.rdf (%s) does not match the ID of your add-on on AMO (%s)"
+msgstr ""
 
 #: src/olympia/files/utils.py
 msgid "Duplicate add-on ID found."
@@ -7967,8 +8264,9 @@ msgid "Version numbers should only contain letters, numbers, and these punctuati
 msgstr "版本号只能包含英文字母、数字以及这些标点符号：+*.-_。"
 
 #: src/olympia/files/utils.py
-msgid "<em:type> doesn't match add-on"
-msgstr "<em:type> 与附加组件不匹配"
+#, python-format
+msgid "<em:type> in your install.rdf (%s) does not match the type of your add-on on AMO (%s)"
+msgstr ""
 
 #: src/olympia/files/views.py
 msgid "Back to review"
@@ -8198,6 +8496,14 @@ msgstr "游戏！"
 #: src/olympia/legacy_discovery/modules.py
 msgid "Add more fun to your Firefox. Play dozens of games right from your browser—puzzles, classic arcade, action games, and more!"
 msgstr "为你的 Firefox 增添更多趣味。直接在您的浏览器上玩几十种游戏—解谜、经典街机、动作游戏等等！"
+
+#: src/olympia/legacy_discovery/modules.py
+msgid "Must-Have Media"
+msgstr ""
+
+#: src/olympia/legacy_discovery/modules.py
+msgid "Take better screenshots, improve your online video experience, finally learn how to make a GIF, and other great media tools."
+msgstr ""
 
 #: src/olympia/legacy_discovery/templates/legacy_discovery/base.html
 msgid "Discover Add-ons"
@@ -10961,7 +11267,7 @@ msgstr "查看移动版网站"
 
 #: src/olympia/templates/copyright.html
 msgid "Site Status"
-msgstr "网站统计"
+msgstr "网站状态"
 
 #: src/olympia/templates/copyright.html
 msgid ""
@@ -11105,7 +11411,7 @@ msgstr "访问 Mozilla"
 msgid "menu"
 msgstr "菜单"
 
-#: src/olympia/templates/mobile/header_auth.html src/olympia/users/templates/users/register.html
+#: src/olympia/templates/mobile/header_auth.html
 msgid "Register"
 msgstr "注册"
 
@@ -11455,27 +11761,6 @@ msgid "Having Trouble?"
 msgstr "有问题？"
 
 #: src/olympia/users/views.py
-msgid "You are already logged in to an account."
-msgstr "您已经登录到了一个账户。"
-
-#: src/olympia/users/views.py
-msgid "Congratulations! Your user account was successfully created."
-msgstr "祝贺您！您的用户帐号已经成功建立。"
-
-# %1 is the user's email address
-#: src/olympia/users/views.py
-msgid "An email has been sent to your address {0} to confirm your account. Before you can log in, you have to activate your account by clicking on the link provided in this email."
-msgstr "向您的邮箱 {0} 发送了一封确认邮件。通过点击邮件中提供的链接激活您的帐户，之后才能登录。"
-
-#: src/olympia/users/views.py
-msgid "There are errors in this form"
-msgstr "表单中有错误"
-
-#: src/olympia/users/views.py
-msgid "Please correct them and resubmit."
-msgstr "请修订他们并重新提交。"
-
-#: src/olympia/users/views.py
 msgid "User reported."
 msgstr "用户已报告。"
 
@@ -11539,11 +11824,11 @@ msgstr "请设置您的显示名称或用户名以完成注册流程。"
 msgid "Manage basic account information, such as username and email address."
 msgstr "管理基本的账户信息，例如用户名和电子邮件地址。"
 
-#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/edit.html
 msgid "Username"
 msgstr "用户名"
 
-#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/pwreset_request.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/pwreset_request.html
 msgid "Email Address"
 msgstr "电子邮件地址"
 
@@ -11555,7 +11840,7 @@ msgstr "管理 Firefox 账号..."
 msgid "Change Password"
 msgstr "修改密码"
 
-#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html
 msgid "Password"
 msgstr "密码"
 
@@ -11609,10 +11894,6 @@ msgid "Allowed HTML: {0}. Links are forbidden."
 msgstr "允许的 HTML：{0}。不允许使用链接。"
 
 #: src/olympia/users/templates/users/edit.html
-msgid "Miscellaneous"
-msgstr "杂项"
-
-#: src/olympia/users/templates/users/edit.html
 msgid "Decide what collections should be shown in your profile."
 msgstr "决定将在您的概况页面显示哪些收藏集。"
 
@@ -11656,6 +11937,10 @@ msgstr "无"
 msgid "all"
 msgstr "所有"
 
+#: src/olympia/users/templates/users/fxa_login_prompt_content.html
+msgid "Mozilla Add-ons has transitioned to Firefox Accounts for login. Continue to complete the simple login process."
+msgstr "Mozilla 附加组件已转为采用 Firefox 账号进行登录。继续以完成登录过程。"
+
 #: src/olympia/users/templates/users/fxa_migration.html src/olympia/users/templates/users/mobile/fxa_migration.html
 msgid "Migrate to Firefox Accounts"
 msgstr "迁移到 Firefox 账号"
@@ -11673,12 +11958,12 @@ msgid "User Login"
 msgstr "用户登录"
 
 #: src/olympia/users/templates/users/login.html src/olympia/users/templates/users/mobile/login.html
-msgid "Enter your email"
-msgstr "请输入您的电子邮件地址"
+msgid "Login with Firefox Accounts"
+msgstr "使用 Firefox 账号登录"
 
 #: src/olympia/users/templates/users/login.html src/olympia/users/templates/users/mobile/login.html
-msgid "Log In"
-msgstr "登录"
+msgid "Enter your email"
+msgstr "请输入您的电子邮件地址"
 
 #: src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html
 msgid "Email address"
@@ -11794,7 +12079,7 @@ msgstr "密码重置不成功"
 msgid "You have migrated to Firefox Accounts. You can no longer change your password here."
 msgstr "您已迁移到 Firefox 账号。您不需要在这里更改密码了。"
 
-#: src/olympia/users/templates/users/pwreset_confirm.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/pwreset_confirm.html
 msgid "Confirm password"
 msgstr "确认密码"
 
@@ -11814,47 +12099,6 @@ msgstr "发送重置密码链接"
 msgid ""
 "An email has been sent to the requested account with further information. If you do not receive an email then please confirm you have entered the same email address used during account registration."
 msgstr "更多信息已通过电子邮件发送到了提出请求的帐号。如果您没有收到电子邮件，请确定您正确地进入了您注册帐号时使用的电子邮箱地址。"
-
-#: src/olympia/users/templates/users/register.html
-msgid "New User Registration"
-msgstr "注册新用户"
-
-#: src/olympia/users/templates/users/register.html
-msgid "Why register?"
-msgstr "为什么要注册？"
-
-#: src/olympia/users/templates/users/register.html
-msgid "Registration on AMO is <strong>not required</strong> if you simply want to download and install public add-ons."
-msgstr "如果您只是简单地需要下载安装公开发布的附加组件，则 AMO <strong>并不</strong>强制用户注册。"
-
-#: src/olympia/users/templates/users/register.html
-msgid "You only need to register if:"
-msgstr "只有下列情况需要注册："
-
-#: src/olympia/users/templates/users/register.html
-msgid "You want to submit reviews for add-ons"
-msgstr "您想提交附加组件的评论"
-
-#: src/olympia/users/templates/users/register.html
-msgid "You want to keep track of your favorite add-on collections or create one yourself"
-msgstr "您想追踪喜爱的附加组件收藏集或者创建自己的收藏集"
-
-#: src/olympia/users/templates/users/register.html
-msgid "You are an add-on developer and want to upload your add-on for hosting on AMO"
-msgstr "您是附加组件开发者并想要将自己的附加组件上传托管在 AMO"
-
-#: src/olympia/users/templates/users/register.html
-msgid "Upon successful registration, you will be sent a confirmation email to the address you provided. Please follow the instructions there to confirm your account."
-msgstr "注册成功后，会有一封确认邮件发送到您提供的邮件地址，请按照其中的说明确认您的账户。"
-
-#: src/olympia/users/templates/users/register.html
-#, python-format
-msgid "If you like, you can read our <a href=\"%(legal)s\" title=\"Legal Notices\">Legal Notices</a> and <a href=\"%(privacy)s\" title=\"Privacy Policy\">Privacy Policy</a>."
-msgstr "如果有兴趣，可以阅读我们的 <a href=\"%(legal)s\" title=\"Legal Notices\">法律声明</a>和<a href=\"%(privacy)s\" title=\"Privacy Policy\">隐私政策</a>。"
-
-#: src/olympia/users/templates/users/register.html
-msgid "Display name"
-msgstr "显示名"
 
 #: src/olympia/users/templates/users/report_abuse.html
 msgid "Please describe why you are reporting this user, such as for spam or an inappropriate picture."

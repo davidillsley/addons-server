@@ -1,17 +1,18 @@
 # -*- coding: utf-8 -*-
-from datetime import datetime
-
 from elasticsearch_dsl import Search
 from rest_framework.test import APIRequestFactory
 
 from olympia import amo
 from olympia.amo.helpers import absolutify
-from olympia.amo.tests import addon_factory, ESTestCase, TestCase, user_factory
+from olympia.amo.tests import (
+    addon_factory, ESTestCase, file_factory, TestCase, user_factory)
 from olympia.amo.urlresolvers import reverse
 from olympia.addons.indexers import AddonIndexer
 from olympia.addons.models import Addon, AddonUser, Persona, Preview
-from olympia.addons.serializers import AddonSerializer, ESAddonSerializer
+from olympia.addons.serializers import (
+    AddonSerializer, ESAddonSerializer, VersionSerializer)
 from olympia.addons.utils import generate_addon_guid
+from olympia.versions.models import License
 
 
 class AddonSerializerOutputTestMixin(object):
@@ -107,7 +108,10 @@ class AddonSerializerOutputTestMixin(object):
         assert result['guid'] == self.addon.guid
         assert result['homepage'] == {'en-US': self.addon.homepage}
         assert result['icon_url'] == absolutify(self.addon.get_icon_url(64))
+        assert result['is_disabled'] == self.addon.is_disabled
+        assert result['is_experimental'] == self.addon.is_experimental is False
         assert result['is_listed'] == self.addon.is_listed
+        assert result['is_source_public'] == self.addon.view_source
         assert result['name'] == {'en-US': self.addon.name}
         assert result['last_updated'] == self.addon.last_updated.isoformat()
 
@@ -152,6 +156,30 @@ class AddonSerializerOutputTestMixin(object):
         assert result['weekly_downloads'] == self.addon.weekly_downloads
 
         return result
+
+    def test_is_disabled(self):
+        self.addon = addon_factory(disabled_by_user=True)
+        result = self.serialize()
+
+        assert result['is_disabled'] is True
+
+    def test_is_listed(self):
+        self.addon = addon_factory(is_listed=False)
+        result = self.serialize()
+
+        assert result['is_listed'] is False
+
+    def test_is_source_public(self):
+        self.addon = addon_factory(view_source=True)
+        result = self.serialize()
+
+        assert result['is_source_public'] is True
+
+    def test_is_experimental(self):
+        self.addon = addon_factory(is_experimental=True)
+        result = self.serialize()
+
+        assert result['is_experimental'] is True
 
     def test_icon_url_without_icon_type_set(self):
         self.addon = addon_factory()
@@ -286,48 +314,100 @@ class TestESAddonSerializerOutput(AddonSerializerOutputTestMixin, ESTestCase):
             result = serializer.to_representation(obj)
         return result
 
-    def test_icon_url_without_modified_date(self):
-        self.addon = addon_factory(icon_type='image/png')
-        self.addon.update(created=datetime(year=1970, day=1, month=1))
 
-        obj = self.search()
-        delattr(obj, 'modified')
+class TestVersionSerializerOutput(TestCase):
+    def setUp(self):
+        self.request = APIRequestFactory().get('/')
 
-        with self.assertNumQueries(0):
-            serializer = ESAddonSerializer(context={'request': self.request})
-            result = serializer.to_representation(obj)
+    def serialize(self):
+        serializer = VersionSerializer(context={'request': self.request})
+        return serializer.to_representation(self.version)
 
-        assert result['id'] == self.addon.pk
+    def test_basic(self):
+        now = self.days_ago(0)
+        license = License.objects.create(
+            name={
+                'en-US': u'My License',
+                'fr': u'Mä Licence',
+            },
+            text={
+                'en-US': u'Lorem ipsum dolor sit amet, has nemore patrioqué',
+            },
+            url='http://license.example.com/'
 
-        # icon_url should differ, since the serialized result could not use
-        # the modification date.
-        assert result['icon_url'] != absolutify(self.addon.get_icon_url(64))
+        )
+        addon = addon_factory(
+            file_kw={
+                'hash': 'fakehash',
+                'platform': amo.PLATFORM_WIN.id,
+                'size': 42,
+            },
+            version_kw={
+                'license': license,
+                'min_app_version': '50.0',
+                'max_app_version': '*',
+                'releasenotes': {
+                    'en-US': u'Release notes in english',
+                    'fr': u'Notes de version en français',
+                },
+                'reviewed': now,
+            }
+        )
 
-        # If we pretend the original add-on modification date is its creation
-        # date, then icon_url should be the same, since that's what we do when
-        # we don't have a modification date in the serializer.
-        self.addon.modified = self.addon.created
-        assert result['icon_url'] == absolutify(self.addon.get_icon_url(64))
+        self.version = addon.current_version
+        first_file = self.version.files.latest('pk')
+        file_factory(
+            version=self.version, platform=amo.PLATFORM_MAC.id)
+        second_file = self.version.files.latest('pk')
+        # Force reload of all_files cached property.
+        del self.version.all_files
 
-    def test_handle_persona_without_persona_data_in_index(self):
-        """Make sure we handle missing persona data in the index somewhat
-        gracefully, because it won't be in it when the commit that uses it
-        lands, it will need a reindex first."""
-        self.addon = addon_factory(type=amo.ADDON_PERSONA)
-        persona = self.addon.persona
-        persona.header = u'myheader.jpg'
-        persona.footer = u'myfooter.jpg'
-        persona.accentcolor = u'336699'
-        persona.textcolor = u'f0f0f0'
-        persona.author = u'Me-me-me-Myself'
-        persona.display_username = u'my-username'
-        persona.save()
+        result = self.serialize()
+        assert result['id'] == self.version.pk
 
-        obj = self.search()
-        delattr(obj, 'persona')
+        assert result['compatibility'] == {
+            'firefox': {'max': u'*', 'min': u'50.0'}
+        }
 
-        with self.assertNumQueries(0):
-            serializer = ESAddonSerializer(context={'request': self.request})
-            result = serializer.to_representation(obj)
+        assert result['files']
+        assert len(result['files']) == 2
 
-        assert 'theme_data' not in result
+        assert result['files'][0]['id'] == first_file.pk
+        assert result['files'][0]['created'] == first_file.created.isoformat()
+        assert result['files'][0]['hash'] == first_file.hash
+        assert result['files'][0]['platform'] == 'windows'
+        assert result['files'][0]['size'] == first_file.size
+        assert result['files'][0]['status'] == 'public'
+        assert result['files'][0]['url'] == first_file.get_url_path(src='')
+
+        assert result['files'][1]['id'] == second_file.pk
+        assert result['files'][1]['created'] == second_file.created.isoformat()
+        assert result['files'][1]['hash'] == second_file.hash
+        assert result['files'][1]['platform'] == 'mac'
+        assert result['files'][1]['size'] == second_file.size
+        assert result['files'][1]['status'] == 'public'
+        assert result['files'][1]['url'] == second_file.get_url_path(src='')
+
+        assert result['edit_url'] == absolutify(addon.get_dev_url(
+            'versions.edit', args=[self.version.pk], prefix_only=True))
+        assert result['release_notes'] == {
+            'en-US': u'Release notes in english',
+            'fr': u'Notes de version en français',
+        }
+        assert result['license']
+        assert dict(result['license']) == {
+            'name': {'en-US': u'My License', 'fr': u'Mä Licence'},
+            'text': {
+                'en-US': u'Lorem ipsum dolor sit amet, has nemore patrioqué',
+            },
+            'url': 'http://license.example.com/',
+        }
+        assert result['reviewed'] == now.isoformat()
+        assert result['url'] == absolutify(self.version.get_url_path())
+
+    def test_no_license(self):
+        addon = addon_factory()
+        self.version = addon.current_version
+        result = self.serialize()
+        assert result['id'] == self.version.pk
+        assert result['license'] is None

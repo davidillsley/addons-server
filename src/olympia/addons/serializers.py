@@ -11,7 +11,7 @@ from olympia.applications.models import AppVersion
 from olympia.constants.applications import APPS_ALL
 from olympia.files.models import File
 from olympia.users.models import UserProfile
-from olympia.versions.models import ApplicationsVersions, Version
+from olympia.versions.models import ApplicationsVersions, License, Version
 
 
 class AddonFeatureCompatibilitySerializer(serializers.ModelSerializer):
@@ -86,7 +86,16 @@ class ESPreviewSerializer(BaseESSerializer, PreviewSerializer):
         return obj
 
 
-class VersionSerializer(serializers.ModelSerializer):
+class LicenseSerializer(serializers.ModelSerializer):
+    name = TranslationSerializerField()
+    text = TranslationSerializerField()
+
+    class Meta:
+        model = License
+        fields = ('name', 'text', 'url')
+
+
+class SimpleVersionSerializer(serializers.ModelSerializer):
     compatibility = serializers.SerializerMethodField()
     edit_url = serializers.SerializerMethodField()
     files = FileSerializer(source='all_files', many=True)
@@ -110,13 +119,24 @@ class VersionSerializer(serializers.ModelSerializer):
                 for app, compat in obj.compatible_apps.items()}
 
 
+class VersionSerializer(SimpleVersionSerializer):
+    license = LicenseSerializer()
+    release_notes = TranslationSerializerField(source='releasenotes')
+
+    class Meta:
+        model = Version
+        fields = ('id', 'compatibility', 'edit_url', 'files', 'license',
+                  'release_notes', 'reviewed', 'url', 'version')
+
+
 class AddonSerializer(serializers.ModelSerializer):
     authors = AddonAuthorSerializer(many=True, source='listed_authors')
-    current_version = VersionSerializer()
+    current_version = SimpleVersionSerializer()
     description = TranslationSerializerField()
     edit_url = serializers.SerializerMethodField()
     homepage = TranslationSerializerField()
     icon_url = serializers.SerializerMethodField()
+    is_source_public = serializers.BooleanField(source='view_source')
     name = TranslationSerializerField()
     previews = PreviewSerializer(many=True, source='all_previews')
     ratings = serializers.SerializerMethodField()
@@ -134,9 +154,11 @@ class AddonSerializer(serializers.ModelSerializer):
         model = Addon
         fields = ('id', 'authors', 'average_daily_users', 'current_version',
                   'default_locale', 'description', 'edit_url', 'guid',
-                  'homepage', 'icon_url', 'is_listed', 'name', 'last_updated',
-                  'previews', 'public_stats', 'ratings', 'review_url', 'slug',
-                  'status', 'summary', 'support_email', 'support_url', 'tags',
+                  'homepage', 'icon_url', 'is_disabled', 'is_experimental',
+                  'is_listed',
+                  'is_source_public', 'name', 'last_updated', 'previews',
+                  'public_stats', 'ratings', 'review_url', 'slug', 'status',
+                  'summary', 'support_email', 'support_url', 'tags',
                   'theme_data', 'type', 'url', 'weekly_downloads')
 
     def to_representation(self, obj):
@@ -212,23 +234,17 @@ class ESAddonSerializer(BaseESSerializer, AddonSerializer):
 
     def fake_object(self, data):
         """Create a fake instance of Addon and related models from ES data."""
-        obj = Addon(id=data['id'], slug=data['slug'], is_listed=True)
+        obj = Addon(id=data['id'], slug=data['slug'])
 
         # Attach base attributes that have the same name/format in ES and in
         # the model.
         self._attach_fields(
             obj, data,
             ('average_daily_users', 'bayesian_rating', 'created',
-             'default_locale', 'guid', 'hotness', 'icon_type', 'is_listed',
+             'default_locale', 'guid', 'hotness', 'icon_type',
+             'is_experimental', 'is_listed',
              'last_updated', 'modified', 'public_stats', 'slug', 'status',
-             'type', 'weekly_downloads'))
-
-        # Temporary hack to make sure all add-ons have a modified date when
-        # serializing, to avoid errors when calling get_icon_url().
-        # Remove once all add-ons have been reindexed at least once since the
-        # addition of `modified` in the mapping.
-        if obj.modified is None:
-            obj.modified = obj.created
+             'type', 'view_source', 'weekly_downloads'))
 
         # Attach attributes that do not have the same name/format in ES.
         obj.tag_list = data['tags']
@@ -236,7 +252,7 @@ class ESAddonSerializer(BaseESSerializer, AddonSerializer):
 
         # Categories are annoying, skip them for now. We probably need to start
         # declaring them in the code to properly handle translations etc if we
-        # want to display them in search results.
+        # want to display them in search results. See #2923.
         obj.all_categories = []
 
         # Attach translations (they require special treatment).

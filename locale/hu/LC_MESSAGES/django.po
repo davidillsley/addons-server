@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: addons\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-07-05 13:42+0000\n"
-"PO-Revision-Date: 2016-07-23 20:39+0000\n"
+"POT-Creation-Date: 2016-07-28 10:05+0000\n"
+"PO-Revision-Date: 2015-10-27 10:10+0000\n"
 "Last-Translator: Balázs Meskó <meskobalazs@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -69,8 +69,8 @@ msgid "Continue to Download&nbsp;&rarr;"
 msgstr "Tovább a letöltéshez&nbsp;&rarr;"
 
 #: src/olympia/addons/buttons.py src/olympia/addons/helpers.py src/olympia/addons/templates/addons/impala/details.html src/olympia/addons/templates/addons/impala/listing/items.html
-#: src/olympia/addons/templates/addons/mobile/home.html src/olympia/addons/views.py src/olympia/amo/templates/amo/side_nav.html src/olympia/amo/templates/amo/site_nav.html
-#: src/olympia/bandwagon/views.py src/olympia/browse/templates/browse/impala/category_landing.html src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/browse/views.py
+#: src/olympia/addons/templates/addons/mobile/home.html src/olympia/amo/templates/amo/side_nav.html src/olympia/amo/templates/amo/site_nav.html src/olympia/bandwagon/views.py
+#: src/olympia/browse/templates/browse/impala/category_landing.html src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/browse/views.py
 msgid "Featured"
 msgstr "Kiemelt"
 
@@ -184,18 +184,6 @@ msgstr "A Kiegészítőkezelőben a felhasználók mindig megkérdezésre kerül
 #: src/olympia/addons/models.py src/olympia/addons/templates/addons/details_box.html src/olympia/devhub/templates/devhub/includes/addon_details.html src/olympia/devhub/templates/devhub/index.html
 msgid "Listed"
 msgstr "Felsorolva"
-
-#: src/olympia/addons/views.py src/olympia/browse/templates/browse/personas/mobile/category_landing.html
-msgid "Popular"
-msgstr "Népszerű"
-
-#: src/olympia/addons/views.py src/olympia/browse/views.py
-msgid "Recently Added"
-msgstr "Nemrég hozzáadott"
-
-#: src/olympia/addons/views.py src/olympia/bandwagon/views.py src/olympia/browse/views.py src/olympia/search/forms.py
-msgid "Recently Updated"
-msgstr "Legutóbb frissítve"
 
 #. l10n: {0} is the addon name
 # %1 is an add-on name.
@@ -648,8 +636,8 @@ msgid "See all Themes by this Artist"
 msgstr "Az alkotó összes témájának megjelenítése"
 
 #: src/olympia/addons/templates/addons/mobile/home.html src/olympia/addons/templates/addons/persona_detail.html src/olympia/amo/templates/amo/side_nav.html
-#: src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/devhub/templates/devhub/addons/edit/basic.html src/olympia/editors/templates/editors/review.html
-#: src/olympia/editors/templates/editors/themes/themes.html src/olympia/templates/categories.html
+#: src/olympia/browse/templates/browse/macros.html src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/devhub/templates/devhub/addons/edit/basic.html
+#: src/olympia/editors/templates/editors/review.html src/olympia/editors/templates/editors/themes/themes.html src/olympia/templates/categories.html
 msgid "Categories"
 msgstr "Kategóriák"
 
@@ -920,7 +908,7 @@ msgid_plural "See all %(cnt)s reviews of this add-on"
 msgstr[0] "Kiegészítő összes értékelésének megtekintése"
 msgstr[1] "Kiegészítő összes (%(cnt)s) értékelésének megtekintése"
 
-#: src/olympia/addons/templates/addons/tags_box.html src/olympia/devhub/templates/devhub/addons/edit/basic.html
+#: src/olympia/addons/templates/addons/tags_box.html src/olympia/constants/categories.py src/olympia/devhub/templates/devhub/addons/edit/basic.html
 msgid "Tags"
 msgstr "Címkék"
 
@@ -1432,10 +1420,6 @@ msgstr "Hiba a bemenet ellenőrzésekor, kérjük próbálja meg újra."
 #: src/olympia/amo/fields.py
 msgid "This must be a valid hex color code, such as #000000."
 msgstr "Ennek érvényes hexakódnak kell lennie, mint például: #000000."
-
-#: src/olympia/amo/fields.py
-msgid "Enter at least one value."
-msgstr "Legalább egy értéket meg kell adni."
 
 #: src/olympia/amo/helpers.py src/olympia/amo/templates/amo/site_nav.html src/olympia/bandwagon/templates/bandwagon/add.html src/olympia/bandwagon/templates/bandwagon/collection_detail.html
 #: src/olympia/bandwagon/templates/bandwagon/delete.html src/olympia/bandwagon/templates/bandwagon/edit.html src/olympia/bandwagon/templates/bandwagon/impala/collection_listing.html
@@ -1996,7 +1980,7 @@ msgstr "Tovább&hellip;"
 msgid "Add-ons for Mobile"
 msgstr "Kiegészítők a Mobile-hoz"
 
-#: src/olympia/amo/templates/amo/site_nav.html src/olympia/browse/feeds.py src/olympia/browse/templates/browse/search_tools.html src/olympia/constants/base.py
+#: src/olympia/amo/templates/amo/site_nav.html src/olympia/browse/feeds.py src/olympia/browse/templates/browse/search_tools.html src/olympia/constants/base.py src/olympia/constants/categories.py
 msgid "Search Tools"
 msgstr "Keresőeszközök"
 
@@ -2214,6 +2198,10 @@ msgstr "Eltávolítás a kedvencek közül"
 #: src/olympia/editors/templates/editors/leaderboard.html src/olympia/editors/templates/editors/themes/queue_list.html src/olympia/search/forms.py src/olympia/users/templates/users/vcard.html
 msgid "Name"
 msgstr "Név"
+
+#: src/olympia/bandwagon/views.py src/olympia/browse/views.py src/olympia/search/forms.py
+msgid "Recently Updated"
+msgstr "Legutóbb frissítve"
 
 #: src/olympia/bandwagon/views.py
 msgid "Recently Popular"
@@ -2575,8 +2563,8 @@ msgstr "<b>Figyelem!</b> A gyűjtemény tulajdonosának megváltoztatásakor, t�
 
 #: src/olympia/bandwagon/templates/bandwagon/edit_contributors.html src/olympia/devhub/templates/devhub/addons/forms_shared/media.html src/olympia/devhub/templates/devhub/addons/submit/describe.html
 #: src/olympia/devhub/templates/devhub/addons/submit/license.html src/olympia/devhub/templates/devhub/addons/submit/upload.html src/olympia/devhub/templates/devhub/payments/tier.html
-#: src/olympia/editors/templates/editors/themes/themes.html src/olympia/users/templates/users/fxa_migration_prompt_content.html src/olympia/users/templates/users/login_form.html
-#: src/olympia/users/templates/users/mobile/login.html
+#: src/olympia/editors/templates/editors/themes/themes.html src/olympia/users/templates/users/fxa_login_prompt_content.html src/olympia/users/templates/users/fxa_migration_prompt_content.html
+#: src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html
 msgid "Continue"
 msgstr "Folytatás"
 
@@ -2793,6 +2781,10 @@ msgstr "Legtöbb felhasználó"
 #: src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/browse/views.py src/olympia/legacy_discovery/templates/legacy_discovery/pane.html src/olympia/search/forms.py
 msgid "Up & Coming"
 msgstr "Ígéretes"
+
+#: src/olympia/browse/views.py
+msgid "Recently Added"
+msgstr "Nemrég hozzáadott"
 
 #: src/olympia/browse/views.py src/olympia/devhub/views.py src/olympia/legacy_discovery/templates/legacy_discovery/addons/detail.html
 msgid "Created"
@@ -3055,6 +3047,10 @@ msgid "Easy-to-use themes for Firefox"
 msgstr "Egyszerűen használható Firefox témák"
 
 #: src/olympia/browse/templates/browse/personas/mobile/category_landing.html
+msgid "Popular"
+msgstr "Népszerű"
+
+#: src/olympia/browse/templates/browse/personas/mobile/category_landing.html
 msgid "More Themes"
 msgstr "További témák"
 
@@ -3160,7 +3156,7 @@ msgstr "Probléma"
 msgid "No reports found."
 msgstr "Nem található jelentés."
 
-#: src/olympia/constants/applications.py
+#: src/olympia/constants/applications.py src/olympia/constants/categories.py
 msgid "Firefox"
 msgstr "Firefox"
 
@@ -3313,7 +3309,7 @@ msgid "Ask before users can download this add-on"
 msgstr "Azelőtt kérdezzen, mielőtt a felhasználó le tudná tölteni a kiegészítőt"
 
 #. Review points sources other than add-ons and themes.
-#: src/olympia/constants/base.py src/olympia/devhub/forms.py src/olympia/editors/templates/editors/performance.html
+#: src/olympia/constants/base.py src/olympia/constants/categories.py src/olympia/devhub/forms.py src/olympia/editors/templates/editors/performance.html
 msgid "Other"
 msgstr "Egyéb"
 
@@ -3476,6 +3472,282 @@ msgstr "Kompatibilis"
 #: src/olympia/constants/base.py
 msgid "Incompatible"
 msgstr "Nem kompatibilis"
+
+#: src/olympia/constants/categories.py
+msgid "Alerts & Updates"
+msgstr "Riasztások és frissítések"
+
+#: src/olympia/constants/categories.py
+msgid "Appearance"
+msgstr "Megjelenés"
+
+#: src/olympia/constants/categories.py
+msgid "Bookmarks"
+msgstr "Könyvjelzők"
+
+#: src/olympia/constants/categories.py
+msgid "Download Management"
+msgstr "Letöltéskezelők"
+
+#: src/olympia/constants/categories.py
+msgid "Feeds, News & Blogging"
+msgstr "Hírcsatornák, hírek és blogolás"
+
+#: src/olympia/constants/categories.py
+msgid "Games & Entertainment"
+msgstr "Játékok és szórakozás"
+
+#: src/olympia/constants/categories.py
+msgid "Language Support"
+msgstr "Nyelvi támogatás"
+
+#: src/olympia/constants/categories.py
+msgid "Photos, Music & Videos"
+msgstr "Fotók, zenék és videók"
+
+#: src/olympia/constants/categories.py
+msgid "Privacy & Security"
+msgstr "Adatvédelem és biztonság"
+
+#: src/olympia/constants/categories.py
+msgid "Shopping"
+msgstr "Vásárlás"
+
+#: src/olympia/constants/categories.py
+msgid "Social & Communication"
+msgstr "Közösség és kommunikáció"
+
+#: src/olympia/constants/categories.py
+msgid "Tabs"
+msgstr "Fülek"
+
+#: src/olympia/constants/categories.py
+msgid "Web Development"
+msgstr "Webfejlesztés"
+
+#: src/olympia/constants/categories.py
+msgid "Animals"
+msgstr "Állatok"
+
+#: src/olympia/constants/categories.py
+msgid "Compact"
+msgstr "Apró"
+
+#: src/olympia/constants/categories.py
+msgid "Large"
+msgstr "Nagy"
+
+#: src/olympia/constants/categories.py src/olympia/users/templates/users/edit.html
+msgid "Miscellaneous"
+msgstr "Egyebek"
+
+#: src/olympia/constants/categories.py
+msgid "Modern"
+msgstr "Modern"
+
+#: src/olympia/constants/categories.py
+msgid "Nature"
+msgstr "Természet"
+
+#: src/olympia/constants/categories.py
+msgid "OS Integration"
+msgstr "OS integráció"
+
+#: src/olympia/constants/categories.py
+msgid "Retro"
+msgstr "Retró"
+
+#: src/olympia/constants/categories.py
+msgid "Sports"
+msgstr "Sport"
+
+#: src/olympia/constants/categories.py
+msgid "General"
+msgstr "Általános"
+
+#: src/olympia/constants/categories.py
+msgid "Business"
+msgstr "Üzlet"
+
+#: src/olympia/constants/categories.py
+msgid "Dictionaries & Encyclopedias"
+msgstr "Szótárak és enciklopédiák"
+
+#: src/olympia/constants/categories.py
+msgid "Kids"
+msgstr "Gyerekek"
+
+#: src/olympia/constants/categories.py
+msgid "Multiple Search"
+msgstr "Többszörös keresés"
+
+#: src/olympia/constants/categories.py
+msgid "Music"
+msgstr "Zene"
+
+#: src/olympia/constants/categories.py
+msgid "News & Blogs"
+msgstr "Hírek és blogok"
+
+#: src/olympia/constants/categories.py
+msgid "Photos & Images"
+msgstr "Fotók és képek"
+
+#: src/olympia/constants/categories.py
+msgid "Shopping & E-Commerce"
+msgstr "Vásárlás és e-kereskedelem"
+
+#: src/olympia/constants/categories.py
+msgid "Social & People"
+msgstr "Közösség és emberek"
+
+#: src/olympia/constants/categories.py
+msgid "Travel"
+msgstr "Utazás"
+
+#: src/olympia/constants/categories.py
+msgid "Video"
+msgstr "Videó"
+
+#: src/olympia/constants/categories.py
+msgid "Abstract"
+msgstr "Absztrakt"
+
+#: src/olympia/constants/categories.py
+msgid "Causes"
+msgstr "Ügyek"
+
+#: src/olympia/constants/categories.py
+msgid "Fashion"
+msgstr "Divat"
+
+#: src/olympia/constants/categories.py
+msgid "Film and TV"
+msgstr "Film és TV"
+
+#: src/olympia/constants/categories.py
+msgid "Foxkeh"
+msgstr "Foxkeh"
+
+#: src/olympia/constants/categories.py
+msgid "Holiday"
+msgstr "Szabadság"
+
+#: src/olympia/constants/categories.py
+msgid "Scenery"
+msgstr "Tájkép"
+
+#: src/olympia/constants/categories.py
+msgid "Seasonal"
+msgstr "Időszakos"
+
+#: src/olympia/constants/categories.py
+msgid "Solid"
+msgstr "Kiforrott"
+
+#: src/olympia/constants/categories.py
+msgid "Websites"
+msgstr "Weboldalak"
+
+#: src/olympia/constants/categories.py
+msgid "Device Features & Location"
+msgstr "Eszközfunkciók és helymeghatározás"
+
+#: src/olympia/constants/categories.py
+msgid "Experimental"
+msgstr "Kísérleti"
+
+#: src/olympia/constants/categories.py
+msgid "Feeds, News, & Blogging"
+msgstr "Hírcsatornák, hírek és blogolás"
+
+#: src/olympia/constants/categories.py src/olympia/editors/templates/editors/base.html src/olympia/editors/templates/editors/performance.html
+msgid "Performance"
+msgstr "Teljesítmény"
+
+#: src/olympia/constants/categories.py
+msgid "Photos & Media"
+msgstr "Fotók és média"
+
+#: src/olympia/constants/categories.py
+msgid "Security & Privacy"
+msgstr "Biztonság és adatvédelem"
+
+#: src/olympia/constants/categories.py
+msgid "Social Networking"
+msgstr "Közösségi hálózatok"
+
+#: src/olympia/constants/categories.py
+msgid "Sports & Games"
+msgstr "Sport és játékok"
+
+#: src/olympia/constants/categories.py
+msgid "User Interface"
+msgstr "Felhasználói felület"
+
+#: src/olympia/constants/categories.py
+msgid "Appearance and Customization"
+msgstr "Megjelenítés és testreszabás"
+
+#: src/olympia/constants/categories.py
+msgid "Calendar and Date/Time"
+msgstr "Naptár és dátum/idő"
+
+#: src/olympia/constants/categories.py
+msgid "Chat and IM"
+msgstr "Csevegés és IM"
+
+#: src/olympia/constants/categories.py
+msgid "Message Composition"
+msgstr "Üzenetek fogalmazása"
+
+#: src/olympia/constants/categories.py
+msgid "Contacts"
+msgstr "Névjegyek"
+
+#: src/olympia/constants/categories.py
+msgid "Folders and Filters"
+msgstr "Mappák és szűrők"
+
+#: src/olympia/constants/categories.py
+msgid "Import/Export"
+msgstr "Importálás/Exportálás"
+
+#: src/olympia/constants/categories.py
+msgid "Message and News Reading"
+msgstr "Üzenet- és hírolvasás"
+
+#: src/olympia/constants/categories.py
+msgid "Privacy and Security"
+msgstr "Adatvédelem és biztonság"
+
+#: src/olympia/constants/categories.py
+msgid "Downloading and File Management"
+msgstr "Letöltés- és fájlkezelők"
+
+#: src/olympia/constants/categories.py
+msgid "Interface Customizations"
+msgstr "Felület testreszabása"
+
+#: src/olympia/constants/categories.py
+msgid "Language Support and Translation"
+msgstr "Nyelvi támogatás és fordítás"
+
+#: src/olympia/constants/categories.py
+msgid "Photos and Media"
+msgstr "Fotók és média"
+
+#: src/olympia/constants/categories.py
+msgid "RSS, News and Blogging"
+msgstr "RSS, hírek és blogolás"
+
+#: src/olympia/constants/categories.py
+msgid "Site-specific"
+msgstr "Webhelyspecifikus"
+
+#: src/olympia/constants/categories.py
+msgid "Web and Developer Tools"
+msgstr "Webes és fejlesztői szerszámos láda"
 
 #: src/olympia/constants/editors.py src/olympia/editors/templates/editors/themes/queue.html src/olympia/editors/templates/editors/themes/themes.html
 msgid "Request More Info"
@@ -4463,8 +4735,7 @@ msgstr "Alapértelmezett nyelv"
 msgid "Information about your add-on is displayed in this locale unless you override it with a locale-specific translation. It is only relevant for listed add-ons."
 msgstr "A kiegészítőről szóló információk csak ezen a nyelvterületen jelennek meg addig, amíg el nem látja egy másik területhez illő fordítással. Mindez csak a listázott kiegészítőkre vonatkozik."
 
-#: src/olympia/devhub/templates/devhub/addons/edit/details.html src/olympia/users/forms.py src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/register.html
-#: src/olympia/users/templates/users/vcard.html
+#: src/olympia/devhub/templates/devhub/addons/edit/details.html src/olympia/users/forms.py src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/vcard.html
 msgid "Homepage"
 msgstr "Honlap"
 
@@ -5982,6 +6253,11 @@ msgid ""
 "can. We don't expect you to perfectly optimize or have zero bugs &mdash; Firefox itself undergoes constant improvement in these areas &mdash; but we do want you to take reasonable efforts to "
 "minimize downsides, and to clearly call out cases where users may be surprised by those that remain."
 msgstr ""
+"<strong>Jól tesztelve lett a kiegészítő, és egyértelmű vagy komoly hibáktól mentes?</strong> Az egyik fontos dolog amit megnézünk, amikor döntünk egy kiegészítőről az, hogy a felhasználói "
+"értékelések azt jelzik-e, hogy alapos tesztelést kapott, és nincsenek komoly problémái vagy negatív hatása a böngészőre. Ha az értékelők problémákat jelentenek, mint például komoly teljesítménybeli "
+"gondok, összeomlások, gyakori problémák a kiegészítő funkcióival, ömlő hibaüzenetek a konzolon; az ilyen problémákat vegye komolyan, és nyújtsa be újra a kiegészítőt, amint az Öntől telhető "
+"legjobban kezelte ezeket. Nem várjuk el, hogy tökéletesen optimalizáljon vagy ne legyenek egyáltalán hibák – maga a Firefox is folyamatos fejlesztés alatt áll ezeken a területeken, de elvárjuk hogy "
+"ésszerű módon minimalizálja a gondokat, és figyelmeztesse a felhasználókat azokban az esetekben, ahol a megmaradtakkal találkozhatnak."
 
 #: src/olympia/devhub/templates/devhub/docs/policies-submission.html
 msgid ""
@@ -5989,24 +6265,35 @@ msgid ""
 " from the user. Users (or even non-users) are sometimes rude in their comments, and while we will do our best to filter out inaccurate reviews as they're reported to us, we do expect that authors "
 "will avoid retaliating with rudeness of their own."
 msgstr ""
+"<strong>A kiegészítő és a kiegészítő szerzője is tisztelettel kezeli a felhasználót?</strong> A szoftvere nem tolakodhat feleslegesen a felhasználó felé, nem próbálhatja becsapni, vagy elrejteni "
+"előle a tevékenységét. A felhasználók (és a nem felhasználók is) néha durvák a megjegyzéseikben. Ugyan megpróbáljuk a legjobban kiszűrni a pontatlan értékeléseket, amint azok jelentésre kerülnek, "
+"emellett elvárjuk hogy a szerzők kerüljék el a durva válaszreakciókat."
 
 #: src/olympia/devhub/templates/devhub/docs/policies-submission.html
 msgid ""
 "<strong>Is the add-on useful to an appropriately wide portion of Firefox's users?</strong> Your add-on doesn't need to be the next Greasemonkey or Firebug, but if it is only useful to people at your"
 " company or who are part of a small web community, we may feel that it's not yet appropriate to put it in front of all of our users."
 msgstr ""
+"<strong>A kiegészítő hasznos a Firefox felhasználók megfelelően széles körének?</strong> A kiegészítőjének nem kell a következő Greasemonkeynak, vagy Firebugnak lennie, de ha csak néhány embernek "
+"hasznos a cégénél, vagy azok számára, akik egy kis webes közösség részei, akkor úgy dönthetünk, hogy még megfelelő kitenni az összes felhasználónk elé."
 
 #: src/olympia/devhub/templates/devhub/docs/policies-submission.html
 msgid ""
 "We are constantly looking at ways to improve the organization of the site to better accommodate add-ons that are exemplary in other ways, but are aimed at only a small community of potential users. "
 "Correctly categorizing and maintaining the metadata of your add-on will help us figure out how we can surface more of those sorts of add-ons to people who are most likely to benefit from them."
 msgstr ""
+"Folyamatosan módokat keresünk arra, hogy javítsuk az oldal elrendezését, hogy jobban kiszolgáljuk azokat a kiegészítőket, amelyek példásak bizonyos szempontból, de csak a felhasználók csak egy kis "
+"közösségéhez szólnak. A helyes kategorizálás és a kiegészítője metaadatainak karbantartása segít nekünk abban, hogy jobban felszínre hozzuk az ilyen kiegészítőket azoknak, akiknek a leginkább "
+"előnyösek."
 
 #: src/olympia/devhub/templates/devhub/docs/policies-submission.html
 msgid ""
 "If your add-on just provides bookmarks or other simple access points to your site, it's probably not appropriate for the gallery. Like the rest of the Mozilla project, we love web applications and "
 "new web services, but Firefox add-ons should provide an improved browsing experience for the user and not just be a way to promote a new site or service through a Mozilla Add-ons listing."
 msgstr ""
+"Ha a kiegészítője csak könyvjelzőket ad, vagy más egyszerű hozzáférési pontokat biztosít az oldalára, akkor valószínűleg nem megfelelő a galéria számára. Mint ahogy a Mozilla projekt többi része is,"
+" mi is imádjuk a webalkalmazásokat és az új webszolgáltatásokat, de a Firefox kiegészítőknek jobb böngészési élményt kell nyújtania a felhasználónak, nem csak módot nyújtaniuk egy új oldal vagy "
+"szolgáltatás népszerűsítéséhez a Mozilla kiegészítők szolgáltatáson keresztül."
 
 #: src/olympia/devhub/templates/devhub/docs/policies-submission.html
 msgid ""
@@ -6014,6 +6301,9 @@ msgid ""
 "infringe on trademarks or copyrights. If you don't have permission to use a trademarked name or image, please do not submit your add-on to us. If your add-on includes code that is copyrighted by "
 "someone else, and is not licensed to you to use in your add-on, please do not submit your add-on to us."
 msgstr ""
+"<strong>A kiegészítő mentes-e nem licencelt védjegyektől és szerzői jogoktól?</strong> Bár lehet hogy Ön nem akar ártani egy védjegy tulajdonosának, vagy egy szerzői jog által védett munka "
+"szerzőjének, mi nem szolgáltathatunk olyan kiegészítőket, amelyek védjegyeket vagy szerzői jogokat sértenek. Ha nincs engedélye egy védjegyzett név vagy kép használatára, akkor ne nyújtsa be a "
+"kiegészítőjét. Ha a kiegészítője olyan kódot tartalmaz, amely más szerzői joga alatt van, és nincs licencelve Önnek a kiegészítőben történő felhasználásra, akkor ne nyújtsa be a kiegészítőjét."
 
 #: src/olympia/devhub/templates/devhub/docs/policies-submission.html
 msgid ""
@@ -6021,6 +6311,9 @@ msgid ""
 "source license &mdash; then you should assume that you do not have the right to do so. You can contact the author to seek such permission, but we can't provide you with any special rights to it just"
 " because it's listed on the site, or because the author isn't responding to your request."
 msgstr ""
+"A más kiegészítők forráskódjának újrafelhasználásáról: ha a szerző nem jelezte egyértelműen hogy használhatja az ő kódját az Ön munkájában – például azzal, hogy nyílt forráskódú licenc alá helyezte "
+"–, akkor azt kell feltételeznie, hogy nincs joga így tenni. Felveheti a kapcsolatot a szerzővel, hogy erre engedélyt kapjon, de mi nem adhatunk semmilyen különleges jogot hozzá Önnek, csak mert "
+"listázva van az oldalon, vagy mert a szerző nem válaszol az Ön kérésére."
 
 #: src/olympia/devhub/templates/devhub/docs/policies-submission.html
 msgid ""
@@ -6028,6 +6321,9 @@ msgid ""
 "and prevent the trademarks from being overturned due to lack of protection; please respect the need for such protection, and help us preserve some of the most valuable assets of the Mozilla "
 "Foundation."
 msgstr ""
+"Ez a Mozilla alapítvány védjegyeire is vonatkozik, köztük a „Mozilla”, „Firefox” és „Thunderbird” védjegyekre. A Mozilla irányelve a védjegyek használatára arra lett tervezve, hogy meg a "
+"megtévesztés ellen, és megakadályozza a védjegy megszüntetését a védelem hiánya miatt; tartsa tiszteletben az ilyen védelem szükségességét, és segítsen megóvni a Mozilla alapítvány legfontosabb "
+"értékeinek egyikét."
 
 #: src/olympia/devhub/templates/devhub/docs/policies-submission.html
 msgid "Licensing"
@@ -6038,12 +6334,16 @@ msgid ""
 "Selecting an appropriate license for your add-on is a very important step in the submission process. A license specifies the rights you grant on your source code and is important in protecting your "
 "intellectual property."
 msgstr ""
+"A megfelelő licenc kiválasztása a kiegészítőjéhez nagyon fontos lépése a benyújtási folyamatnak. A licenc megadja a jogokat amelyeket a forráskódra nézve megad, és fontos a szellemi javainak "
+"megvédésében."
 
 #: src/olympia/devhub/templates/devhub/docs/policies-submission.html
 msgid ""
 "During the add-on submission process, you will be presented with a list of popular licenses to choose from, as well as the ability to specify your own license. It is best to consult with a legal "
 "professional about which license option is best for you. Choosing the right license for your source code will help to prevent confusion and code conflicts in the future."
 msgstr ""
+"A kiegészítő benyújtási folyamat során népszerű licencek listájából választhat, vagy megadhatja a saját licencét is. Tanácsos egyeztetni egy jogi szakértővel, hogy melyik licenc a legmegfelelőbb "
+"Önnek. A helyes licenc kiválasztása segít megakadályozni a félreértéseket és a kódütközéseket a jövőben."
 
 #: src/olympia/devhub/templates/devhub/docs/policies.html
 msgid "Add-on Submission"
@@ -6071,15 +6371,15 @@ msgstr "Kiegészítőfrissítések, tulajdonjog átadása, felhasználói érté
 
 #: src/olympia/devhub/templates/devhub/docs/policies.html
 msgid "How up-and-coming add-ons become featured and what&#039;s involved in the process."
-msgstr ""
+msgstr "Hogyan válnak a kiegészítők kiemeltté, és miből áll a folyamat."
 
 #: src/olympia/devhub/templates/devhub/docs/policies.html
 msgid "Terms of Service for submitting your work to our site. Developers are required to accept this agreement before submission."
-msgstr ""
+msgstr "A szolgáltatási feltételek a munkája benyújtásához az oldalunkon. A fejlesztőknek a beküldés előtt el kell fogadniuk ezt a megállapodást."
 
 #: src/olympia/devhub/templates/devhub/docs/policies.html
 msgid "How to get in touch with us regarding these policies or your add-on."
-msgstr ""
+msgstr "Hogyan lépjen velünk kapcsolatba az irányelvekkel vagy kiegészítőjével kapcsolatban."
 
 #: src/olympia/devhub/templates/devhub/includes/addon_details.html
 msgid "You have disabled this add-on"
@@ -6087,7 +6387,7 @@ msgstr "Letiltotta ezt a kiegészítőt."
 
 #: src/olympia/devhub/templates/devhub/includes/addon_details.html
 msgid "Your add-on's listing is disabled and is not showing anywhere in our gallery or update service."
-msgstr ""
+msgstr "A kiegészítője listázása letiltásra kerül, és nem jelenik meg sehol sem a galériánkban, vagy a frissítési szolgáltatásban."
 
 #: src/olympia/devhub/templates/devhub/includes/addon_details.html
 msgid "Please complete your add-on."
@@ -6119,7 +6419,7 @@ msgstr "Ez a kiegészítő aláírt, és alkalmazás-telepítőhöz csatolható.
 
 #: src/olympia/devhub/templates/devhub/includes/addon_details.html
 msgid "Your add-on was disabled by a site administrator and is no longer shown in our gallery. If you have any questions, please email amo-admins@mozilla.org."
-msgstr ""
+msgstr "A kiegészítőjét egy oldal adminisztrátor letiltotta, ezért többé nem jelenik meg a galériánkban. Ha bármi kérdése van, küldjön egy e-mailt az amo-admins@mozilla.org címre."
 
 #: src/olympia/devhub/templates/devhub/includes/addon_details.html
 msgid "Your add-on is displayed in our gallery as experimental and users are receiving automatic updates. Some features are unavailable to your add-on."
@@ -6139,7 +6439,7 @@ msgstr ""
 
 #: src/olympia/devhub/templates/devhub/includes/addon_details.html
 msgid "You will receive an email when the full review is complete, making you able to bundle your add-on with an application installer."
-msgstr ""
+msgstr "Kapni fog egy e-mailt, amint a teljes értékelés elkészült, és alkalmazástelepítőhöz csomagolhatja a kiegészítőjét."
 
 #: src/olympia/devhub/templates/devhub/includes/addon_details.html
 msgid "Current Version:"
@@ -6147,15 +6447,15 @@ msgstr "Jelenlegi verzió:"
 
 #: src/olympia/devhub/templates/devhub/includes/addon_details.html
 msgid "This is the version of your add-on that will be installed if someone clicks the Install button on addons.mozilla.org. It is only relevant for listed add-ons."
-msgstr ""
+msgstr "A kiegészítő ezen verziója fog telepítésre kerülni, ha valaki rákattint a telepítési gombra az addons.mozilla.org oldalon. Ez csak a listázott kiegészítők esetén lényeges."
 
 #: src/olympia/devhub/templates/devhub/includes/addon_details.html
 msgid "Multi Process Status:"
-msgstr ""
+msgstr "Több folyamatos állapot:"
 
 #: src/olympia/devhub/templates/devhub/includes/addon_details.html
 msgid "Your add-on compatibility with Multi Process Firefox (e10s)."
-msgstr ""
+msgstr "A kiegészítő kompatibilitás a több folyamatos Firefoxszal (e10s)."
 
 #: src/olympia/devhub/templates/devhub/includes/addon_details.html
 msgid "Created:"
@@ -6277,14 +6577,18 @@ msgid ""
 "Users will be required to accept the following End-User License Agreement (EULA) prior to installing your add-on. The presence of a EULA significantly affects the number of downloads an add-on "
 "receives. Please note that a EULA is not the same as a code license, such as the GPL or MPL.It is only relevant for listed add-ons."
 msgstr ""
+"A felhasználóknak a kiegészítő telepítése előtt el kell fogadniuk a végfelhasználói licencszerződést (EULA). Az EULA megléte jelentősen befolyásolja a kiegészítő letöltéseinek számát. Jegyezze meg, "
+"hogy az EULA nem ugyanaz mint a kód licence, például a GPL vagy az MPL. Ez csak a listázott kiegészítők esetén lényeges."
 
 #: src/olympia/devhub/templates/devhub/includes/policy_form.html
 msgid "If your add-on transmits any data from the user's computer, a privacy policy is required that explains what data is sent and how it is used. It is only relevant for listed add-ons."
 msgstr ""
+"Ha a kiegészítője bármilyen adatot továbbít a felhasználó számítógépéről, akkor egy adatvédelmi szabályzat szükséges, amely elmagyarázza milyen adatok kerülnek elküldésre, és hogyan kerülnek "
+"felhasználásra. Ez csak a listázott kiegészítők esetén lényeges."
 
 #: src/olympia/devhub/templates/devhub/includes/source_form_field.html
 msgid "If your add-on contains binary or obfuscated code other than known libraries, upload its sources for review."
-msgstr ""
+msgstr "Ha a kiegészítője bináris vagy obfuszkált kódot tartalmaz, az ismert kódkönyvtárak mellett, akkor töltse fel a forrásaikat értékelésre."
 
 #: src/olympia/devhub/templates/devhub/includes/source_form_field.html
 msgid "Read more about the source code review policy."
@@ -6515,7 +6819,7 @@ msgstr "Új dizájn feltöltése"
 
 #: src/olympia/devhub/templates/devhub/personas/edit.html
 msgid "Upon upload and form submission, the AMO Team will review your updated design. Your current design will still be public in the meantime."
-msgstr ""
+msgstr "Feltöltés és az űrlap feladása után, az AMO csapat értékeli a feltöltött dizájnt. Addig is, a jelenlegi dizájn továbbra is nyilvános marad."
 
 #: src/olympia/devhub/templates/devhub/personas/edit.html
 msgid "Your previously resubmitted design, which is under pending review."
@@ -6581,7 +6885,7 @@ msgstr "Új téma létrehozása"
 #: src/olympia/devhub/templates/devhub/personas/submit.html
 #, python-format
 msgid "Background themes let you easily personalize the look of your Firefox. Submit your own design below, or <a href=\"%(submit_url)s\">learn how to create one</a>!"
-msgstr ""
+msgstr "A háttértémák egyszerűen testre szabhatóvá teszik a Firefox kinézetét. Küldje be saját dizájnját lent, vagy <a href=\"%(submit_url)s\">ismerje meg hogyan készíthet egyet</a>!"
 
 #: src/olympia/devhub/templates/devhub/personas/submit.html
 msgid "Give your Theme a name."
@@ -6593,6 +6897,8 @@ msgid ""
 "I agree to the <a href=\"%(agreement_url)s\">Firefox Add-on Distribution Agreement</a> and to my information being handled as described in the <a href=\"%(privacy_notice_url)s\">Websites, "
 "Communications and Cookies Privacy Notice</a>."
 msgstr ""
+"Egyetértek a <a href=\"%(agreement_url)s\">Firefox kiegészítő-terjesztési megállapodással</a>, és azzal hogy az információimat a <a href=\"%(privacy_notice_url)s\">Weboldalakra, kommunikációra és a "
+"sütikre vonatkozó adatvédelmi értesítés</a> szerint kezelik."
 
 #: src/olympia/devhub/templates/devhub/personas/submit.html
 msgid "Submit Theme"
@@ -6600,17 +6906,17 @@ msgstr "Téma benyújtása"
 
 #: src/olympia/devhub/templates/devhub/personas/submit_done.html
 msgid "Your theme has been submitted to the Review Queue. You'll receive an email once it has been reviewed, typically within 24 hours."
-msgstr ""
+msgstr "A témája beküldésre került az értékelési sorba. Kapni fog egy e-mailt, amint értékelésre került, jellemzően 24 órán belül."
 
 #: src/olympia/devhub/templates/devhub/personas/submit_done.html
 #, python-format
 msgid "Provide more details about your theme by <a href=\"%(edit_url)s\">editing its listing</a>."
-msgstr ""
+msgstr "Adjon meg további részleteket a témájáról a <a href=\"%(edit_url)s\">listázásának szerkesztésével</a>."
 
 #: src/olympia/devhub/templates/devhub/personas/submit_done.html
 #, python-format
 msgid "View and subscribe to your theme's <a href=\"%(feed_url)s\">activity feed</a> to stay updated on reviews, collections, and more."
-msgstr ""
+msgstr "Tekintse meg és iratkozzon fel a témája <a href=\"%(feed_url)s\">tevékenységi csatornájára</a> hogy értesítést kapjon az értékelésekről, gyűjteményekről és egyebekről."
 
 #: src/olympia/devhub/templates/devhub/personas/submit_done.html
 #, python-format
@@ -6801,6 +7107,18 @@ msgstr "Értékelés kérésének megszakítása"
 #: src/olympia/devhub/templates/devhub/versions/list.html
 msgid "Addon visibility"
 msgstr "Kiegészítő láthatósága"
+
+#: src/olympia/devhub/templates/devhub/versions/list.html
+msgid "Why can't I switch to <i>Listed</i> or <i>Hidden</i>?"
+msgstr "Miért nem válthatok át <i>Listázott</i> vagy <i>Rejtett</i> állapotba?"
+
+#: src/olympia/devhub/templates/devhub/versions/list.html
+msgid ""
+"Due to technical limitations, you need to delete your entire add-on and resubmit it using this AMO account in order to switch your add-on to listed.\n"
+"            The process is described in detail in <a href=\"{link}\">this documentation</a>."
+msgstr ""
+"Technikai megszorítások miatt törölnie kell a teljes kiegészítőjét, és újra benyújtania az AMO fiókja használatával, ahhoz hogy listázottá tegye a kiegészítőjét.\n"
+"            A folyamat részletesen le van írva <a href=\"{link}\">ebben a dokumentációban</a>."
 
 #: src/olympia/devhub/templates/devhub/versions/list.html
 msgid "Listed:"
@@ -7080,12 +7398,6 @@ msgstr "Platformok"
 #: src/olympia/editors/forms.py
 msgid "Search by add-on name / author email / guid"
 msgstr "Keresés kiegészítő neve / szerző e-mail címe / guid szerint"
-
-#. L10n: 0 = platform, 1 = filename, 2 = status message
-#: src/olympia/editors/forms.py
-#, python-format
-msgid "<strong>%s</strong> &middot; %s &middot; %s"
-msgstr "<strong>%s</strong> &middot; %s &middot; %s"
 
 #: src/olympia/editors/forms.py
 msgid "Comments:"
@@ -7544,10 +7856,6 @@ msgstr "Várakozási sorok"
 #: src/olympia/editors/templates/editors/base.html
 msgid "Unlisted Queues"
 msgstr "Titkos sorok"
-
-#: src/olympia/editors/templates/editors/base.html src/olympia/editors/templates/editors/performance.html
-msgid "Performance"
-msgstr "Teljesítmény"
 
 #: src/olympia/editors/templates/editors/base.html src/olympia/editors/templates/editors/themes/base.html
 msgid "Logs"
@@ -8246,8 +8554,9 @@ msgid "Add-on ID must be 64 characters or less."
 msgstr "A kiegészítő azonosító 64 karakter vagy rövidebb lehet."
 
 #: src/olympia/files/utils.py
-msgid "Add-on ID doesn't match add-on."
-msgstr "A kiegészítő azonosító nem egyezik a kiegészítővel."
+#, python-format
+msgid "The add-on ID in your manifest.json or install.rdf (%s) does not match the ID of your add-on on AMO (%s)"
+msgstr "A kiegészítő azonosítója a manifest.json vagy install.rdf fájlban (%s) nem egyezik a kiegészítő AMO azonosítójával (%s)"
 
 #: src/olympia/files/utils.py
 msgid "Duplicate add-on ID found."
@@ -8262,8 +8571,9 @@ msgid "Version numbers should only contain letters, numbers, and these punctuati
 msgstr "A verziószámok kizárólag betűket, számokat és a következő karaktereket tartalmazhatja: +*.-_."
 
 #: src/olympia/files/utils.py
-msgid "<em:type> doesn't match add-on"
-msgstr "<em:type> nem illeszkedik kiegészítőre"
+#, python-format
+msgid "<em:type> in your install.rdf (%s) does not match the type of your add-on on AMO (%s)"
+msgstr "az install.rdf fájlban lévő <em:type> (%s) nem egyezik a kiegészítő típusával az AMO-n (%s)"
 
 #: src/olympia/files/views.py
 msgid "Back to review"
@@ -8497,6 +8807,14 @@ msgstr "Játékok!"
 #: src/olympia/legacy_discovery/modules.py
 msgid "Add more fun to your Firefox. Play dozens of games right from your browser—puzzles, classic arcade, action games, and more!"
 msgstr "Adjon több szórakozást a Firefoxához. Játsszon tucatnyi játékkal közvetlenül a böngészőjében – puzzle, ügyességi, akciójátékok, és így tovább!"
+
+#: src/olympia/legacy_discovery/modules.py
+msgid "Must-Have Media"
+msgstr "Kötelező média"
+
+#: src/olympia/legacy_discovery/modules.py
+msgid "Take better screenshots, improve your online video experience, finally learn how to make a GIF, and other great media tools."
+msgstr "Készítsen jobb képernyőképeket, javítsa az online videoélményét, tanuljon meg végre GIF-eket készíteni, és ismerjen meg más nagyszerű médiaeszközöket."
 
 #: src/olympia/legacy_discovery/templates/legacy_discovery/base.html
 msgid "Discover Add-ons"
@@ -9261,22 +9579,22 @@ msgstr "Hogyan tudok lépést tartani azzal, hogy mi történik az AMO-n?"
 
 #: src/olympia/pages/templates/pages/about.lhtml
 msgid "There are several ways to find out the latest news from the world of add-ons:"
-msgstr ""
+msgstr "Sok módja van annak, hogy megkapja a legfrissebb híreket a kiegészítők világából:"
 
 #: src/olympia/pages/templates/pages/about.lhtml
 #, python-format
 msgid "Our <a href=\"%(url)s\">Add-ons Blog</a> is regularly updated with information for both add-on enthusiasts and developers."
-msgstr ""
+msgstr "A <a href=\"%(url)s\">Kiegészítők blogunk</a> rendszeresen frissül érdeklődőknek és fejlesztőknek szóló információkkal."
 
 #: src/olympia/pages/templates/pages/about.lhtml
 #, python-format
 msgid "We often post news, tips, and tricks to our Twitter account, <a href=\"%(url)s\">mozamo</a>"
-msgstr ""
+msgstr "Gyakran teszünk közzé híreket, tippeket és trükköket a Twitter fiókunkkal: <a href=\"%(url)s\">mozamo</a>"
 
 #: src/olympia/pages/templates/pages/about.lhtml
 #, python-format
 msgid "Our <a href=\"%(url)s\">forums</a> are a good place to interact with the add-ons community and discuss upcoming changes to AMO."
-msgstr ""
+msgstr "A <a href=\"%(url)s\">fórumaink</a> jó helyet biztosítanak a kiegészítők közösségének az együttműködésre és az AMO változásainak megbeszélésére."
 
 #: src/olympia/pages/templates/pages/about.lhtml
 msgid "This sounds great! How can I get involved?"
@@ -9370,12 +9688,16 @@ msgid ""
 "As you start browsing and using your add-ons, take careful note of anything that seems different from when you last used the extension. This might be a display glitch, such as a menu item missing, "
 "or something more serious, like the add-on not working at all or showing errors."
 msgstr ""
+"Amint böngészni kezd és elkezdi használni a kiegészítőt, figyelje meg hogy tapasztal-e bármi változást azóta, amikor legutóbb használta a kiegészítőt. Lehet ez megjelenítési hiba, például hiányzó "
+"menüelem, vagy valami komolyabb, például a kiegészítő egyáltalán nem működik, vagy hibákat mutat."
 
 #: src/olympia/pages/templates/pages/acr_firstrun.html
 msgid ""
 "Once you know whether a particular add-on works properly or has problems, open the Add-ons Manager and click Compatibility next to the add-on to let Mozilla know what you found in your testing. "
 "Submitting a report will help us tell the add-on developer whether their add-on is working properly in this version or might need some fixes."
 msgstr ""
+"Amint tudja hogy egy kiegészítő megfelelően működik vagy problémái vannak, nyissa meg a Kiegészítőkezelőt és kattintson a Kompatibilitásra a kiegészítő mellett és tudassa a Mozillával hogy mit "
+"talált a tesztelésnél. A jelentés beküldése segít nekünk abban, hogy értesítsük a kiegészítő fejlesztőét, hogy megfelelően működik ebben a verzióban, vagy javítások szükségesek."
 
 #: src/olympia/pages/templates/pages/acr_firstrun.html
 #, python-format
@@ -9383,12 +9705,16 @@ msgid ""
 "If you upgrade to a new version of Firefox or update your add-ons, your reports for the old versions will be hidden to allow you to test the new version. If you have any questions, please ask in <a "
 "href=\"%(url)s\">our forums</a>."
 msgstr ""
+"Ha a Firefox egy új verziójára frissít vagy frissíti a kiegészítőit, akkor a régi verziókra vonatkozó jelentései elrejtésre kerülnek, hogy tesztelhess az új verziót. Ha bármi kérdése van, kérdezzen "
+"a <a href=\"%(url)s\">fórumainkon</a>."
 
 #: src/olympia/pages/templates/pages/acr_firstrun.html
 msgid ""
 "Thousands of add-ons are made by our community every year, and your assistance with compatibility testing helps us make sure these add-ons stay useful as we strive to provide a great user "
 "experience."
 msgstr ""
+"Kiegészítők ezreit készít el a közösség minden évben, és a kompatibilitási tesztelésben nyújtott segítsége teszi lehetővé, hogy ezek a kiegészítők hasznosak maradnak, miközben mi azon dolgozunk hogy"
+" nagyszerű felhasználói élményt nyújtsunk."
 
 #: src/olympia/pages/templates/pages/acr_firstrun.html
 msgid "Thank you!"
@@ -9400,7 +9726,7 @@ msgstr "Köszönetnyilvánítás"
 
 #: src/olympia/pages/templates/pages/credits.html
 msgid "Mozilla would like to thank the following people for their contributions to the addons.mozilla.org project over the years:"
-msgstr ""
+msgstr "A Mozilla szeretné megköszönni a következő embereknek a közreműködését az addons.mozilla.org projektben az évek során:"
 
 #: src/olympia/pages/templates/pages/credits.html
 msgid "Developers &amp; Administrators"
@@ -9436,23 +9762,29 @@ msgid ""
 "Some icons used are from the <a href=\"http://www.famfamfam.com/lab/icons/silk/\">famfamfam Silk Icon Set</a>, licensed under a <a href=\"http://creativecommons.org/licenses/by/2.5/\">Creative "
 "Commons Attribution 2.5 License</a>."
 msgstr ""
+"Néhány használt ikon a <a href=\"http://www.famfamfam.com/lab/icons/silk/\">famfamfam Silk ikonkészletből</a> származik, <a href=\"http://creativecommons.org/licenses/by/2.5/\">Creative Commons – "
+"Nevezd meg! 2.5 licenc</a> alatt."
 
 #: src/olympia/pages/templates/pages/credits.html
 msgid ""
 "Some icons used are from the <a href=\"http://www.fatcow.com/free-icons/\">FatCow Farm-Fresh Web Icons Set</a>, licensed under a <a href=\"http://creativecommons.org/licenses/by/3.0/us/\">Creative "
 "Commons Attribution 3.0 License</a>."
 msgstr ""
+"Néhány használt ikon a <a href=\"http://www.fatcow.com/free-icons/\">FatCow Farm-Fresh webes ikonkészletből</a> származik, <a href=\"http://creativecommons.org/licenses/by/3.0/us/\">Creative Commons"
+" – Nevezd meg! 3.0 licenc</a> alatt."
 
 #: src/olympia/pages/templates/pages/credits.html
 msgid ""
 "Some pages use elements of <a href=\"http://shop.highsoft.com/highcharts.html\">Highcharts</a> (non-commercial), licensed under a <a href=\"http://creativecommons.org/licenses/by-nc/3.0/\">Creative "
 "Commons Attribution-NonCommercial 3.0 License</a>."
 msgstr ""
+"Néhány oldal a <a href=\"http://shop.highsoft.com/highcharts.html\">Highcharts</a> (nem kereskedelmi) elemeit használja, <a href=\"http://creativecommons.org/licenses/by-nc/3.0/\">Creative Commons –"
+" Nevezd meg! – Ne add el! 3.0 licenc</a> alatt."
 
 #: src/olympia/pages/templates/pages/credits.html
 #, python-format
 msgid "For information on contributing, please see our <a href=\"%(url)s\">wiki page</a>."
-msgstr ""
+msgstr "További információkért a közreműködésről, olvassa el ezt a <a href=\"%(url)s\">wiki oldalt</a>."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "Developer FAQ"
@@ -9627,6 +9959,9 @@ msgid ""
 " cases, the latest version of Mozilla software may be a beta release. Since these releases at times introduce architectural changes that may impact the functionality of your add-on, it's important "
 "to be actively involved in the beta process to ensure that your add-on users are not negatively impacted upon final release of Mozilla software."
 msgstr ""
+"A legfrissebb Mozilla szoftverekkel való kompatibilitás biztosítása érdekében fontos letölteni a frissítéseket, amint azok elérhetővé válnak, és tesztelni a kiegészítőjét, hogy még mindig úgy "
+"működik-e, ahogy kellene. Sok esetben a legfrissebb verziójú Mozilla szoftverek béta változatok. Mivel ezek a kiadások néha architekturális változásokat vezethetnek be, amelyek a kiegészítő "
+"funkcionalitását érinthetik, ezért fontos hogy aktívan részt vegyen a béta folyamatban, így a felhasználóit nem fogja negatívan érinteni a Mozilla szoftver végleges kiadása."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "How to improve the performance of my add-on?"
@@ -9638,6 +9973,8 @@ msgid ""
 "Poorly written extensions can have a severe impact on the browsing experience, including on the overall performance of Firefox itself. The following page contains many good <a "
 "href=\"%(url)s\">guides</a> that help you improve performance, whether you're developing core Mozilla code or an add-on."
 msgstr ""
+"A rosszul megírt kiegészítők súlyos hatással lehetnek a böngészési élményre, beleértve a Firefox általános teljesítményét is. A következő oldal sok jó <a href=\"%(url)s\">útmutatót</a> tartalmaz, "
+"amely segít javítani a teljesítményt, fejlesszen Ön akár központi Mozilla kódot, akár kiegészítőt."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "Can my add-on support multiple locales?"
@@ -9649,6 +9986,8 @@ msgid ""
 "Yes. Details on localizing your add-on can be found in the the <a href=\"%(l10n_url)s\">Mozilla Developer Network Localization page</a>. <a href=\"%(bz_url)s\">The BabelZilla project</a> is also a "
 "great resource for learning about localization and volunteering to help translate add-ons."
 msgstr ""
+"Igen. A kiegészítője honosítási részletei megtalálhatóak a <a href=\"%(l10n_url)s\">Mozilla fejlesztői hálózat lokalizációs oldalán</a>. <a href=\"%(bz_url)s\">A BabelZilla projekt</a> is egy "
+"nagyszerű erőforrás a lokalizációval, és a kiegészítők honosításával foglalkozó önkéntes munkával kapcsolatban."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "I need some advice building my add-on. Where can I find help?"
@@ -9724,6 +10063,9 @@ msgid ""
 "to the large volume of visitors to the site. <a href=\"%(md_url)s\">mozdev.org</a> offers free project hosting for Mozilla applications and extensions providing developers with tools to help manage "
 "source code, version control, bug tracking and documentation."
 msgstr ""
+"Igen. Sok fejlesztő választja, hogy maga szolgálja ki a saját kiegészítőjét. A <a href=\"%(amo_url)s\">Mozilla kiegészítők oldalon</a> történő kiszolgálással azonban sokkal szélesebb közönséget "
+"érhető el, az oldal látogatóinak nagy száma miatt. A <a href=\"%(md_url)s\">mozdev.org</a> ingyenes projektkiszolgálást biztosít Mozilla alkalmazások és kiegészítők száma, ellátva a fejlesztőket "
+"eszközökkel, hogy kezeljék a forráskódot, a verziókezelést, a hibakövetést és a dokumentációt is."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "Can Mozilla host my add-on?"
@@ -9790,6 +10132,8 @@ msgid ""
 "The Developer Tools dashboard will allow you to upload and submit add-ons to AMO. You must be a registered AMO users before you can submit an add-on. Before submitting your add-on be sure to you "
 "have read the AMO <a href=\"%(url)s\">Editors Reviewing Guide</a> to ensure that your add-on has met the guidelines used by editors to review add-ons."
 msgstr ""
+"A Fejlesztői eszközök irányítópult lehetővé teszi a kiegészítők feltöltését és benyújtását az AMO-ba. Regisztrált AMO felhasználónak kell lennie mielőtt benyújthat kiegészítőket. Mielőtt beküldi a "
+"kiegészítőjét, olvassa el az AMO <a href=\"%(url)s\">Szerkesztői értékelői útmutatót</a>, hogy meggyőződjön arról, hogy az betartja a szerkesztők által, az értékelésnél használt irányelveket."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "What operating system do I choose for my add-on?"
@@ -9860,10 +10204,13 @@ msgid ""
 " communicating with editors, please be courteous, patient and respectful as they are working hard to ensure that your add-on is set up correctly and follows the guidelines outlined in the <a "
 "href=\"%(url)s\">Editors Reviewing Guide</a>."
 msgstr ""
+"A kiegészítőket az AMO szerkesztők értékelik, egy csapatnyi tehetséges fejlesztő, akik önként jelentkeznek hogy segítsék a Mozilla projektet, azáltal hogy értékelik a kiegészítőket, így biztosítva a"
+" Mozilla felhasználók stabil és biztonságos felhasználói élményt. Amikor a szerkesztőkkel kommunikál, legyen udvarias, türelmes és tisztelettudó, mivel keményen dolgoznak azon, hogy a kiegészítője "
+"jól legyen beállítva, és kövesse a <a href=\"%(url)s\">Szerkesztői értékelési útmutatóban</a> vázolt irányelveket."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "What are the guidelines used to review my add-on?"
-msgstr ""
+msgstr "Mik a kiegészítőm értékelésekor használt irányelvek?"
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 #, python-format
@@ -9871,6 +10218,8 @@ msgid ""
 "The Mozilla editorial team follows the <a href=\"%(url)s\">Editors Reviewing Guide</a> when testing an add-on for acceptance onto AMO. It is important that add-on developers review this guide to "
 "ensure that common problem areas are addressed prior to submitting their add-on for review. This will greatly assist in expediting the review process."
 msgstr ""
+"A Mozilla szerkesztői csapat a <a href=\"%(url)s\">Szerkesztői értékelési útmutatót</a> használja, amikor azt vizsgálja, hogy egy kiegészítő elfogadható-e az AMO számára. Fontos hogy a kiegészítő "
+"fejlesztők átnézzék ezt az útmutatót, hogy megoldják a gyakori problémás területeket, még az előtt, hogy beküldenék a kiegészítőjüket. Ez nagyban gyorsítja az értékelési folyamatot."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "How long will it take for my add-on to be reviewed?"
@@ -9901,49 +10250,55 @@ msgid ""
 "This is why it's very important to read the <a href=\"%(g_url)s\">Editors Reviewing Guide</a> to ensure that your add-on is setup as expected. It's also a good idea to read the blog post, <a "
 "href=\"%(blog_url)s\">Successfully Getting your Add-on Reviewed</a> which provides excellent insight into ensuring a smooth review of your add-on."
 msgstr ""
+"Ezért nagyon fontos elolvasni a <a href=\"%(g_url)s\">Szerkesztői értékelési útmutatót</a>, hogy olyan legyen a kiegészítő beállítva, ahogy az elvárt. Szintén jó ötlet elolvasni a <a "
+"href=\"%(blog_url)s\">A kiegészítője sikeres értékelése</a> blogbejegyzést, amely kitűnő bepillantást nyújt ahhoz, hogy simán zajlódjon a kiegészítője értékelése."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "How can I see how many times my add-on has been downloaded?"
-msgstr ""
+msgstr "Hogyan láthatom, hogy hányszor lett a kiegészítőm letöltve?"
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "The Statistics Dashboard found in the Developer Tools dashboard provides information that can help you determine your add-on downloads since you've submitted it to AMO."
-msgstr ""
+msgstr "A Statisztikai irányítópult a Fejlesztői eszközök irányítópulton információkat szolgáltat, amely segít meghatározni a kiegészítője letöltéseinek számát azóta, hogy beküldte az AMO-ba."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "How can I see how many active users are using my add-on?"
-msgstr ""
+msgstr "Hogyan láthatom, hogy hány felhasználó használja a kiegészítőmet?"
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid ""
 "The Statistics Dashboard found in the Developer Tools dashboard provides information that can help you determine how many users have been actively using your add-on since you've submitted it to AMO."
 msgstr ""
+"A Statisztikai irányítópult a Fejlesztői eszközök irányítópulton információkat szolgáltat, amely segít meghatározni, hogy hány felhasználó használta aktívan a kiegészítőjét azóta, hogy beküldte az "
+"AMO-ba."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "How do I submit an update for my add-on?"
-msgstr ""
+msgstr "Hogyan küldök be frissítést a kiegészítőmhöz?"
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "You can submit an update for your add-on via the Developer Tools dashboard by choosing the option \"Upload a new version\" and uploading a new .xpi file for your add-on."
-msgstr ""
+msgstr "A Fejlesztői eszközök irányítópulton beküldheti a frissítést, az „Új verzió feltöltése” lehetőséget választva, és egy új .xpi fájlt feltöltve a kiegészítőjéhez."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "Does my update need to be reviewed by editors?"
-msgstr ""
+msgstr "A kiegészítőmet át kell nézniük a szerkesztőknek?"
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid ""
 "That depends. If you are simply changing a description of your add-on or updating a \"maxVersion\" to ensure compatibility with a new Mozilla software update, then your add-on does not need to be "
 "reviewed again. If, however, you submit a new updated file, then your add-on update will need to be reviewed by an editor."
 msgstr ""
+"Az attól függ. Ha csak a kiegészítője leírását módosítja, vagy a „maxVersion”-t frissíti, hogy biztosítsa a kompatibilitást egy új Mozilla szoftververzióval, akkor a kiegészítőjét nem kell újra "
+"értékelni. Viszont ha frissített fájlt tölt fel, akkor a kiegészítőfrissítést értékelnie kell egy szerkesztőnek."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "How do I reply to a user who has posted a negative review of my add-on?"
-msgstr ""
+msgstr "Hogyan válaszolhatok egy felhasználónak, aki negatívan értékelte a kiegészítőmet?"
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "A developer may reply to any review posted to their add-on as long as they are logged into AMO. In addition, any user can flag a review as:"
-msgstr ""
+msgstr "A fejlesztő válaszolhat minden kiegészítője értékéléseire, ha be van jelentkezve az AMO-ba. Továbbá bármelyik felhasználó megjelölheti az értékeléseket az alábbiakként:"
 
 #. part of a list (<li>)
 #: src/olympia/pages/templates/pages/dev_faq.html src/olympia/reviews/models.py
@@ -9963,7 +10318,7 @@ msgstr "Rossz helyre küldött hibajelentés vagy támogatási kérés"
 #. part of a list (<li>)
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "Other (provides a pop-up prompt for information)"
-msgstr ""
+msgstr "Más (felugró ablakot nyújt az információk bekéréséhez)"
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "Currently, AMO does not provide a mechanism to directly communicate with a reviewer but this feature is being investigated and considered for a future update."
@@ -9992,16 +10347,23 @@ msgid ""
 "provided solely for your convenience and as a reference for your personal use. These resources do not constitute legal advice nor should they be used in lieu of such advice. Mozilla neither "
 "guarantees nor is responsible for the content of these sites or your reliance on such content."
 msgstr ""
+"Több információra van szüksége a különböző nyílt forráskódú licencekről? Nem tudja melyiket válassza? Milyen jogokat ad egy bizonyos licenc? Ugyan semmi sem pótolja a teljes licencfeltételek "
+"elolvasását, lent néhány oldal található, amely információkat tartalmaz néhány kulcsfontosságú nyílt forráskódú licencről, amely segíthet megtudni a köztük lévő különbségeket. Ezeket az oldalakat "
+"csak az Ön kényelme miatt soroltuk fel, személyes használatra, referenciaként. Ezek az anyagok nem számítanak jogi tanácsadásnak, és nem használhatóak ahelyett. A Mozilla nem felelős ezeknek az "
+"oldalaknak a tartalmáért, sem a megbízhatóságukért."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid ""
 "In addition to the full text of the Mozilla Public License(\"MPL\"), this also provides an annotated version of the MPL and an <abbr title=\"Frequently Asked Questions\">FAQ</abbr> to help you if "
 "you want to use or distribute code licensed under it."
 msgstr ""
+"Az MPL (Mozilla Public License) teljes szövege mellett, ez az MPL jegyzetezett verzióját is biztosítja; a <abbr title=\"Gyakran ismétlődő kérdések\">GYIK</abbr> pedig segít Önnek, ha használni vagy "
+"terjeszteni szeretné az alatta licencelt kódot."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "A table summarizing and comparing how some of the key open source licenses treat distributions, proprietary software linking, and redistribution of code with changes."
 msgstr ""
+"A táblázat összesíti és összehasonlítja hogyan kezelik a kulcsfontosságú nyílt forráskódú licencek a terjesztést, a tulajdonosi szoftverek illesztését, és a módosított forráskód továbbterjesztését."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid ""
@@ -10009,10 +10371,13 @@ msgid ""
 "discussion of what constitutes a free software license or a copyleft license (e.g., a Copyleft license is a general method for making a program or other work free, and requiring all modified and "
 "extended versions of the program to be free as well.)"
 msgstr ""
+"A Free Software Foundation rövid összegzéseket biztosít a kulcsfontosságú nyílt forráskódú licencekhez, köztük arról is, hogy az szabad szoftver vagy copyleft licencként is megfelelő-e. Tartalmaz "
+"egy beszélgetést is arról, hogy mi számít szabad szoftver licencnek, vagy copyleft licencnek (például a copyleft licenc egy általános módszer arra, hogy egy program vagy más munka szabad legyen, és "
+"megköveteli hogy a program minden módosított és bővített verziója is szabad legyen)."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "Open Source Initiative provides the terms of some of the key open source licenses."
-msgstr ""
+msgstr "Az Open Source Initiative szolgáltatja néhány kulcsfontosságú nyílt forráskódú licenc feltételeit."
 
 #: src/olympia/pages/templates/pages/dev_faq.html
 msgid "A comparison of known open source licenses on Wikipedia."
@@ -10089,7 +10454,7 @@ msgstr ""
 #: src/olympia/pages/templates/pages/faq.html
 #, python-format
 msgid "<strong><a href=\"%(browse_url)s\">Themes</a></strong> are lightweight themes that use background images to customize your %(app_name)s toolbars."
-msgstr ""
+msgstr "<strong>A <a href=\"%(browse_url)s\"Témák</a></strong> olyna könnyűsúlyú témák, melyek háttérképeket használnak a %(app_name)s eszköztárainak testreszabásához."
 
 #: src/olympia/pages/templates/pages/faq.html
 #, python-format
@@ -10121,6 +10486,9 @@ msgid ""
 "instructions, read <a href=\"%(extension_url)s\">this article on extensions</a> or <a href=\"%(theme_url)s\">this one for Themes and Complete Themes</a>. If you have difficulty installing add-ons, "
 "see <a href=\"%(troubleshooting_url)s\">Troubleshooting Extensions and Themes</a>."
 msgstr ""
+"A legtöbb esetben a kiegészítők egyszerűen a telepítési gomb megnyomásával telepíthetőek. A kiegészítőket a %(app_name)s Kiegészítőkezelőben lehet kezelni, letiltani vagy eltávolítani. Részletes "
+"utasításokért olvassa el <a href=\"%(extension_url)s\">ezt a cikket a kiegészítőkről</a> vagy <a href=\"%(theme_url)s\">ezt a témákról és a teljes témákról</a>. Ha nehézségbe ütközik a  kiegészítők "
+"telepítésével, akkor nézze meg a <a href=\"%(troubleshooting_url)s\">Kiegészítők és témák hibaelhárítása</a> oldalt."
 
 #: src/olympia/pages/templates/pages/faq.html
 msgid "How do I install add-ons without restarting Firefox?"
@@ -10132,6 +10500,8 @@ msgid ""
 "In Firefox, add-ons marked with \"No restart required\" can be installed without restarting. These add-ons have been created using the <a href=\"%(sdk_url)s\">Add-on SDK</a> or <a "
 "href=\"%(bootstrap_url)s\">bootstrapping</a>. Other add-ons will still require a restart before you can use them."
 msgstr ""
+"A Firefoxban, a „Nincs újraindítás” szöveggel jelölt kiegészítők újraindítás nélkül is telepíthetőek. Ezek a kiegészítők a <a href=\"%(sdk_url)s\">Kiegészítő SDK</a> segítségével, vagy <a "
+"href=\"%(bootstrap_url)s\">önbetöltéssel</a> készültek. Más kiegészítőkhöz továbbra is szükséges az újraindítás a használatuk előtt."
 
 #: src/olympia/pages/templates/pages/faq.html
 msgid "How do I keep add-ons up-to-date?"
@@ -10144,6 +10514,9 @@ msgid ""
 "will alert you that updates to your add-ons are available. <a href=\"%(plugin_url)s\">Plugins</a> are not currently automatically checked for updates, so be sure to regularly visit the <a "
 "href=\"%(plugincheck_url)s\">Plugin Check</a> page to stay up-to-date."
 msgstr ""
+"A kiegészítők, a bővítményekkel ellentétben, automatikusan, minden nap keresnek frissítéseket. A Firefoxban a frissítések alapértelmezés szerint automatikusan települnek. A Firefox 4-es verziója "
+"előtt (és más alkalmazásokban) figyelmeztetést ad, hogy frissítések érhetőek el. A <a href=\"%(plugin_url)s\">bővítmények</a> jelenleg nem keresnek automatikusan frissítéseket, így rendszeresen "
+"látogassa meg a <a href=\"%(plugincheck_url)s\">Bővítmény ellenőrző</a> oldalt, hogy naprakész maradjon."
 
 #: src/olympia/pages/templates/pages/faq.html
 msgid "Are add-ons safe to install?"
@@ -10171,6 +10544,8 @@ msgid ""
 "Most add-ons do not cause a perceivable performance decrease in %(app_name)s, though installing an excessive number may have adverse effects. If you suspect an add-on is causing %(app_name)s to be "
 "slow, try disabling it."
 msgstr ""
+"A legtöbb kiegészítő nem okoz észrevehető teljesítménycsökkenést a %(app_name)sban, de kiugró számú kiegészítő telepítésének kedvezőtlen hatása lehet. Ha gyanítja hogy egy kiegészítő miatt lassú a "
+"%(app_name)s, akkor próbálja meg letiltani azt."
 
 #: src/olympia/pages/templates/pages/faq.html
 #, python-format
@@ -10231,6 +10606,8 @@ msgid ""
 "With thousands of add-ons available, there's something for everyone. But if you're looking for a particular add-on and can't find it, you might try searching on other sites or posting about it in "
 "our <a href=\"%(forum_url)s\">Add-ons </a>forum."
 msgstr ""
+"Az elérhető kiegészítők ezrei közt mindenkinek jut valami. De ha egy kifejezett kiegészítőt keres, és nem találja, akkor megpróbálhatja más oldalakon keresni, vagy bejegyzést tehet a <a "
+"href=\"%(forum_url)s\">Kiegészítők </a>fórumon."
 
 #: src/olympia/pages/templates/pages/faq.html
 msgid "What does it mean if an add-on is \"experimental\" or \"preliminarily reviewed\"?"
@@ -10307,7 +10684,7 @@ msgstr "Mit jelent, ha egy kiegészítő lassúnak van jelölve?"
 
 #: src/olympia/pages/templates/pages/faq.html
 msgid "Most add-ons load code and resources at the same time Firefox is starting up. In most cases the impact in start-up time is minimal, but some add-ons can cause a noticeable slowdown."
-msgstr ""
+msgstr "A legtöbb kiegészítő kódot és erőforrásokat tölt be, amikor a Firefox elindul. A legtöbb esetben az indítási időre gyakorolt hatása minimális, de néhány kiegészítő érezhető lassulást okoz."
 
 #: src/olympia/pages/templates/pages/faq.html
 msgid "How do I report an inappropriate or spam user review?"
@@ -10323,7 +10700,7 @@ msgstr ""
 
 #: src/olympia/pages/templates/pages/faq.html
 msgid "How do I report a bug or contact the Mozilla Add-ons team?"
-msgstr "Hogyan lehet hibát bejelenteni, vagy felvenni a kapcsolatot a Mozilla Add-ons csapattal?"
+msgstr "Hogyan lehet hibát bejelenteni, vagy felvenni a kapcsolatot a Mozilla kiegészítők csapattal?"
 
 #: src/olympia/pages/templates/pages/faq.html
 #, python-format
@@ -10422,6 +10799,8 @@ msgid ""
 "Add-on reviews are a way for you to share your opinions about the add-ons you’ve installed and used. Our review moderation team reserves the right to refuse or remove any review that does not comply"
 " with these guidelines."
 msgstr ""
+"A kiegészítőértékelésekkel megoszthatja véleményét azokról a kiegészítőkről, amelyeket telepített és használt. Az értékelési moderátorcsapatunk fenntartja a jogot, hogy visszautasítson vagy "
+"eltávolítson minden olyan értékelést, amely nem tartja be ezeket az irányelveket."
 
 #: src/olympia/pages/templates/pages/review_guide.html
 msgid "Do:"
@@ -10501,13 +10880,15 @@ msgstr "Ne fűzze hozzá saját vagy más e-mailcímét, telefonszámát vagy m�
 
 #: src/olympia/pages/templates/pages/review_guide.html
 msgid "Post reviews for an add-on you or your organization wrote or represent."
-msgstr ""
+msgstr "Ne írjon értékelést olyan kiegészítőhöz, amelyet Ön vagy a szervezete írt, illetve azt képviseli."
 
 #: src/olympia/pages/templates/pages/review_guide.html
 msgid ""
 "Criticize an add-on for something it’s intended to do. For example, leaving a negative review of an add-on for displaying ads or requiring data gathering, when that is the intended purpose of the "
 "add-on, or the add-on requires gathering data to function."
 msgstr ""
+"Ne kritizálja a kiegészítőt azért mert azt teszi, ami a célja. Például, ne hagyjon negatív értékelést egy kiegészítőhöz, mert az reklámokat jelenít meg, vagy adatgyűjtést igényel, amikor az a "
+"kiegészítő kifejezett célja, vagy a kiegészítő működéséhez szükséges az adatgyűjtés."
 
 #: src/olympia/pages/templates/pages/review_guide.html
 msgid "How can I report a problematic review?"
@@ -10518,6 +10899,8 @@ msgid ""
 "Please report or flag any questionable reviews by clicking the \"Report this review\" and it will be submitted to the site for moderation. Our moderation team will use the Review Guidelines to "
 "evaluate whether or not to delete the review or restore it back to the site."
 msgstr ""
+"Kérjük jelentsen vagy jelöljön meg minden kifogásolható értékelést az „Értékelés jelentése” gombra kattintva, és beküldésre kerül moderálásra. A moderátorcsapatunk az Értékelési irányelveket fogja "
+"használni ahhoz, hogy eldöntse töröljék-e az értékelést, vagy állítsák vissza az oldalra."
 
 #: src/olympia/pages/templates/pages/review_guide.html
 msgid "I’m an add-on author, can I respond to reviews?"
@@ -10526,7 +10909,7 @@ msgstr "Én vagyok a kiegészítő szerzője, válaszolhatok az értékelésekre
 #: src/olympia/pages/templates/pages/review_guide.html
 #, python-format
 msgid "Yes, add-on authors can provide a single response to a review. You can set up a discussion topic in our <a href=\"%(forum_url)s\">forum</a> to engage in additional discussion or follow-up."
-msgstr ""
+msgstr "Igen, a kiegészítő szerzője adhat egy választ egy értékelésre. A további megbeszéléshez vagy nyomon követéshez létrehozhat egy témát a <a href=\"%(forum_url)s\">fórumunkban</a>."
 
 #: src/olympia/pages/templates/pages/review_guide.html
 msgid "I’m an add-on author, can I delete unfavorable reviews or ratings?"
@@ -10537,6 +10920,8 @@ msgid ""
 "In general, no. But if the review did not meet the review guidelines outlined above, you can click \"Report this review\" and have it moderated. If a review included a complaint that is no longer "
 "valid due to a new release of your add-on, we may consider deleting the review. Submit your detailed request to amo-editors@mozilla.org."
 msgstr ""
+"Általánosságban nem. De ha az értékelés nem követi a fent vázolt értékelési irányelveket, akkor rákattinthat az „Értékelés jelentése” gombra, és moderáltathatja. Ha egy értékelés egy panaszt "
+"tartalmazott, amely már nem érvényes a kiegészítő új kiadása miatt, akkor megfontolhatjuk az értékelés törlését. Küldje el a részletes kérését az amo-editors@mozilla.org címre."
 
 #: src/olympia/pages/templates/pages/sunbird.html
 msgid "Sunbird has retired"
@@ -10629,6 +11014,11 @@ msgid ""
 "href=\"%(support)s\">support section</a> to find out where to get assistance for this add-on. </li> <li>Please keep reviews clean, avoid the use of improper language and do not post any personal "
 "information. </li> </ul> <p>Please read the <a href=\"%(guide)s\">Review Guidelines</a> for more detail about user add-on reviews.</p>"
 msgstr ""
+"<h2>Tartsa ezeket észben</h2> <ul> <li> Írjon úgy, mintha egy barátjának mesélné el a tapasztalatát a kiegészítővel. Adjon meg részletes és segítőkész részleteket, mint például hogy mi tetszett/nem "
+"tetszett, milyen könnyű használni, milyen hátrányai vannak. Tartózkodjon a túl általános kifejezésektől, mint a „Nagyszerű” vagy „Rossz”, hacsak nem tud valami okot mondani, amiért ezt gondolja. "
+"</li> <li> Ne írjon hibajelentéseket az értékelésekbe. Nem tesszük elérhetővé az e-mail címét a kiegészítő fejlesztője számára, viszont szükségük lehet kapcsolatba lépniük Önnel a probléma "
+"megoldásához. Lásd a <a href=\"%(support)s\">támogatás szakaszt</a>, hogy megtudja hol kaphat segítséget a kiegészítőhöz. </li> <li>Tartsa tisztán az értékeléseket, kerülje a nem megfelelő "
+"nyelvezetet, és ne írjon le semmi személyes információt. </li> </ul> <p> További részletekért a kiegészítő értékelésről, olvassa el az <a href=\"%(guide)s\">Értékelési irányelveket</a>.</p>"
 
 #: src/olympia/reviews/templates/reviews/reply.html
 msgid "Reply to review by {0}"
@@ -11265,6 +11655,11 @@ msgid ""
 "blog</b></dd> </dl> <p> Only src parameters that begin with \"external-\" will be tracked, up to 61 additional characters. Any text after \"external-\" can be used to describe the source, such as "
 "\"external-blog\", \"external-sidebar\", \"external-campaign225\", etc. The following URL-safe characters are allowed: <code>a-z A-Z - . _ ~ %% +</code>"
 msgstr ""
+"<h2>Külső források követése</h2> <p> Ha hivatkozik a kiegészítő részletező oldalára, vagy közvetlenül a fájlra egy külső helyről, mint például egy blogról vagy egy weboldalról, akkor hozzáfűzhet egy"
+" paramétert, amely a letöltési forrást követi. Például a következő hivatkozások jelennének meg a blogban: <dl><dt>Kiegészítő részletező oldala</dt> "
+"<dd>https://addons.mozilla.org/addon/%(slug)s?src=<b>external-blog</b><dd> <dt>Közvetlen fájl hivatkozás</dt> <dd>https://addons.mozilla.org/downloads/latest/%(id)s/addon-%(id)s-latest.xpi?src=<b"
+">external-blog</b></dd> <dl> <p> Csak az „external-” karakterlánccal kezdődő src attribútumok lesznek követve, legfeljebb 61 további karakterig. Az „external-” után következő szöveg írhatja le a "
+"forrást, például „external-blog”, „external-oldalsav”, „external-kampany255”, stb. A következő URL-biztos karakterek engedélyezettek: <code>a-z A-Z - . _ ~ %% +</code>"
 
 #: src/olympia/stats/templates/stats/reports/statuses.html
 msgid "Add-on Status by Date"
@@ -11355,6 +11750,8 @@ msgid ""
 "Except where otherwise <a href=\"http://www.mozilla.org/about/legal.html#site\">noted</a>, content on this site is licensed under the <br /> <a href=\"http://creativecommons.org/licenses/by-"
 "sa/3.0/\"> Creative Commons Attribution Share-Alike License v3.0 </a> or any later version."
 msgstr ""
+"Hacsak másként nincs <a href=\"http://www.mozilla.org/about/legal.html#site\">jelezve</a>, akkor az oldal tartalma a <br /><a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons"
+" Nevezd meg! – Így add tovább! 3.0</a> (vagy újabb) verziójú licenc alatt érhető el."
 
 #: src/olympia/templates/footer.html
 msgid "get to know <b>add-ons</b>"
@@ -11492,7 +11889,7 @@ msgstr "Mozilla weboldal"
 msgid "menu"
 msgstr "menü"
 
-#: src/olympia/templates/mobile/header_auth.html src/olympia/users/templates/users/register.html
+#: src/olympia/templates/mobile/header_auth.html
 msgid "Register"
 msgstr "Regisztráció"
 
@@ -11846,27 +12243,6 @@ msgid "Having Trouble?"
 msgstr "Problémákba ütközött?"
 
 #: src/olympia/users/views.py
-msgid "You are already logged in to an account."
-msgstr "Már be vagy jelentkezve."
-
-#: src/olympia/users/views.py
-msgid "Congratulations! Your user account was successfully created."
-msgstr "Gratulálunk! A felhasználói fiók sikeresen létrejött."
-
-# %1 is the user's email address
-#: src/olympia/users/views.py
-msgid "An email has been sent to your address {0} to confirm your account. Before you can log in, you have to activate your account by clicking on the link provided in this email."
-msgstr "A felhasználói fiókot aktiváló hivatkozást e-mailben küldtük el a(z) {0} címre. Az első bejelentkezés előtt aktiválnia kell a fiókját az e-mailben küldött hivatkozásra való kattintással."
-
-#: src/olympia/users/views.py
-msgid "There are errors in this form"
-msgstr "Hibák vannak az űrlapon"
-
-#: src/olympia/users/views.py
-msgid "Please correct them and resubmit."
-msgstr "Javítsa őket és küldje be újra."
-
-#: src/olympia/users/views.py
 msgid "User reported."
 msgstr "Felhasználó bejelentve."
 
@@ -11932,11 +12308,11 @@ msgstr "Kérjük, állítsa be a megjelenítendő nevet vagy felhasználónevet 
 msgid "Manage basic account information, such as username and email address."
 msgstr "Kezelje az alapvető fiókinformációt, mint például a felhasználónevét és e-mail címét."
 
-#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/edit.html
 msgid "Username"
 msgstr "Felhasználónév"
 
-#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/pwreset_request.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/pwreset_request.html
 msgid "Email Address"
 msgstr "E-mail cím"
 
@@ -11948,7 +12324,7 @@ msgstr "Firefox-fiók kezelése…"
 msgid "Change Password"
 msgstr "Jelszó megváltoztatása"
 
-#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html
 msgid "Password"
 msgstr "Jelszó"
 
@@ -12002,10 +12378,6 @@ msgid "Allowed HTML: {0}. Links are forbidden."
 msgstr "Engedélyezett HTML: {0}. A hivatkozások tiltottak."
 
 #: src/olympia/users/templates/users/edit.html
-msgid "Miscellaneous"
-msgstr "Egyebek"
-
-#: src/olympia/users/templates/users/edit.html
 msgid "Decide what collections should be shown in your profile."
 msgstr "Döntse el mely gyűjtemények jelenlenek meg a profiljában."
 
@@ -12049,6 +12421,10 @@ msgstr "nincs"
 msgid "all"
 msgstr "mind"
 
+#: src/olympia/users/templates/users/fxa_login_prompt_content.html
+msgid "Mozilla Add-ons has transitioned to Firefox Accounts for login. Continue to complete the simple login process."
+msgstr "A Mozilla Kiegészítők áttért a Firefox fiókokra a bejelentkezéshez. Folytassa az egyszerű bejelentkezési folyamat befejezéséhez."
+
 #: src/olympia/users/templates/users/fxa_migration.html src/olympia/users/templates/users/mobile/fxa_migration.html
 msgid "Migrate to Firefox Accounts"
 msgstr "Migrálás Firefox fiókra"
@@ -12066,12 +12442,12 @@ msgid "User Login"
 msgstr "Felhasználónév"
 
 #: src/olympia/users/templates/users/login.html src/olympia/users/templates/users/mobile/login.html
-msgid "Enter your email"
-msgstr "Adja meg az e-mail címét"
+msgid "Login with Firefox Accounts"
+msgstr "Bejelentkezés Firefox fiókkal"
 
 #: src/olympia/users/templates/users/login.html src/olympia/users/templates/users/mobile/login.html
-msgid "Log In"
-msgstr "Bejelentkezés"
+msgid "Enter your email"
+msgstr "Adja meg az e-mail címét"
 
 #: src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html
 msgid "Email address"
@@ -12187,7 +12563,7 @@ msgstr "Jelszó átállítása sikertelen volt"
 msgid "You have migrated to Firefox Accounts. You can no longer change your password here."
 msgstr "Áttért a Firefox fiókok használatára, többé már nem változtathatja meg itt a jelszavát."
 
-#: src/olympia/users/templates/users/pwreset_confirm.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/pwreset_confirm.html
 msgid "Confirm password"
 msgstr "Jelszó megerősítése"
 
@@ -12207,47 +12583,6 @@ msgstr "Jelszót törlő hivatkozás küldése"
 msgid ""
 "An email has been sent to the requested account with further information. If you do not receive an email then please confirm you have entered the same email address used during account registration."
 msgstr "További információt tartalmazó levelet küldtünk a megadott e-mail címre. Amennyiben nem kapott levelet, ellenőrizzem hogy ugyanazt az e-mail címet adta meg, mint regisztrációkor."
-
-#: src/olympia/users/templates/users/register.html
-msgid "New User Registration"
-msgstr "Új felhasználó regisztráció"
-
-#: src/olympia/users/templates/users/register.html
-msgid "Why register?"
-msgstr "Miért regisztráljon?"
-
-#: src/olympia/users/templates/users/register.html
-msgid "Registration on AMO is <strong>not required</strong> if you simply want to download and install public add-ons."
-msgstr "Az AMO regisztráció <strong>nem kötelező</strong>, ha csak nyilvános kiegészítőket szeretne letölteni és telepíteni."
-
-#: src/olympia/users/templates/users/register.html
-msgid "You only need to register if:"
-msgstr "Csak akkor kell regisztrálnia ha:"
-
-#: src/olympia/users/templates/users/register.html
-msgid "You want to submit reviews for add-ons"
-msgstr "Értékeléseket akar beküldeni kiegészítőkhöz"
-
-#: src/olympia/users/templates/users/register.html
-msgid "You want to keep track of your favorite add-on collections or create one yourself"
-msgstr "Szeretné nyomon követni kedvenc kiegészítőgyűjteményeit vagy szeretne egy sajátot létrehozni"
-
-#: src/olympia/users/templates/users/register.html
-msgid "You are an add-on developer and want to upload your add-on for hosting on AMO"
-msgstr "Ön egy kiegészítőfejlesztő, és szeretné feltölteni a kiegészítőjét, hogy az AMO szolgáltassa azt "
-
-#: src/olympia/users/templates/users/register.html
-msgid "Upon successful registration, you will be sent a confirmation email to the address you provided. Please follow the instructions there to confirm your account."
-msgstr "A sikeres regisztráció után egy megerősítő e-mailt fog kapni a megadott e-mail címre. Kérjük kövesse az abban leírt utasításokat, hogy megerősítse fiókját."
-
-#: src/olympia/users/templates/users/register.html
-#, python-format
-msgid "If you like, you can read our <a href=\"%(legal)s\" title=\"Legal Notices\">Legal Notices</a> and <a href=\"%(privacy)s\" title=\"Privacy Policy\">Privacy Policy</a>."
-msgstr "Ha szeretné,  elolvashatja a <a href=\"%(legal)s\" title=\"Legal Notices\">Jogi megjegyzéseket</a> és az <a href=\"%(privacy)s\" title=\"Privacy Policy\">Adatvédelmi nyilatkozatot</a>."
-
-#: src/olympia/users/templates/users/register.html
-msgid "Display name"
-msgstr "Megjelenő név"
 
 #: src/olympia/users/templates/users/report_abuse.html
 msgid "Please describe why you are reporting this user, such as for spam or an inappropriate picture."

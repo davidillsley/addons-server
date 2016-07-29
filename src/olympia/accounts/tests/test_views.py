@@ -1,4 +1,6 @@
+# -*- coding: utf-8 -*-
 import base64
+from datetime import datetime
 
 from django.contrib.auth.models import AnonymousUser
 from django.contrib.messages import get_messages
@@ -53,6 +55,10 @@ class TestLoginUser(TestCase):
         patcher = mock.patch('olympia.accounts.views.login')
         self.login = patcher.start()
         self.addCleanup(patcher.stop)
+        patcher = mock.patch('olympia.users.models.commonware.log')
+        commonware_log = patcher.start()
+        commonware_log.get_remote_addr.return_value = '8.8.8.8'
+        self.addCleanup(patcher.stop)
 
     def test_user_gets_logged_in(self):
         assert len(get_messages(self.request)) == 0
@@ -60,7 +66,15 @@ class TestLoginUser(TestCase):
         self.login.assert_called_with(self.request, self.user)
         assert len(get_messages(self.request)) == 0
 
-    def test_fxa_data_gets_set(self):
+    def test_login_attempt_is_logged(self):
+        now = datetime.now()
+        self.user.update(last_login_attempt=now)
+        views.login_user(self.request, self.user, self.identity)
+        self.login.assert_called_with(self.request, self.user)
+        assert self.user.last_login_attempt > now
+        assert self.user.last_login_ip == '8.8.8.8'
+
+    def test_fxa_data_gets_set_migrating(self):
         assert len(get_messages(self.request)) == 0
         self.user.update(fxa_id=None)
         views.login_user(self.request, self.user, self.identity)
@@ -68,6 +82,16 @@ class TestLoginUser(TestCase):
         assert user.fxa_id == '9001'
         assert not user.has_usable_password()
         assert len(get_messages(self.request)) == 1
+
+    def test_fxa_data_gets_set_migration_over(self):
+        assert len(get_messages(self.request)) == 0
+        self.user.update(fxa_id=None)
+        self.create_switch('fxa-migrated', active=True)
+        views.login_user(self.request, self.user, self.identity)
+        user = self.user.reload()
+        assert user.fxa_id == '9001'
+        assert not user.has_usable_password()
+        assert len(get_messages(self.request)) == 0
 
     def test_email_address_can_change(self):
         assert len(get_messages(self.request)) == 0
@@ -907,3 +931,21 @@ class TestAccountSuperCreate(APIKeyAuthTestCase):
         user = UserProfile.objects.get(pk=res.data['user_id'])
         assert action_allowed_user(user, 'Any', 'DamnThingTheyWant')
         assert res.data['groups'] == [(group.pk, group.name, group.rules)]
+
+
+class TestParseNextPath(TestCase):
+
+    def test_plain_path(self):
+        parts = ['deadcafe', 'L2VuLVVTL2FkZG9ucy9teS1hZGRvbi8']
+        next_path = views.parse_next_path(parts)
+        assert next_path == '/en-US/addons/my-addon/'
+
+    def test_unicode_path(self):
+        parts = [
+            'deadcafe',
+            'L2VuLVVTL2ZpcmVmb3gvYWRkb24vZMSZbMOuY8Otw7jDuXMtcMOkw7HEjcOla8SZL'
+            'z9zcmM9aHAtZGwtZmVhdHVyZWQ',
+        ]
+        next_path = views.parse_next_path(parts)
+        assert next_path == (
+            u'/en-US/firefox/addon/dęlîcíøùs-päñčåkę/?src=hp-dl-featured')

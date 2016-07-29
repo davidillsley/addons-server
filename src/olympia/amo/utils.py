@@ -5,6 +5,7 @@ import datetime
 import errno
 import functools
 import itertools
+import json
 import operator
 import os
 import random
@@ -40,6 +41,7 @@ from html5lib.serializer.htmlserializer import HTMLSerializer
 from jingo import get_env, get_standard_processors
 from PIL import Image
 from rest_framework.utils.encoders import JSONEncoder
+from validator import unicodehelper
 
 from olympia.amo import search
 from olympia.amo import ADDON_ICON_SIZES
@@ -167,6 +169,11 @@ def paginate(request, queryset, per_page=20, count=None):
 
     paginated.url = u'%s?%s' % (request.path, request.GET.urlencode())
     return paginated
+
+
+def decode_json(json_string):
+    """Helper that transparently handles BOM encoding."""
+    return json.loads(unicodehelper.decode(json_string), cls=AMOJSONEncoder)
 
 
 def send_mail(subject, message, from_email=None, recipient_list=None,

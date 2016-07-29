@@ -36,12 +36,6 @@ class AddonIndexer(BaseSearchIndexer):
                     'app': {'type': 'byte'},
                     'appversion': {'properties': {app.id: appver
                                                   for app in amo.APP_USAGE}},
-                    # FIXME: See issue #3120, the 'authors' property is for
-                    # backwards-compatibility and all code should be switched
-                    # to use 'listed_authors.name' instead. We needed a reindex
-                    # first though, which is why the 2 are present at the
-                    # moment.
-                    'authors': {'type': 'string'},
                     'average_daily_users': {'type': 'long'},
                     'bayesian_rating': {'type': 'double'},
                     'category': {'type': 'integer'},
@@ -77,6 +71,7 @@ class AddonIndexer(BaseSearchIndexer):
                     'hotness': {'type': 'double'},
                     'icon_type': {'type': 'string', 'index': 'no'},
                     'is_disabled': {'type': 'boolean'},
+                    'is_experimental': {'type': 'boolean'},
                     'is_listed': {'type': 'boolean'},
                     'last_updated': {'type': 'date'},
                     'listed_authors': {
@@ -126,6 +121,7 @@ class AddonIndexer(BaseSearchIndexer):
                     'summary': {'type': 'string', 'analyzer': 'snowball'},
                     'tags': {'type': 'string', 'index': 'not_analyzed'},
                     'type': {'type': 'byte'},
+                    'view_source': {'type': 'boolean', 'index': 'no'},
                     'weekly_downloads': {'type': 'long'},
                 },
             },
@@ -151,8 +147,9 @@ class AddonIndexer(BaseSearchIndexer):
 
         attrs = ('id', 'average_daily_users', 'bayesian_rating', 'created',
                  'default_locale', 'guid', 'hotness', 'icon_type',
-                 'is_disabled', 'is_listed', 'last_updated', 'modified',
-                 'public_stats', 'slug', 'status', 'type', 'weekly_downloads')
+                 'is_disabled', 'is_experimental', 'is_listed', 'last_updated',
+                 'modified', 'public_stats', 'slug', 'status', 'type',
+                 'view_source', 'weekly_downloads')
         data = {attr: getattr(obj, attr) for attr in attrs}
 
         if obj.type == amo.ADDON_PERSONA:
@@ -196,14 +193,9 @@ class AddonIndexer(BaseSearchIndexer):
                 'min': min_, 'min_human': min_human,
                 'max': max_, 'max_human': max_human,
             }
-        # FIXME: See issue #3120, the 'authors' property is for
-        # backwards-compatibility and all code should be switched
-        # to use 'listed_authors.name' instead. We needed a reindex
-        # first though, which is why the 2 are present at the
-        # moment.
-        data['authors'] = [a.name for a in obj.listed_authors]
         # Quadruple the boost if the add-on is public.
-        if obj.status == amo.STATUS_PUBLIC and 'boost' in data:
+        if (obj.status == amo.STATUS_PUBLIC and not obj.is_experimental and
+                'boost' in data):
             data['boost'] = float(max(data['boost'], 1) * 4)
         # We go through attach_categories and attach_tags transformer before
         # calling this function, it sets category_ids and tag_list.

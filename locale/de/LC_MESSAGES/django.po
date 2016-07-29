@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-07-05 13:42+0000\n"
-"PO-Revision-Date: 2016-07-05 16:55+0000\n"
+"POT-Creation-Date: 2016-07-28 10:05+0000\n"
+"PO-Revision-Date: 2016-07-28 17:47+0000\n"
 "Last-Translator: Michael Köhler <michael.koehler1@gmx.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
@@ -61,8 +61,8 @@ msgid "Continue to Download&nbsp;&rarr;"
 msgstr "Weiter zum Download&nbsp;&rarr;"
 
 #: src/olympia/addons/buttons.py src/olympia/addons/helpers.py src/olympia/addons/templates/addons/impala/details.html src/olympia/addons/templates/addons/impala/listing/items.html
-#: src/olympia/addons/templates/addons/mobile/home.html src/olympia/addons/views.py src/olympia/amo/templates/amo/side_nav.html src/olympia/amo/templates/amo/site_nav.html
-#: src/olympia/bandwagon/views.py src/olympia/browse/templates/browse/impala/category_landing.html src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/browse/views.py
+#: src/olympia/addons/templates/addons/mobile/home.html src/olympia/amo/templates/amo/side_nav.html src/olympia/amo/templates/amo/site_nav.html src/olympia/bandwagon/views.py
+#: src/olympia/browse/templates/browse/impala/category_landing.html src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/browse/views.py
 msgid "Featured"
 msgstr "Vorgestellt"
 
@@ -176,18 +176,6 @@ msgstr "Im Add-ons-Manager (Firefox 4 und neuer) werden Nutzer immer gefragt. Gi
 #: src/olympia/addons/models.py src/olympia/addons/templates/addons/details_box.html src/olympia/devhub/templates/devhub/includes/addon_details.html src/olympia/devhub/templates/devhub/index.html
 msgid "Listed"
 msgstr "Angezeigt"
-
-#: src/olympia/addons/views.py src/olympia/browse/templates/browse/personas/mobile/category_landing.html
-msgid "Popular"
-msgstr "Beliebt"
-
-#: src/olympia/addons/views.py src/olympia/browse/views.py
-msgid "Recently Added"
-msgstr "Neu hinzugefügt"
-
-#: src/olympia/addons/views.py src/olympia/bandwagon/views.py src/olympia/browse/views.py src/olympia/search/forms.py
-msgid "Recently Updated"
-msgstr "Zuletzt aktualisiert"
 
 #. l10n: {0} is the addon name
 # %1 is an add-on name.
@@ -640,8 +628,8 @@ msgid "See all Themes by this Artist"
 msgstr "Alle Themes von diesem Künstler ansehen"
 
 #: src/olympia/addons/templates/addons/mobile/home.html src/olympia/addons/templates/addons/persona_detail.html src/olympia/amo/templates/amo/side_nav.html
-#: src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/devhub/templates/devhub/addons/edit/basic.html src/olympia/editors/templates/editors/review.html
-#: src/olympia/editors/templates/editors/themes/themes.html src/olympia/templates/categories.html
+#: src/olympia/browse/templates/browse/macros.html src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/devhub/templates/devhub/addons/edit/basic.html
+#: src/olympia/editors/templates/editors/review.html src/olympia/editors/templates/editors/themes/themes.html src/olympia/templates/categories.html
 msgid "Categories"
 msgstr "Kategorien"
 
@@ -914,7 +902,7 @@ msgid_plural "See all %(cnt)s reviews of this add-on"
 msgstr[0] "Alle Bewertungen dieses Add-ons anzeigen"
 msgstr[1] "Alle %(cnt)s Bewertungen dieses Add-ons anzeigen"
 
-#: src/olympia/addons/templates/addons/tags_box.html src/olympia/devhub/templates/devhub/addons/edit/basic.html
+#: src/olympia/addons/templates/addons/tags_box.html src/olympia/constants/categories.py src/olympia/devhub/templates/devhub/addons/edit/basic.html
 msgid "Tags"
 msgstr "Tags"
 
@@ -1427,10 +1415,6 @@ msgstr "Fehler beim Verifizieren der Eingabe, bitte erneut versuchen."
 #: src/olympia/amo/fields.py
 msgid "This must be a valid hex color code, such as #000000."
 msgstr "Das muss ein gültiger hexadezimaler Farbcode sein, wie #000000."
-
-#: src/olympia/amo/fields.py
-msgid "Enter at least one value."
-msgstr "Geben Sie mindestens einen Wert ein."
 
 #: src/olympia/amo/helpers.py src/olympia/amo/templates/amo/site_nav.html src/olympia/bandwagon/templates/bandwagon/add.html src/olympia/bandwagon/templates/bandwagon/collection_detail.html
 #: src/olympia/bandwagon/templates/bandwagon/delete.html src/olympia/bandwagon/templates/bandwagon/edit.html src/olympia/bandwagon/templates/bandwagon/impala/collection_listing.html
@@ -1995,7 +1979,7 @@ msgstr "Mehr&hellip;"
 msgid "Add-ons for Mobile"
 msgstr "Add-ons für Firefox Mobile"
 
-#: src/olympia/amo/templates/amo/site_nav.html src/olympia/browse/feeds.py src/olympia/browse/templates/browse/search_tools.html src/olympia/constants/base.py
+#: src/olympia/amo/templates/amo/site_nav.html src/olympia/browse/feeds.py src/olympia/browse/templates/browse/search_tools.html src/olympia/constants/base.py src/olympia/constants/categories.py
 msgid "Search Tools"
 msgstr "Suchwerkzeuge"
 
@@ -2213,6 +2197,10 @@ msgstr "Aus den Favoriten entfernen"
 #: src/olympia/editors/templates/editors/leaderboard.html src/olympia/editors/templates/editors/themes/queue_list.html src/olympia/search/forms.py src/olympia/users/templates/users/vcard.html
 msgid "Name"
 msgstr "Name"
+
+#: src/olympia/bandwagon/views.py src/olympia/browse/views.py src/olympia/search/forms.py
+msgid "Recently Updated"
+msgstr "Zuletzt aktualisiert"
 
 #: src/olympia/bandwagon/views.py
 msgid "Recently Popular"
@@ -2574,8 +2562,8 @@ msgstr "<b>Achtung:</b> Wenn Sie den Besitzer dieser Sammlung ändern, können S
 
 #: src/olympia/bandwagon/templates/bandwagon/edit_contributors.html src/olympia/devhub/templates/devhub/addons/forms_shared/media.html src/olympia/devhub/templates/devhub/addons/submit/describe.html
 #: src/olympia/devhub/templates/devhub/addons/submit/license.html src/olympia/devhub/templates/devhub/addons/submit/upload.html src/olympia/devhub/templates/devhub/payments/tier.html
-#: src/olympia/editors/templates/editors/themes/themes.html src/olympia/users/templates/users/fxa_migration_prompt_content.html src/olympia/users/templates/users/login_form.html
-#: src/olympia/users/templates/users/mobile/login.html
+#: src/olympia/editors/templates/editors/themes/themes.html src/olympia/users/templates/users/fxa_login_prompt_content.html src/olympia/users/templates/users/fxa_migration_prompt_content.html
+#: src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html
 msgid "Continue"
 msgstr "Weiter"
 
@@ -2791,6 +2779,10 @@ msgstr "Meiste Anwender"
 #: src/olympia/browse/templates/browse/personas/mobile/category_landing.html src/olympia/browse/views.py src/olympia/legacy_discovery/templates/legacy_discovery/pane.html src/olympia/search/forms.py
 msgid "Up & Coming"
 msgstr "Neu & aufstrebend"
+
+#: src/olympia/browse/views.py
+msgid "Recently Added"
+msgstr "Neu hinzugefügt"
 
 #: src/olympia/browse/views.py src/olympia/devhub/views.py src/olympia/legacy_discovery/templates/legacy_discovery/addons/detail.html
 msgid "Created"
@@ -3057,6 +3049,10 @@ msgid "Easy-to-use themes for Firefox"
 msgstr "Einfach zu verwendende Themes für Firefox"
 
 #: src/olympia/browse/templates/browse/personas/mobile/category_landing.html
+msgid "Popular"
+msgstr "Beliebt"
+
+#: src/olympia/browse/templates/browse/personas/mobile/category_landing.html
 msgid "More Themes"
 msgstr "Weitere Themes"
 
@@ -3162,7 +3158,7 @@ msgstr "Problem"
 msgid "No reports found."
 msgstr "Keine Meldungen."
 
-#: src/olympia/constants/applications.py
+#: src/olympia/constants/applications.py src/olympia/constants/categories.py
 msgid "Firefox"
 msgstr "Firefox"
 
@@ -3315,9 +3311,9 @@ msgid "Ask before users can download this add-on"
 msgstr "Fragen, bevor Nutzer dieses Add-on herunterladen können"
 
 #. Review points sources other than add-ons and themes.
-#: src/olympia/constants/base.py src/olympia/devhub/forms.py src/olympia/editors/templates/editors/performance.html
+#: src/olympia/constants/base.py src/olympia/constants/categories.py src/olympia/devhub/forms.py src/olympia/editors/templates/editors/performance.html
 msgid "Other"
-msgstr "andere"
+msgstr "Sonstiges"
 
 #: src/olympia/constants/base.py
 msgid "Exception"
@@ -3478,6 +3474,282 @@ msgstr "Kompatibel"
 #: src/olympia/constants/base.py
 msgid "Incompatible"
 msgstr "Inkompatibel"
+
+#: src/olympia/constants/categories.py
+msgid "Alerts & Updates"
+msgstr "Hinweise und Benachrichtigungen"
+
+#: src/olympia/constants/categories.py
+msgid "Appearance"
+msgstr "Anzeige"
+
+#: src/olympia/constants/categories.py
+msgid "Bookmarks"
+msgstr "Lesezeichen"
+
+#: src/olympia/constants/categories.py
+msgid "Download Management"
+msgstr "Download-Verwaltung"
+
+#: src/olympia/constants/categories.py
+msgid "Feeds, News & Blogging"
+msgstr "RSS-Feeds, Nachrichten & Bloggen"
+
+#: src/olympia/constants/categories.py
+msgid "Games & Entertainment"
+msgstr "Spiele und Unterhaltung"
+
+#: src/olympia/constants/categories.py
+msgid "Language Support"
+msgstr "Sprachwerkzeuge"
+
+#: src/olympia/constants/categories.py
+msgid "Photos, Music & Videos"
+msgstr "Fotos, Musik und Videos"
+
+#: src/olympia/constants/categories.py
+msgid "Privacy & Security"
+msgstr "Datenschutz & Sicherheit"
+
+#: src/olympia/constants/categories.py
+msgid "Shopping"
+msgstr "Einkaufen"
+
+#: src/olympia/constants/categories.py
+msgid "Social & Communication"
+msgstr "Tauschen und Veröffentlichen"
+
+#: src/olympia/constants/categories.py
+msgid "Tabs"
+msgstr "Tabs"
+
+#: src/olympia/constants/categories.py
+msgid "Web Development"
+msgstr "Webentwicklung"
+
+#: src/olympia/constants/categories.py
+msgid "Animals"
+msgstr "Tiere"
+
+#: src/olympia/constants/categories.py
+msgid "Compact"
+msgstr "Kompakt"
+
+#: src/olympia/constants/categories.py
+msgid "Large"
+msgstr "Große Themen"
+
+#: src/olympia/constants/categories.py src/olympia/users/templates/users/edit.html
+msgid "Miscellaneous"
+msgstr "Verschiedenes"
+
+#: src/olympia/constants/categories.py
+msgid "Modern"
+msgstr "Moderne Themen"
+
+#: src/olympia/constants/categories.py
+msgid "Nature"
+msgstr "Natur"
+
+#: src/olympia/constants/categories.py
+msgid "OS Integration"
+msgstr "Betriebssystem-Integration"
+
+#: src/olympia/constants/categories.py
+msgid "Retro"
+msgstr "Klassische Themen"
+
+#: src/olympia/constants/categories.py
+msgid "Sports"
+msgstr "Sport"
+
+#: src/olympia/constants/categories.py
+msgid "General"
+msgstr "Allgemein"
+
+#: src/olympia/constants/categories.py
+msgid "Business"
+msgstr "Geschäftliches"
+
+#: src/olympia/constants/categories.py
+msgid "Dictionaries & Encyclopedias"
+msgstr "Wörterbücher und Lexika"
+
+#: src/olympia/constants/categories.py
+msgid "Kids"
+msgstr "Kinder"
+
+#: src/olympia/constants/categories.py
+msgid "Multiple Search"
+msgstr "Metasuchen"
+
+#: src/olympia/constants/categories.py
+msgid "Music"
+msgstr "Musik"
+
+#: src/olympia/constants/categories.py
+msgid "News & Blogs"
+msgstr "Nachrichten & Blogs"
+
+#: src/olympia/constants/categories.py
+msgid "Photos & Images"
+msgstr "Fotos und Grafiken"
+
+#: src/olympia/constants/categories.py
+msgid "Shopping & E-Commerce"
+msgstr "Einkaufen"
+
+#: src/olympia/constants/categories.py
+msgid "Social & People"
+msgstr "Menschen und Sozialnetzwerke"
+
+#: src/olympia/constants/categories.py
+msgid "Travel"
+msgstr "Reisen"
+
+#: src/olympia/constants/categories.py
+msgid "Video"
+msgstr "Video"
+
+#: src/olympia/constants/categories.py
+msgid "Abstract"
+msgstr "Abstrakt"
+
+#: src/olympia/constants/categories.py
+msgid "Causes"
+msgstr "Anlässe"
+
+#: src/olympia/constants/categories.py
+msgid "Fashion"
+msgstr "Mode"
+
+#: src/olympia/constants/categories.py
+msgid "Film and TV"
+msgstr "Film und Fernsehen"
+
+#: src/olympia/constants/categories.py
+msgid "Foxkeh"
+msgstr "Foxkeh"
+
+#: src/olympia/constants/categories.py
+msgid "Holiday"
+msgstr "Urlaub"
+
+#: src/olympia/constants/categories.py
+msgid "Scenery"
+msgstr "Landschaft"
+
+#: src/olympia/constants/categories.py
+msgid "Seasonal"
+msgstr "Jahreszeiten"
+
+#: src/olympia/constants/categories.py
+msgid "Solid"
+msgstr "Ausgefüllte Themen"
+
+#: src/olympia/constants/categories.py
+msgid "Websites"
+msgstr "Webseiten"
+
+#: src/olympia/constants/categories.py
+msgid "Device Features & Location"
+msgstr "Gerätefunktionen und Ortsbestimmung"
+
+#: src/olympia/constants/categories.py
+msgid "Experimental"
+msgstr "Experimentell"
+
+#: src/olympia/constants/categories.py
+msgid "Feeds, News, & Blogging"
+msgstr "Feeds, Nachrichten und Bloggen"
+
+#: src/olympia/constants/categories.py src/olympia/editors/templates/editors/base.html src/olympia/editors/templates/editors/performance.html
+msgid "Performance"
+msgstr "Leistung"
+
+#: src/olympia/constants/categories.py
+msgid "Photos & Media"
+msgstr "Fotos und Medien"
+
+#: src/olympia/constants/categories.py
+msgid "Security & Privacy"
+msgstr "Sicherheit und Privatsphäre"
+
+#: src/olympia/constants/categories.py
+msgid "Social Networking"
+msgstr "Soziale Netzwerke"
+
+#: src/olympia/constants/categories.py
+msgid "Sports & Games"
+msgstr "Sport und Spiele"
+
+#: src/olympia/constants/categories.py
+msgid "User Interface"
+msgstr "Benutzeroberfläche"
+
+#: src/olympia/constants/categories.py
+msgid "Appearance and Customization"
+msgstr "Anzeige und Personalisierung"
+
+#: src/olympia/constants/categories.py
+msgid "Calendar and Date/Time"
+msgstr "Kalender und Datum/Zeit"
+
+#: src/olympia/constants/categories.py
+msgid "Chat and IM"
+msgstr "Chat und Nachrichten"
+
+#: src/olympia/constants/categories.py
+msgid "Message Composition"
+msgstr "Nachrichten schreiben"
+
+#: src/olympia/constants/categories.py
+msgid "Contacts"
+msgstr "Kontakte"
+
+#: src/olympia/constants/categories.py
+msgid "Folders and Filters"
+msgstr "Verzeichnisse und Filter"
+
+#: src/olympia/constants/categories.py
+msgid "Import/Export"
+msgstr "Import/Export"
+
+#: src/olympia/constants/categories.py
+msgid "Message and News Reading"
+msgstr "E-Mails lesen"
+
+#: src/olympia/constants/categories.py
+msgid "Privacy and Security"
+msgstr "Datenschutz und Sicherheit"
+
+#: src/olympia/constants/categories.py
+msgid "Downloading and File Management"
+msgstr "Herunterladen und Dateiverwaltung"
+
+#: src/olympia/constants/categories.py
+msgid "Interface Customizations"
+msgstr "Oberflächenanpassungen"
+
+#: src/olympia/constants/categories.py
+msgid "Language Support and Translation"
+msgstr "Sprachunterstützung und Übersetzung"
+
+#: src/olympia/constants/categories.py
+msgid "Photos and Media"
+msgstr "Fotos und Medien"
+
+#: src/olympia/constants/categories.py
+msgid "RSS, News and Blogging"
+msgstr "RSS-Feeds, Nachrichten & Bloggen"
+
+#: src/olympia/constants/categories.py
+msgid "Site-specific"
+msgstr "Seitenabhängige Erweiterungen"
+
+#: src/olympia/constants/categories.py
+msgid "Web and Developer Tools"
+msgstr "Entwicklerwerkzeuge"
 
 #: src/olympia/constants/editors.py src/olympia/editors/templates/editors/themes/queue.html src/olympia/editors/templates/editors/themes/themes.html
 msgid "Request More Info"
@@ -4464,8 +4736,7 @@ msgstr "Standard-Sprache"
 msgid "Information about your add-on is displayed in this locale unless you override it with a locale-specific translation. It is only relevant for listed add-ons."
 msgstr "Informationen über Ihr Add-on wird in dieser Sprache angezeigt, es sei denn, Sie geben eine Übersetzung für eine bestimmte Sprache an. Dies ist nur für gelistete Add-ons wichtig."
 
-#: src/olympia/devhub/templates/devhub/addons/edit/details.html src/olympia/users/forms.py src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/register.html
-#: src/olympia/users/templates/users/vcard.html
+#: src/olympia/devhub/templates/devhub/addons/edit/details.html src/olympia/users/forms.py src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/vcard.html
 msgid "Homepage"
 msgstr "Homepage"
 
@@ -6849,6 +7120,18 @@ msgid "Addon visibility"
 msgstr "Add-on-Sichtbarkeit"
 
 #: src/olympia/devhub/templates/devhub/versions/list.html
+msgid "Why can't I switch to <i>Listed</i> or <i>Hidden</i>?"
+msgstr "Warum kann ich nicht auf <i>Gelistet</i> oder <i>Versteckt</i> umschalten?"
+
+#: src/olympia/devhub/templates/devhub/versions/list.html
+msgid ""
+"Due to technical limitations, you need to delete your entire add-on and resubmit it using this AMO account in order to switch your add-on to listed.\n"
+"            The process is described in detail in <a href=\"{link}\">this documentation</a>."
+msgstr ""
+"Aufgrund technischer Einschränkungen müssen Sie Ihr gesamtes Add-on löschen und mit diesem AMO-Konto neu einreichen, damit Ihr Add-on als „gelistet“ aufgeführt wird.\n"
+"            Der Prozess wird in <a href=\"{link}\">dieser Dokumentation</a> ausführlich beschrieben."
+
+#: src/olympia/devhub/templates/devhub/versions/list.html
 msgid "Listed:"
 msgstr "Gelistet:"
 
@@ -7127,12 +7410,6 @@ msgstr "Betriebssystem"
 #: src/olympia/editors/forms.py
 msgid "Search by add-on name / author email / guid"
 msgstr "Nach Add-on-Name / E-Mail-Adresse des Autors / guid suchen"
-
-#. L10n: 0 = platform, 1 = filename, 2 = status message
-#: src/olympia/editors/forms.py
-#, python-format
-msgid "<strong>%s</strong> &middot; %s &middot; %s"
-msgstr "<strong>%s</strong> · %s · %s"
 
 #: src/olympia/editors/forms.py
 msgid "Comments:"
@@ -7593,10 +7870,6 @@ msgstr "Listen"
 #: src/olympia/editors/templates/editors/base.html
 msgid "Unlisted Queues"
 msgstr "Warteschlangen für nicht aufgeführte Add-ons"
-
-#: src/olympia/editors/templates/editors/base.html src/olympia/editors/templates/editors/performance.html
-msgid "Performance"
-msgstr "Leistung"
 
 #: src/olympia/editors/templates/editors/base.html src/olympia/editors/templates/editors/themes/base.html
 msgid "Logs"
@@ -8281,8 +8554,9 @@ msgid "Add-on ID must be 64 characters or less."
 msgstr "Add-on-ID darf höchstens 64 Zeichen lang sein."
 
 #: src/olympia/files/utils.py
-msgid "Add-on ID doesn't match add-on."
-msgstr "Add-on-ID passt nicht zum Add-on."
+#, python-format
+msgid "The add-on ID in your manifest.json or install.rdf (%s) does not match the ID of your add-on on AMO (%s)"
+msgstr "Die Add-on-ID in Ihrer manifest.json oder install.rdf (%s) stimmt nicht mit der ID Ihres Add-ons auf AMO (%s) überein."
 
 #: src/olympia/files/utils.py
 msgid "Duplicate add-on ID found."
@@ -8297,8 +8571,9 @@ msgid "Version numbers should only contain letters, numbers, and these punctuati
 msgstr "Versionsnummern sollten nur Buchstaben, Zahlen und diese Zeichen enthalten: +*.-_."
 
 #: src/olympia/files/utils.py
-msgid "<em:type> doesn't match add-on"
-msgstr "<em:type> passt nicht zum Add-on"
+#, python-format
+msgid "<em:type> in your install.rdf (%s) does not match the type of your add-on on AMO (%s)"
+msgstr "<em:type> in Ihrer install.rdf (%s) stimmt nicht mit der ID Ihres Add-ons auf AMO (%s) überein."
 
 #: src/olympia/files/views.py
 msgid "Back to review"
@@ -8528,6 +8803,14 @@ msgstr "Spiele!"
 #: src/olympia/legacy_discovery/modules.py
 msgid "Add more fun to your Firefox. Play dozens of games right from your browser—puzzles, classic arcade, action games, and more!"
 msgstr "Noch mehr Spaß in Ihrem Firefox. Spielen Sie Dutzende von Spielen direkt in Ihrem Browser – Puzzles, klassische Arcade- sowie Action-Spiele und mehr!"
+
+#: src/olympia/legacy_discovery/modules.py
+msgid "Must-Have Media"
+msgstr "Wichtige Add-ons aus dem Medienbereich"
+
+#: src/olympia/legacy_discovery/modules.py
+msgid "Take better screenshots, improve your online video experience, finally learn how to make a GIF, and other great media tools."
+msgstr "Machen Sie bessere Screenshots, verbessern Sie Ihr Online-Video-Erlebnis, lernen Sie endlich, wie man ein GIF erstellt und weitere tolle Medienwerkzeuge."
 
 #: src/olympia/legacy_discovery/templates/legacy_discovery/base.html
 msgid "Discover Add-ons"
@@ -11617,7 +11900,7 @@ msgstr "Mozilla besuchen"
 msgid "menu"
 msgstr "Menü"
 
-#: src/olympia/templates/mobile/header_auth.html src/olympia/users/templates/users/register.html
+#: src/olympia/templates/mobile/header_auth.html
 msgid "Register"
 msgstr "Registrieren"
 
@@ -11973,29 +12256,6 @@ msgid "Having Trouble?"
 msgstr "Haben Sie Probleme?"
 
 #: src/olympia/users/views.py
-msgid "You are already logged in to an account."
-msgstr "Sie sind bereits eingeloggt."
-
-#: src/olympia/users/views.py
-msgid "Congratulations! Your user account was successfully created."
-msgstr "Glückwunsch, Ihr Benutzerkonto wurde erfolgreich angelegt!"
-
-# %1 is the user's email address
-#: src/olympia/users/views.py
-msgid "An email has been sent to your address {0} to confirm your account. Before you can log in, you have to activate your account by clicking on the link provided in this email."
-msgstr ""
-"Eine E-Mail wurde an Ihre Adresse {0} gesendet, um Ihre E-Mail-Adresse zu bestätigen. Bevor Sie sich einloggen können, müssen Sie den in der Mail enthaltenen Link aufrufen, um Ihr Konto zu "
-"aktivieren."
-
-#: src/olympia/users/views.py
-msgid "There are errors in this form"
-msgstr "Es gibt Fehler in diesem Formular"
-
-#: src/olympia/users/views.py
-msgid "Please correct them and resubmit."
-msgstr "Bitte korrigieren Sie sie und senden Sie es dann erneut ab."
-
-#: src/olympia/users/views.py
 msgid "User reported."
 msgstr "Benutzer gemeldet"
 
@@ -12061,11 +12321,11 @@ msgstr "Bitte legen Sie Ihren Anzeigenamen oder Benutzernamen fest, um den Regis
 msgid "Manage basic account information, such as username and email address."
 msgstr "Grundlegende Kontoinformationen verwalten, wie Benutzername und E-Mail-Adresse"
 
-#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/edit.html
 msgid "Username"
 msgstr "Benutzername"
 
-#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/pwreset_request.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/pwreset_request.html
 msgid "Email Address"
 msgstr "E-Mail-Adresse"
 
@@ -12077,7 +12337,7 @@ msgstr "Firefox-Konto verwalten…"
 msgid "Change Password"
 msgstr "Passwort ändern"
 
-#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/edit.html src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html
 msgid "Password"
 msgstr "Passwort"
 
@@ -12131,10 +12391,6 @@ msgid "Allowed HTML: {0}. Links are forbidden."
 msgstr "Zulässiges HTML: {0}. Links sind nicht erlaubt."
 
 #: src/olympia/users/templates/users/edit.html
-msgid "Miscellaneous"
-msgstr "Verschiedenes"
-
-#: src/olympia/users/templates/users/edit.html
 msgid "Decide what collections should be shown in your profile."
 msgstr "Entscheiden Sie, welche Sammlungen in Ihrem Profil gezeigt werden sollen."
 
@@ -12178,6 +12434,10 @@ msgstr "Keins"
 msgid "all"
 msgstr "Alle"
 
+#: src/olympia/users/templates/users/fxa_login_prompt_content.html
+msgid "Mozilla Add-ons has transitioned to Firefox Accounts for login. Continue to complete the simple login process."
+msgstr "Mozilla-Add-ons nutzt jetzt Firefox-Konten zur Anmeldung. Fahren Sie fort, um den einfachen Anmeldevorgang abzuschließen."
+
 #: src/olympia/users/templates/users/fxa_migration.html src/olympia/users/templates/users/mobile/fxa_migration.html
 msgid "Migrate to Firefox Accounts"
 msgstr "Zum Firefox-Konto umziehen"
@@ -12195,12 +12455,12 @@ msgid "User Login"
 msgstr "Benutzer-Login"
 
 #: src/olympia/users/templates/users/login.html src/olympia/users/templates/users/mobile/login.html
-msgid "Enter your email"
-msgstr "Geben Sie Ihre E-Mail-Adresse ein"
+msgid "Login with Firefox Accounts"
+msgstr "Mit Firefox-Konto anmelden"
 
 #: src/olympia/users/templates/users/login.html src/olympia/users/templates/users/mobile/login.html
-msgid "Log In"
-msgstr "Einloggen"
+msgid "Enter your email"
+msgstr "Geben Sie Ihre E-Mail-Adresse ein"
 
 #: src/olympia/users/templates/users/login_form.html src/olympia/users/templates/users/mobile/login.html
 msgid "Email address"
@@ -12316,7 +12576,7 @@ msgstr "Passwort zurücksetzen nicht erfolgreich"
 msgid "You have migrated to Firefox Accounts. You can no longer change your password here."
 msgstr "Sie sind zum Firefox-Konto umgezogen. Sie können Ihr Passwort hier nicht mehr ändern."
 
-#: src/olympia/users/templates/users/pwreset_confirm.html src/olympia/users/templates/users/register.html
+#: src/olympia/users/templates/users/pwreset_confirm.html
 msgid "Confirm password"
 msgstr "Passwort bestätigen"
 
@@ -12338,47 +12598,6 @@ msgid ""
 msgstr ""
 "Eine E-Mail mit weiteren Informationen wurde an die gewählte E-Mail-Adresse gesendet. Wenn Sie diese E-Mail nicht erhalten, prüfen Sie bitte, dass es dieselbe Adresse ist, die Sie während der "
 "Registrierung angegeben haben."
-
-#: src/olympia/users/templates/users/register.html
-msgid "New User Registration"
-msgstr "Neue Benutzer-Anmeldung"
-
-#: src/olympia/users/templates/users/register.html
-msgid "Why register?"
-msgstr "Warum registrieren?"
-
-#: src/olympia/users/templates/users/register.html
-msgid "Registration on AMO is <strong>not required</strong> if you simply want to download and install public add-ons."
-msgstr "Registrierung auf AMO ist <strong>nicht erforderlich</strong>, wenn Sie öffentliche Add-ons einfach herunterladen und installieren möchten."
-
-#: src/olympia/users/templates/users/register.html
-msgid "You only need to register if:"
-msgstr "Sie müssen sich nur registrieren, wenn:"
-
-#: src/olympia/users/templates/users/register.html
-msgid "You want to submit reviews for add-ons"
-msgstr "Sie Bewertungen für Add-ons abgeben möchten"
-
-#: src/olympia/users/templates/users/register.html
-msgid "You want to keep track of your favorite add-on collections or create one yourself"
-msgstr "Sie Ihre Lieblings-Add-on-Sammlung verfolgen oder selbst eine erstellen möchten"
-
-#: src/olympia/users/templates/users/register.html
-msgid "You are an add-on developer and want to upload your add-on for hosting on AMO"
-msgstr "Sie ein Add-on-Entwickler sind, und Ihr Add-on zum Hosten auf AMO hochladen möchten"
-
-#: src/olympia/users/templates/users/register.html
-msgid "Upon successful registration, you will be sent a confirmation email to the address you provided. Please follow the instructions there to confirm your account."
-msgstr "Nach erfolgreicher Registrierung erhalten Sie eine Bestätigungs-E-Mail an die von Ihnen angegebene Adresse. Bitte folgen Sie den dortigen Anweisungen, um Ihr Konto zu bestätigen."
-
-#: src/olympia/users/templates/users/register.html
-#, python-format
-msgid "If you like, you can read our <a href=\"%(legal)s\" title=\"Legal Notices\">Legal Notices</a> and <a href=\"%(privacy)s\" title=\"Privacy Policy\">Privacy Policy</a>."
-msgstr "Wenn Sie möchten, können Sie unser <a href=\"%(legal)s\" title=\"Impressum\">Impressum</a> und unsere <a href=\"%(privacy)s\" title=\"Datenschutzerklärung\">Datenschutzerklärung</a> lesen."
-
-#: src/olympia/users/templates/users/register.html
-msgid "Display name"
-msgstr "Name anzeigen"
 
 #: src/olympia/users/templates/users/report_abuse.html
 msgid "Please describe why you are reporting this user, such as for spam or an inappropriate picture."

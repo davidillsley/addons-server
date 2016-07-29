@@ -9,15 +9,18 @@ from django.contrib.auth import login
 from django.core.urlresolvers import reverse
 from django.db.models import Q
 from django.http import HttpResponseRedirect
+from django.utils.encoding import force_bytes
 from django.utils.http import is_safe_url
 from django.utils.html import format_html
 from django.utils.translation import ugettext_lazy as _
 
 from rest_framework import generics
+from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_jwt.settings import api_settings as jwt_api_settings
+from waffle import switch_is_active
 from waffle.decorators import waffle_switch
 
 from olympia.access.models import GroupUser
@@ -66,7 +69,7 @@ LOGIN_ERROR_MESSAGES = {
 def safe_redirect(url, action):
     if not is_safe_url(url):
         url = reverse('home')
-    log.info('Redirecting after {} to: {}'.format(action, url))
+    log.info(u'Redirecting after {} to: {}'.format(action, url))
     return HttpResponseRedirect(url)
 
 
@@ -115,13 +118,14 @@ def update_user(user, identity):
 
 def login_user(request, user, identity):
     migrated = update_user(user, identity)
-    if migrated:
+    if migrated and not switch_is_active('fxa-migrated'):
         messages.success(
             request,
             _(u'Great job!'),
             _(u'You can now log in to Add-ons with your Firefox Account.'),
             extra_tags='fxa')
     log.info('Logging in user {} from FxA'.format(user))
+    user.log_login_attempt(True)
     login(request, user)
 
 
@@ -159,7 +163,8 @@ def parse_next_path(state_parts):
         # but it only cares if there are too few so add 4 of them.
         encoded_path = state_parts[1] + '===='
         try:
-            next_path = base64.urlsafe_b64decode(str(encoded_path))
+            next_path = base64.urlsafe_b64decode(
+                force_bytes(encoded_path)).decode('utf-8')
         except TypeError:
             log.info('Error decoding next_path {}'.format(
                 encoded_path))
@@ -256,6 +261,7 @@ def add_api_token_to_response(response, user, set_cookie=True):
 
 
 class LoginView(APIView):
+    authentication_classes = (SessionAuthentication,)
 
     @with_user(format='json')
     def post(self, request, user, identity, next_path):
@@ -269,6 +275,7 @@ class LoginView(APIView):
 
 
 class RegisterView(APIView):
+    authentication_classes = (SessionAuthentication,)
 
     @with_user(format='json')
     def post(self, request, user, identity, next_path):
@@ -283,6 +290,7 @@ class RegisterView(APIView):
 
 
 class AuthenticateView(APIView):
+    authentication_classes = (SessionAuthentication,)
 
     @with_user(format='html')
     def get(self, request, user, identity, next_path):

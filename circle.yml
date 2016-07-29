@@ -8,7 +8,7 @@ dependencies:
 
 test:
   pre:
-    - mozdownload --version latest-esr --destination firefox.tar.bz2
+    - mozdownload --version latest --destination firefox.tar.bz2
     - mozinstall firefox.tar.bz2
     - wget "https://github.com/mozilla/geckodriver/releases/download/v0.9.0/geckodriver-v0.9.0-linux64.tar.gz"
     - gunzip -c geckodriver-v0.9.0-linux64.tar.gz | tar xopf -
@@ -16,8 +16,8 @@ test:
     - sudo mv geckodriver /home/ubuntu/bin/wires
     - docker-compose pull
     - docker-compose up -d
+    - sleep 60
     - docker-compose run web ./scripts/setup-docker.sh
-    - sleep 60 # wait for the web application to start
   override:
     - tox -e ui-tests --
       --base-url=http://127.0.0.1

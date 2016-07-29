@@ -20,9 +20,10 @@ class TestAddonIndexer(TestCase):
     # see expected_fields() for the rest.
     simple_fields = [
         'average_daily_users', 'bayesian_rating', 'created', 'default_locale',
-        'guid', 'hotness', 'icon_type', 'id', 'is_disabled', 'is_listed',
+        'guid', 'hotness', 'icon_type', 'id', 'is_disabled', 'is_experimental',
+        'is_listed',
         'last_updated', 'modified', 'public_stats', 'slug', 'status', 'type',
-        'weekly_downloads',
+        'view_source', 'weekly_downloads',
     ]
 
     def setUp(self):
@@ -44,10 +45,10 @@ class TestAddonIndexer(TestCase):
         # exist on the model, or it has a different name, or the value we need
         # to store in ES differs from the one in the db.
         complex_fields = [
-            'app', 'appversion', 'authors', 'boost', 'category',
-            'current_version', 'description', 'has_theme_rereview',
-            'has_version', 'listed_authors', 'name', 'name_sort', 'platforms',
-            'previews', 'public_stats', 'ratings', 'summary', 'tags',
+            'app', 'appversion', 'boost', 'category', 'current_version',
+            'description', 'has_theme_rereview', 'has_version',
+            'listed_authors', 'name', 'name_sort', 'platforms', 'previews',
+            'public_stats', 'ratings', 'summary', 'tags',
         ]
 
         # Fields that need to be present in the mapping, but might be skipped
@@ -142,7 +143,6 @@ class TestAddonIndexer(TestCase):
                 'min_human': '2.0',
             }
         }
-        assert extracted['authors'] == [u'55021 التطب']
         assert extracted['boost'] == self.addon.average_daily_users ** .2 * 4
         assert extracted['category'] == [22, 23, 24]  # From fixture.
         assert extracted['has_theme_rereview'] is None
