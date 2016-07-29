@@ -173,7 +173,7 @@ def paginate(request, queryset, per_page=20, count=None):
 
 def decode_json(json_string):
     """Helper that transparently handles BOM encoding."""
-    return json.loads(unicodehelper.decode(json_string), cls=AMOJSONEncoder)
+    return json.loads(unicodehelper.decode(json_string))
 
 
 def send_mail(subject, message, from_email=None, recipient_list=None,
